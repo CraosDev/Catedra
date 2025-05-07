@@ -9,53 +9,103 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" />
 
-  <!-- Paleta profesional -->
+  <!-- Google Fonts - Fuente moderna y elegante -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos personalizados -->
   <style>
     :root {
-      --bs-primary: #1F3B5A;       /* Azul oscuro */
-      --bs-primary-rgb: 31,59,90;
-      --bs-secondary: #3CAEA3;     /* Verde azulado */
-      --bs-secondary-rgb: 60,174,163;
-      --bs-body-bg: #F8F9FA;       /* Gris muy claro */
-      --bs-body-color: #343A40;    /* Gris oscuro base */
-    }
-    body {
-      background-color: var(--bs-body-bg);
-      color: var(--bs-body-color);
-    }
-    a.text-secondary:hover {
-      color: var(--bs-primary) !important;
-    }
-    /* Hover general para tarjetas */
-    .hover-scale {
-      transition: transform .3s ease, box-shadow .3s ease;
-    }
-    .hover-scale:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 1rem 2rem rgba(0,0,0,0.1);
-    }
+  --bs-primary: #1F3B5A;
+  --bs-primary-rgb: 31,59,90;
+  --bs-secondary: #3CAEA3;
+  --bs-secondary-rgb: 60,174,163;
+  --bs-body-bg: #F8F9FA;
+  --bs-body-color: #343A40;
+}
+
+body {
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.1px;
+}
+
+a.text-secondary:hover {
+  color: var(--bs-primary) !important;
+}
+
+.hover-scale {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-scale:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 1.2rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  line-height: 1.2;
+  margin-bottom: 0.6em;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.3rem; }
+h5 { font-size: 1.1rem; }
+h6 { font-size: 1rem; }
+
+p, small {
+  letter-spacing: 0.1px;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.btn-custom {
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+  transition: background-color 0.3s, transform 0.2s;
+  border-radius: 0.5rem;
+}
+.btn-custom:hover {
+  transform: translateY(-2px);
+}
+
+footer {
+  font-size: 0.9rem;
+}
+
   </style>
 </head>
 <body 
-data-bs-spy="scroll" 
-data-bs-target="#mainNav" 
-data-bs-offset="80" 
-tabindex="0">
+  data-bs-spy="scroll" 
+  data-bs-target="#mainNav" 
+  data-bs-offset="80" 
+  tabindex="0">
+
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="img/logo.png" alt="Logo" width="140">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="img/logo.png" alt="Logo" width="140" class="me-2" />
       </a>
       <button class="navbar-toggler border-0" type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasNav"
-              aria-label="Abrir menú">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse d-none d-lg-flex" id="mainNav">
-        <ul class="navbar-nav ms-auto text-uppercase fw-semibold">
-          <li class="nav-item"><a class="nav-link active px-3" href="#inicio">Inicio</a></li>
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNav"
+        aria-controls="mainNav"
+        aria-expanded="false"
+        aria-label="Abrir menú">
+  <span class="navbar-toggler-icon"></span>
+</button>
+      
+<div class="collapse navbar-collapse" id="mainNav">
+  <ul class="navbar-nav ms-auto text-uppercase fw-semibold">
+          <li class="nav-item"><a class="nav-link px-3 active" href="#inicio">Inicio</a></li>
           <li class="nav-item"><a class="nav-link px-3" href="#secciones">Secciones</a></li>
           <li class="nav-item"><a class="nav-link px-3" href="#nosotros">Nosotros</a></li>
           <li class="nav-item"><a class="nav-link px-3" href="#contacto">Contacto</a></li>
@@ -64,14 +114,28 @@ tabindex="0">
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="inicio" class="position-relative d-flex align-items-center text-white" style="min-height:75vh; background: linear-gradient(135deg, rgba(var(--bs-primary-rgb),0.8), rgba(var(--bs-primary-rgb),0.6)), url('img/fondo.png') center/cover no-repeat;">
-    <div class="container text-center position-relative py-5">
-      <h1 class="display-1 fw-bold mb-3" style="text-shadow:0 0.5rem 1rem rgba(0,0,0,0.7)">Descubre el placer de leer</h1>
-      <p class="fs-4 mb-4" style="text-shadow:0 0.3rem 0.7rem rgba(0,0,0,0.5)">Los mejores libros de medicina y literatura infantil te esperan en Cátedra del Saber.</p>
-      <div class="d-flex justify-content-center gap-3">
-        <a href="#secciones" class="btn btn-lg btn-secondary px-4">Ver Secciones</a>
-        <a href="#contacto" class="btn btn-lg btn-outline-light px-4">Visítanos</a>
+  <!-- Hero / Portada -->
+  <section id="inicio" class="position-relative d-flex align-items-center text-white" style="min-height:75vh; overflow: hidden;">
+    <!-- VIDEO DE FONDO -->
+    <video autoplay muted loop playsinline class="position-absolute w-100 h-100 object-fit-cover" style="top: 0; left: 0; z-index: 0;">
+      <source src="video/libreria.mp4" type="video/mp4">
+      Tu navegador no soporta video HTML5.
+    </video>
+  
+    <!-- CAPA OSCURA PARA MEJORAR LEGIBILIDAD -->
+    <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.6); z-index: 1;"></div>
+  
+    <!-- CONTENIDO ENCIMA DEL VIDEO Y DEL FILTRO -->
+    <div class="container text-center py-5 px-3 position-relative" style="max-width: 900px; z-index: 2;">
+      <h1 class="display-3 fw-bold mb-4" style="text-shadow:0 0.5rem 1rem rgba(0,0,0,0.7); font-family:'Montserrat', sans-serif;">
+        Descubre el Placer de Leer
+      </h1>
+      <p class="fs-4 mb-4" style="text-shadow:0 0.3rem 0.7rem rgba(0,0,0,0.1);">
+        Libros especializados en medicina y literatura infantil, solo en Cátedra del Saber.
+      </p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="#secciones" class="btn btn-lg btn-secondary btn-custom px-4 py-3">Ver Secciones</a>
+        <a href="#contacto" class="btn btn-outline-light btn-lg btn-custom px-4 py-3">Visítanos</a>
       </div>
       <div class="mt-5">
         <a href="#secciones" class="text-white fs-2"><i class="bi bi-chevron-down"></i></a>
@@ -79,170 +143,213 @@ tabindex="0">
     </div>
   </section>
 
-  <!-- Secciones -->
-  <section id="secciones" class="py-5">
+  <section id="secciones" class="py-5 bg-light">
     <div class="container">
       <div class="text-center mb-5">
-        <h2 class="fw-bold display-5 text-primary">Nuestras Secciones</h2>
-        <p class="lead text-secondary">Explora nuestras áreas especializadas para todos los lectores</p>
+        <h2 class="fw-bold display-5 text-primary mb-3">Nuestras Áreas de Especialización</h2>
+        <p class="lead text-secondary">Explora nuestras categorías diseñadas para todos los amantes de la lectura</p>
       </div>
       <div class="row g-4">
+  
+        <!-- Medicina -->
         <div class="col-lg-6">
-          <div class="card border-0 shadow-lg rounded-3 hover-scale h-100">
-            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1350&q=80"
-                 class="card-img-top rounded-top-3" alt="Medicina" style="height:300px; object-fit:cover;">
-            <div class="card-body text-center">
-              <i class="bi bi-heart-pulse fs-1 text-secondary mb-3"></i>
-              <h3 class="fw-semibold">Medicina</h3>
-              <p class="text-muted">Selección completa de textos médicos y publicaciones especializadas.</p>
-              <a href="medicina.html" class="btn btn-secondary">Explorar</a>
+          <div class="card border-0 shadow h-100 rounded-3 overflow-hidden position-relative hover-scale">
+            <!-- Video de fondo -->
+            <video autoplay muted loop playsinline class="w-100 h-100 position-absolute top-0 start-0 object-fit-cover" style="z-index: 0;">
+              <source src="video/medicina.mp4" type="video/mp4">
+              Tu navegador no soporta video HTML5.
+            </video>
+            <!-- Filtro oscuro -->
+            <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.7); z-index: 1;"></div>
+            <!-- Contenido -->
+            <div class="card-body position-relative text-center text-white d-flex flex-column justify-content-center align-items-center p-4"
+                 style="z-index: 2; min-height: 300px;">
+              <i class="bi bi-heart-pulse fs-1 mb-3"></i>
+              <h3 class="fw-semibold mb-3">Medicina</h3>
+              <p class="mb-4">Una selección completa de textos médicos y publicaciones especializadas para profesionales y estudiantes.</p>
+              <a href="medicina.html" class="btn btn-light btn-sm px-4 py-2">Explorar</a>
             </div>
           </div>
         </div>
+  
+        <!-- Literatura infantil -->
         <div class="col-lg-6">
-          <div class="card border-0 shadow-lg rounded-3 hover-scale h-100">
-            <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?auto=format&fit=crop&w=1350&q=80"
-                 class="card-img-top rounded-top-3" alt="Infantiles" style="height:300px; object-fit:cover;">
-            <div class="card-body text-center">
-              <i class="bi bi-book-half fs-1 text-secondary mb-3"></i>
-              <h3 class="fw-semibold">Infantiles</h3>
-              <p class="text-muted">Un mundo mágico de cuentos y aprendizaje para los pequeños lectores.</p>
-              <a href="infantiles.html" class="btn btn-secondary">Explorar</a>
+          <div class="card border-0 shadow h-100 rounded-3 overflow-hidden position-relative hover-scale">
+            <!-- Video de fondo -->
+            <video autoplay muted loop playsinline class="w-100 h-100 position-absolute top-0 start-0 object-fit-cover" style="z-index: 0;">
+              <source src="video/infantiles.mp4" type="video/mp4">
+              Tu navegador no soporta video HTML5.
+            </video>
+            <!-- Filtro oscuro -->
+            <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.7); z-index: 1;"></div>
+            <!-- Contenido -->
+            <div class="card-body position-relative text-center text-white d-flex flex-column justify-content-center align-items-center p-4"
+                 style="z-index: 2; min-height: 300px;">
+              <i class="bi bi-book-half fs-1 mb-3"></i>
+              <h3 class="fw-semibold mb-3">Infantiles</h3>
+              <p class="mb-4">Un mundo mágico de cuentos y conocimientos para los pequeños lectores y sus familias.</p>
+              <a href="infantiles.html" class="btn btn-light btn-sm px-4 py-2">Explorar</a>
             </div>
           </div>
         </div>
+  
       </div>
     </div>
   </section>
+  
 
-  <!-- Nosotros -->
+  <!-- Sobre Nosotros -->
   <section id="nosotros" class="py-5">
     <div class="container">
       <div class="text-center mb-5">
-        <h2 class="fw-bold display-5 text-primary">Sobre Nosotros</h2>
-        <p class="lead text-secondary">Más que una librería, un espacio para el conocimiento desde 1995.</p>
+        <h2 class="fw-bold display-5 text-primary mb-3">Sobre Nosotros</h2>
+        <p class="lead text-secondary">Desde 1995, fomentando la pasión por el conocimiento y la lectura especializada.</p>
       </div>
       <div class="row g-4 align-items-center">
         <div class="col-lg-6">
-          <p class="text-muted">Desde nuestros inicios en 1995, Cátedra del Saber se ha consolidado como referente en literatura especializada, ofreciendo contenidos de alta calidad en medicina y literatura infantil. Nuestra misión es apoyar el crecimiento profesional y personal de todos nuestros lectores.</p>
-          <div class="row g-3 mt-4">
+          <p class="text-muted mb-4">En Cátedra del Saber, nos enorgullece ser un referente en literatura médica y infantil. Nuestro compromiso es ofrecer contenidos de alta calidad que apoyen el crecimiento profesional y personal de nuestros lectores, en un espacio que combina tradición, innovación y pasión por la lectura.</p>
+          <div class="row g-3">
+            <!-- Datos destacados -->
             <div class="col-sm-6">
-              <div class="d-flex align-items-center bg-body p-3 rounded-3 shadow-sm hover-scale h-100">
-                <i class="bi bi-book-half fs-1 text-secondary me-3"></i>
+              <div class="d-flex bg-body p-3 rounded-3 shadow hover-scale h-100 align-items-center">
+                <i class="bi bi-book-half fs-2 text-secondary me-3"></i>
                 <div>
-                  <h3 class="h4 fw-bold mb-1">15,000+</h3>
-                  <p class="small text-muted mb-0">Títulos disponibles</p>
+                  <h4 class="mb-1 fw-semibold">15,000+</h4>
+                  <small class="text-muted">Títulos en nuestro catálogo</small>
                 </div>
               </div>
             </div>
             <div class="col-sm-6">
-              <div class="d-flex align-items-center bg-body p-3 rounded-3 shadow-sm hover-scale h-100">
-                <i class="bi bi-people fs-1 text-secondary me-3"></i>
+              <div class="d-flex bg-body p-3 rounded-3 shadow hover-scale h-100 align-items-center">
+                <i class="bi bi-people fs-2 text-secondary me-3"></i>
                 <div>
-                  <h3 class="h4 fw-bold mb-1">Equipo Experto</h3>
-                  <p class="small text-muted mb-0">Asesoramiento profesional</p>
+                  <h4 class="mb-1 fw-semibold">Equipo Experto</h4>
+                  <small class="text-muted">Asesoramiento profesional</small>
                 </div>
               </div>
             </div>
             <div class="col-sm-6">
-              <div class="d-flex align-items-center bg-body p-3 rounded-3 shadow-sm hover-scale h-100">
-                <i class="bi bi-award fs-1 text-secondary me-3"></i>
+              <div class="d-flex bg-body p-3 rounded-3 shadow hover-scale h-100 align-items-center">
+                <i class="bi bi-award fs-2 text-secondary me-3"></i>
                 <div>
-                  <h3 class="h4 fw-bold mb-1">Reconocimientos</h3>
-                  <p class="small text-muted mb-0">Premios de excelencia</p>
+                  <h4 class="mb-1 fw-semibold">Reconocimientos</h4>
+                  <small class="text-muted">Premios de excelencia</small>
                 </div>
               </div>
             </div>
             <div class="col-sm-6">
-              <div class="d-flex align-items-center bg-body p-3 rounded-3 shadow-sm hover-scale h-100">
-                <i class="bi bi-clock-history fs-1 text-secondary me-3"></i>
+              <div class="d-flex bg-body p-3 rounded-3 shadow hover-scale h-100 align-items-center">
+                <i class="bi bi-clock-history fs-2 text-secondary me-3"></i>
                 <div>
-                  <h3 class="h4 fw-bold mb-1">30+ Años</h3>
-                  <p class="small text-muted mb-0">Trayectoria de confianza</p>
+                  <h4 class="mb-1 fw-semibold">30+ Años</h4>
+                  <small class="text-muted">Trayectoria de confianza</small>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <!-- Imagen -->
         <div class="col-lg-6 text-center">
-          <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1350&q=80"
-               class="img-fluid rounded-3 shadow-lg" alt="Librería">
+          <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1350&q=80" class="img-fluid rounded-3 shadow-lg" alt="Librería" />
         </div>
       </div>
     </div>
   </section>
 
   <!-- Contacto -->
-  <section id="contacto" class="py-5">
+  <section id="contacto" class="py-5 bg-light">
     <div class="container">
       <div class="text-center mb-5">
-        <h2 class="fw-bold display-5 text-primary">Contáctanos</h2>
-        <p class="lead text-secondary">Visítanos en nuestras sucursales o escríbenos para más información</p>
+        <h2 class="fw-bold display-5 text-primary mb-3">Contáctanos</h2>
+        <p class="lead text-secondary">Visítanos en nuestras sucursales o envíanos un mensaje para más información.</p>
       </div>
       <div class="row g-4">
+  
+        <!-- Sucursal Medicina -->
         <div class="col-md-6">
-          <div class="card bg-primary text-white border-0 shadow-lg rounded-3 hover-scale h-100">
-            <div class="card-header bg-secondary bg-gradient border-0 rounded-top-3">
-              <h5 class="mb-0"><i class="bi bi-geo-alt-fill me-2"></i>Sucursal Centro</h5>
+          <div class="card bg-primary text-white border-0 shadow hover-scale h-100 rounded-3">
+            <div class="card-header bg-secondary bg-gradient border-0 rounded-top-3 d-flex align-items-center">
+              <i class="bi bi-geo-alt-fill me-2"></i>
+              <h5 class="mb-0">Sucursal Medicina</h5>
             </div>
             <div class="card-body p-4">
+              <div class="ratio ratio-4x3 rounded-3 overflow-hidden mb-3">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1506.4841929601841!2d-68.09325414979848!3d-16.539883964259435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915edf0a04f5a40f%3A0x57dbfc76b4458ab3!2sLa%20Paz!5e1!3m2!1ses!2sbo!4v1746584652860!5m2!1ses!2sbo"
+                  style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
               <p class="mb-3"><i class="bi bi-geo-alt me-2"></i>Av. del Conocimiento 1234, Ciudad Capital</p>
               <p class="mb-3"><i class="bi bi-clock me-2"></i>Lun–Vie: 9:00–19:00 • Sáb: 10:00–14:00</p>
               <p class="mb-0"><i class="bi bi-telephone me-2"></i>(01) 234-5678</p>
             </div>
           </div>
         </div>
+  
+        <!-- Sucursal Infantiles -->
         <div class="col-md-6">
-          <div class="card bg-primary text-white border-0 shadow-lg rounded-3 hover-scale h-100">
-            <div class="card-header bg-secondary bg-gradient border-0 rounded-top-3">
-              <h5 class="mb-0"><i class="bi bi-geo-alt-fill me-2"></i>Sucursal Norte</h5>
+          <div class="card bg-primary text-white border-0 shadow hover-scale h-100 rounded-3">
+            <div class="card-header bg-secondary bg-gradient border-0 rounded-top-3 d-flex align-items-center">
+              <i class="bi bi-geo-alt-fill me-2"></i>
+              <h5 class="mb-0">Sucursal Infantiles</h5>
             </div>
             <div class="card-body p-4">
+              <div class="ratio ratio-4x3 rounded-3 overflow-hidden mb-3">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1506.4841929601841!2d-68.09325414979848!3d-16.539883964259435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915edf0a04f5a40f%3A0x57dbfc76b4458ab3!2sLa%20Paz!5e1!3m2!1ses!2sbo!4v1746584652860!5m2!1ses!2sbo"
+                  style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
               <p class="mb-3"><i class="bi bi-geo-alt me-2"></i>Calle Lectura 567, Barrio Jardín</p>
               <p class="mb-3"><i class="bi bi-clock me-2"></i>Lun–Sáb: 10:00–20:00 • Dom: 11:00–15:00</p>
               <p class="mb-0"><i class="bi bi-telephone me-2"></i>(01) 876-5432</p>
             </div>
           </div>
         </div>
+  
       </div>
     </div>
   </section>
+  
 
-  <!-- Footer -->
-  <footer class="bg-primary text-light pt-5">
+  <!-- Pie de página -->
+  <footer class="bg-primary text-light pt-5 mt-5">
     <div class="container">
       <div class="row gy-4">
+        <!-- Sobre nosotros -->
         <div class="col-md-4">
-          <h5 class="fw-bold">Cátedra del Saber</h5>
-          <p>Más de 25 años fomentando la pasión por la lectura especializada.</p>
-          <div class="d-flex gap-3">
-            <a href="#" class="text-light fs-4"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="text-light fs-4"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="text-light fs-4"><i class="bi bi-twitter"></i></a>
+          <h5 class="fw-bold mb-3">Cátedra del Saber</h5>
+          <p>Fomentando la pasión por la lectura especializada desde 1995.</p>
+          <div class="d-flex gap-3 fs-4">
+            <a href="#" class="text-light"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-light"><i class="bi bi-twitter"></i></a>
           </div>
         </div>
+        <!-- Enlaces rápidos -->
         <div class="col-md-4">
-          <h6 class="text-uppercase fw-semibold">Enlaces rápidos</h6>
+          <h6 class="text-uppercase fw-semibold mb-3">Enlaces rápidos</h6>
           <ul class="list-unstyled">
-            <li><a href="#" class="text-light text-decoration-none d-block py-1">Inicio</a></li>
-            <li><a href="#secciones" class="text-light text-decoration-none d-block py-1">Secciones</a></li>
-            <li><a href="#nosotros" class="text-light text-decoration-none d-block py-1">Nosotros</a></li>
-            <li><a href="#contacto" class="text-light text-decoration-none d-block py-1">Contacto</a></li>
+            <li><a href="#" class="text-light text-decoration-none py-1 d-block">Inicio</a></li>
+            <li><a href="#secciones" class="text-light text-decoration-none py-1 d-block">Secciones</a></li>
+            <li><a href="#nosotros" class="text-light text-decoration-none py-1 d-block">Nosotros</a></li>
+            <li><a href="#contacto" class="text-light text-decoration-none py-1 d-block">Contacto</a></li>
           </ul>
         </div>
+        <!-- Newsletter -->
         <div class="col-md-4">
-          <h6 class="text-uppercase fw-semibold">Newsletter</h6>
-          <p class="small">Suscríbete para recibir novedades y promociones.</p>
-          <form class="d-flex">
-            <input type="email" class="form-control me-2" placeholder="Tu correo">
-            <button class="btn btn-secondary" type="submit">Suscribir</button>
+          <h6 class="text-uppercase fw-semibold mb-3">Suscríbete</h6>
+          <p class="small mb-3">Recibe novedades y promociones directamente en tu correo.</p>
+          <form class="d-flex" onsubmit="event.preventDefault(); alert('Suscripción enviada!')">
+            <input type="email" class="form-control me-2" placeholder="Tu correo" required>
+            <button class="btn btn-secondary btn-sm btn-custom px-3" type="submit">Suscribir</button>
           </form>
         </div>
       </div>
-      <hr class="border-secondary my-4">
+      <hr class="border-secondary my-4" />
       <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small">
         <p class="mb-2 mb-md-0">&copy; 2025 Cátedra del Saber. Todos los derechos reservados.</p>
-        <a href="#" class="btn btn-outline-light btn-sm">Volver arriba</a>
+        <a href="#inicio" class="btn btn-outline-light btn-sm">Volver arriba</a>
       </div>
     </div>
   </footer>
@@ -251,3 +358,4 @@ tabindex="0">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
