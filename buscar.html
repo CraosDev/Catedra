@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cátedra del Saber - Librería Especializada</title>
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" />
+
+  <!-- Google Fonts - Fuente moderna y elegante -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos personalizados -->
+  <style>
+    :root {
+  --bs-primary: #1F3B5A;
+  --bs-primary-rgb: 31,59,90;
+  --bs-secondary: #3CAEA3;
+  --bs-secondary-rgb: 60,174,163;
+  --bs-body-bg: #F8F9FA;
+  --bs-body-color: #343A40;
+}
+
+body {
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.1px;
+}
+
+a.text-secondary:hover {
+  color: var(--bs-primary) !important;
+}
+
+.hover-scale {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-scale:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 1.2rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  line-height: 1.2;
+  margin-bottom: 0.6em;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.3rem; }
+h5 { font-size: 1.1rem; }
+h6 { font-size: 1rem; }
+
+p, small {
+  letter-spacing: 0.1px;
+  font-weight: 200;
+  margin-bottom: 1rem;
+}
+
+.btn-custom {
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+  transition: background-color 0.3s, transform 0.2s;
+  border-radius: 0.5rem;
+}
+.btn-custom:hover {
+  transform: translateY(-2px);
+}
+
+footer {
+  font-size: 0.9rem;
+}
+
+  </style>
+</head>
+<body 
+  data-bs-spy="scroll" 
+  data-bs-target="#mainNav" 
+  data-bs-offset="80" 
+  tabindex="0">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="img/logo.png" alt="Logo" width="140" class="me-2" />
+    </a>
+    <button class="navbar-toggler border-0" type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNav"
+      aria-controls="mainNav"
+      aria-expanded="false"
+      aria-label="Abrir menú">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <!-- Barra de búsqueda -->
+      <form class="d-flex ms-auto me-3 align-items-center" role="search">
+        <div class="input-group">
+          <input class="form-control rounded-pill ps-3" type="search" placeholder="Buscar..." aria-label="Buscar">
+          <a class="btn btn-light rounded-pill mx-1" type="submit" style="z-index:1;" href="buscar.html">
+            <i class="bi bi-search"></i>
+          </a>
+        </div>
+
+        <!-- Botón de sesión SOLO visible en pantallas pequeñas (junto a la búsqueda) -->
+        <button class="btn btn-light rounded-pill mx-1 d-lg-none" type="button"  data-bs-toggle="modal" data-bs-target="#loginModal">
+          <i class="bi bi-person-fill"></i>
+        </button>
+      </form>
+
+      <!-- Enlaces de navegación -->
+      <ul class="navbar-nav text-uppercase">
+        <li class="nav-item"><a class="nav-link px-3 active" href="index.html#inicio">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="index.html#secciones">Secciones</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="index.html#nosotros">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="index.html#contacto">Contacto</a></li>
+      </ul>
+
+      <!-- Botón de sesión SOLO visible en pantallas grandes (al final) -->
+      <button class="btn btn-light rounded-pill mx-1 d-none d-lg-inline" type="button"  data-bs-toggle="modal" data-bs-target="#loginModal">
+        <i class="bi bi-person-fill"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<section>
+     <!-- Cards de libros -->
+  <div class="container py-5">
+    <div class="row row-cols-2 row-cols-md-5 g-5">
+      
+      <!-- Card 1 -->
+      <div class="col">
+        <div class="card h-100 border-0 rounded-4 shadow-sm hover-scale">
+          <img src="img/libros/libro1.jpg" class="card-img-top rounded-top-4 card-img-libro" alt="Libro 1">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Título del Libro 1</h5>
+            <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
+          </div>
+          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+            <span class="precio-libro">$15.99</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 2 -->
+      <div class="col">
+        <div class="card h-100 border-0 rounded-4 shadow-sm hover-scale">
+          <img src="img/libros/libro2.jpg" class="card-img-top rounded-top-4 card-img-libro" alt="Libro 1">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Título del Libro 1</h5>
+            <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
+          </div>
+          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+            <span class="precio-libro">$15.99</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 3 -->
+      <div class="col">
+        <div class="card h-100 border-0 rounded-4 shadow-sm hover-scale">
+          <img src="img/libros/libro3.jpg" class="card-img-top rounded-top-4 card-img-libro" alt="Libro 1">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Título del Libro 1</h5>
+            <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
+          </div>
+          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+            <span class="precio-libro">$15.99</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 4 -->
+      <div class="col">
+        <div class="card h-100 border-0 rounded-4 shadow-sm hover-scale">
+          <img src="img/libros/libro4.jpg" class="card-img-top rounded-top-4 card-img-libro" alt="Libro 1">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Título del Libro 1</h5>
+            <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
+          </div>
+          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+            <span class="precio-libro">$15.99</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Pie de página -->
+  <footer class="bg-primary text-light pt-5 mt-5">
+    <div class="container">
+      <div class="row gy-4">
+        <!-- Sobre nosotros -->
+        <div class="col-md-4">
+          <h5 class="fw-bold mb-3">Cátedra del Saber</h5>
+          <p>Fomentando la pasión por la lectura especializada desde 1995.</p>
+          <div class="d-flex gap-3 fs-4">
+            <a href="#" class="text-light"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-light"><i class="bi bi-twitter"></i></a>
+          </div>
+        </div>
+        <!-- Enlaces rápidos -->
+        <div class="col-md-4">
+          <h6 class="text-uppercase fw-semibold mb-3">Enlaces rápidos</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-light text-decoration-none py-1 d-block">Inicio</a></li>
+            <li><a href="#secciones" class="text-light text-decoration-none py-1 d-block">Secciones</a></li>
+            <li><a href="#nosotros" class="text-light text-decoration-none py-1 d-block">Nosotros</a></li>
+            <li><a href="#contacto" class="text-light text-decoration-none py-1 d-block">Contacto</a></li>
+          </ul>
+        </div>
+        <!-- Newsletter -->
+        <div class="col-md-4">
+          <h6 class="text-uppercase fw-semibold mb-3">Suscríbete</h6>
+          <p class="small mb-3">Recibe novedades y promociones directamente en tu correo.</p>
+          <form class="d-flex" onsubmit="event.preventDefault(); alert('Suscripción enviada!')">
+            <input type="email" class="form-control me-2" placeholder="Tu correo" required>
+            <button class="btn btn-secondary btn-sm btn-custom px-3" type="submit">Suscribir</button>
+          </form>
+        </div>
+      </div>
+      <hr class="border-secondary my-4" />
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small">
+        <p class="mb-2 mb-md-0">&copy; 2025 Cátedra del Saber. Todos los derechos reservados.</p>
+        <a href="#inicio" class="btn btn-outline-light btn-sm"><i class="bi bi-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- Modal Sesion-->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg rounded-4">
+        <div class="modal-header justify-content-center bg-primary text-white rounded-top-4">
+          <div class="text-center w-100">
+            <!-- LOGO -->
+            <img src="img/logo.png" alt="Logo" class="mb-2" style="max-height: 60px;">
+            <h5 class="modal-title mt-2" id="loginModalLabel">Bienvenido</h5>
+            <p class="mb-0 text-white-50 fs-6">Inicia sesión para continuar</p>
+          </div>
+          <button type="button" class="btn-close btn-close-white position-absolute end-0 top-0 m-3" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body px-4 py-4 bg-light">
+          <form>
+            <div class="mb-3">
+              <label for="emailInput" class="form-label">Correo Electrónico</label>
+              <input type="email" class="form-control rounded-pill px-4" id="emailInput" placeholder="nombre@ejemplo.com">
+            </div>
+            <div class="mb-3">
+              <label for="passwordInput" class="form-label">Contraseña</label>
+              <input type="password" class="form-control rounded-pill px-4" id="passwordInput" placeholder="••••••••">
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="rememberCheck">
+                <label class="form-check-label" for="rememberCheck">Recordarme</label>
+              </div>
+              <a href="#" class="text-decoration-none text-secondary small">¿Olvidaste tu contraseña?</a>
+            </div>
+            <button type="submit" class="btn btn-primary w-100 rounded-pill py-2">Ingresar</button>
+          </form>
+          <div class="text-center mt-4">
+            <p class="mb-0 small">¿No tienes cuenta? <a href="#" class="text-primary text-decoration-none">Regístrate</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
