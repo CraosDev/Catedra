@@ -15,72 +15,38 @@
   <!-- Estilos personalizados -->
   <style>
     :root {
-  --bs-primary: #1F3B5A;
+      --bs-primary: #1F3B5A;
   --bs-primary-rgb: 31,59,90;
   --bs-secondary: #3CAEA3;
   --bs-secondary-rgb: 60,174,163;
   --bs-body-bg: #F8F9FA;
   --bs-body-color: #343A40;
-}
+    }
+    body {
+      background: var(--bs-body-bg);
+      color: var(--bs-body-color);
+      font-family: 'Montserrat', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 { font-weight: 600; margin-bottom: .5rem; }
+    p, small { margin-bottom: 1rem; }
+    .hover-scale {
+      transition: transform .2s, box-shadow .2s;
+    }
+    .hover-scale:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+    }
+    .card-hover img {
+      height: 330px;       /* Ajusta este valor al alto que desees */
+  width: 100%;         /* Que siempre ocupe todo el ancho de la card */
+  object-fit: cover; 
+      transition: transform .5s;
 
-body {
-  background-color: var(--bs-body-bg);
-  color: var(--bs-body-color);
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.6;
-  letter-spacing: 0.1px;
-}
-
-a.text-secondary:hover {
-  color: var(--bs-primary) !important;
-}
-
-.hover-scale {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.hover-scale:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 1.2rem 2rem rgba(0, 0, 0, 0.1);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-  letter-spacing: -0.3px;
-  line-height: 1.2;
-  margin-bottom: 0.6em;
-}
-
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.6rem; }
-h4 { font-size: 1.3rem; }
-h5 { font-size: 1.1rem; }
-h6 { font-size: 1rem; }
-
-p, small {
-  letter-spacing: 0.1px;
-  font-weight: 200;
-  margin-bottom: 1rem;
-}
-
-.btn-custom {
-  font-weight: 500;
-  font-size: 0.95rem;
-  letter-spacing: 0.3px;
-  transition: background-color 0.3s, transform 0.2s;
-  border-radius: 0.5rem;
-}
-.btn-custom:hover {
-  transform: translateY(-2px);
-}
-
-footer {
-  font-size: 0.9rem;
-}
-
+    }
+    .card-hover:hover img { transform: scale(1.05); }
   </style>
+</head>
+<body>
 </head>
 <body 
   data-bs-spy="scroll" 
@@ -138,12 +104,13 @@ footer {
 <section>
      <!-- Cards de libros -->
   <div class="container py-5">
-    <div class="row row-cols-2 row-cols-md-5 g-5">
+    <div class="row row-cols-2 row-cols-md-5 g-3">
       
       <!-- Card 1 -->
       <div class="col">
-        <div class="card h-100 border-0 rounded-4 shadow-sm hover-scale">
+        <div class="card h-100 border-0 rounded-4 shadow-sm hover-scale card-hover">
           <img src="img/libros/libro1.jpg" class="card-img-top rounded-top-4 card-img-libro" alt="Libro 1">
+          <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
           <div class="card-body">
             <h5 class="card-title fw-bold">Título del Libro 1</h5>
             <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
@@ -157,8 +124,9 @@ footer {
   
       <!-- Card 2 -->
       <div class="col">
-        <div class="card h-100 border-0 rounded-4 shadow-sm hover-scale">
+        <div class="card h-100 border-0 rounded-4 shadow-sm hover-scale card-hover">
           <img src="img/libros/libro2.jpg" class="card-img-top rounded-top-4 card-img-libro" alt="Libro 1">
+          <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
           <div class="card-body">
             <h5 class="card-title fw-bold">Título del Libro 1</h5>
             <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
@@ -172,8 +140,9 @@ footer {
   
       <!-- Card 3 -->
       <div class="col">
-        <div class="card h-100 border-0 rounded-4 shadow-sm hover-scale">
+        <div class="card h-100 border-0 rounded-4 shadow-sm hover-scale card-hover">
           <img src="img/libros/libro3.jpg" class="card-img-top rounded-top-4 card-img-libro" alt="Libro 1">
+          <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
           <div class="card-body">
             <h5 class="card-title fw-bold">Título del Libro 1</h5>
             <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
@@ -187,8 +156,25 @@ footer {
   
       <!-- Card 4 -->
       <div class="col">
-        <div class="card h-100 border-0 rounded-4 shadow-sm hover-scale">
+        <div class="card h-100 border-0 rounded-4 shadow-sm hover-scale card-hover">
           <img src="img/libros/libro4.jpg" class="card-img-top rounded-top-4 card-img-libro" alt="Libro 1">
+          <span class="badge bg-secondary position-absolute top-0 start-0 m-3" href="#">Aventura</span>
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Título del Libro 1</h5>
+            <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
+          </div>
+          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+            <span class="precio-libro">$15.99</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col">
+        <div class="card h-100 border-0 rounded-4 shadow-sm hover-scale card-hover">
+          <img src="img/libros/libro2.jpg" class="card-img-top rounded-top-4 card-img-libro" alt="Libro 1">
+          <span class="badge bg-secondary position-absolute top-0 start-0 m-3" href="#">Aventura</span>
           <div class="card-body">
             <h5 class="card-title fw-bold">Título del Libro 1</h5>
             <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
