@@ -8,143 +8,125 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <style>
     /* Efecto lomo de libro mejorado */
-   :root {
-      --bs-primary: #1F3B5A;
-      --bs-primary-rgb: 31,59,90;
-      --bs-secondary: #3CAEA3;
-      --bs-secondary-rgb: 60,174,163;
-      --bs-body-bg: #F8F9FA;
-      --bs-body-color: #343A40;
+:root {
+  --bs-primary: #1F3B5A;
+  --bs-primary-rgb: 31,59,90;
+  --bs-secondary: #3CAEA3;
+  --bs-secondary-rgb: 60,174,163;
+  --bs-body-bg: #F8F9FA;
+  --bs-body-color: #343A40;
 
-      --book-width: 400px;
-      --book-height: 600px;
-      --book-perspective: 1500px;
-      --book-radius: 6px;
-      --cover-translateZ: 20px;
-      --pages-translateZ: -1px;
-      --hover-rotate: -30deg;
-    }
-     body {
-      background-color: var(--bs-body-bg);
-      color: var(--bs-body-color);
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1rem;
-      font-weight: 400;
-      line-height: 1.6;
-      letter-spacing: 0.1px;
-    }
-    
-    a.text-secondary:hover {
-      color: var(--bs-primary) !important;
-    }
-    
-    h1, h2, h3, h4, h5, h6 {
-      font-weight: 600;
-      letter-spacing: -0.3px;
-      line-height: 1.2;
-      margin-bottom: 0.6em;
-    }
-    h1 { font-size: 2.5rem; }
-    h2 { font-size: 2rem; }
-    h3 { font-size: 1.6rem; }
-    h4 { font-size: 1.3rem; }
-    h5 { font-size: 1.1rem; }
-    h6 { font-size: 1rem; }
-    
-    p, small {
-      font-weight: 200;
-      letter-spacing: 0.1px;
-      margin-bottom: 1rem;
-    }
-    .book {
-      width: var(--book-width);
-      height: var(--book-height);
-      perspective: var(--book-perspective);
-    }
+  --book-radius: 6px;
+  --cover-translateZ: 20px;
+  --pages-translateZ: -1px;
+  --hover-rotate: -30deg;
+}
 
-    .cover {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      transform-style: preserve-3d;
-      transform-origin: right center;
-      transition: transform 0.5s ease;
-    }
+body {
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  font-family: 'Montserrat', sans-serif;
+}
 
-    .book:hover .cover {
-      transform: rotateY(var(--hover-rotate));
-    }
+.book {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 2 / 3; /* Mantiene proporción 400x600 */
+  perspective: 1500px;
+  margin: auto;
+}
 
-    .cover > div {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border-radius: var(--book-radius);
-    }
+.cover {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transform-origin: right center;
+  transition: transform 0.5s ease;
+}
 
-    .front {
-      transform: translateZ(var(--cover-translateZ));
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-      overflow: hidden;
-    }
+.book:hover .cover {
+  transform: rotateY(var(--hover-rotate));
+}
 
-    .front img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+.cover > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--book-radius);
+}
 
-    .cover::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: #cecdcd;
-      transform: translateZ(var(--pages-translateZ));
-      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-      border-radius: var(--book-radius);
-    }
-        .hover-scale {
-      transition: transform .2s, box-shadow .2s;
-    }
-    .hover-scale:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
-    }
-    .card-hover img {
-      height: 330px;       /* Ajusta este valor al alto que desees */
-  width: 100%;         /* Que siempre ocupe todo el ancho de la card */
-  object-fit: cover; 
-      transition: transform .5s;
+.front {
+  transform: translateZ(var(--cover-translateZ));
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
 
-    }
-    .card-hover:hover img { transform: scale(1.05); }
+.front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
-        .book-cover {
-      position: relative;
-      width: 200px; /* ajusta según la imagen real */
-      height: 300px;
-    }
+.cover::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #cecdcd;
+  transform: translateZ(var(--pages-translateZ));
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  border-radius: var(--book-radius);
+}
 
-    .book-cover img {
-      width: 100%;
-      height: 100%;
-      display: block;
-    }
+.hover-scale {
+  transition: transform .2s, box-shadow .2s;
+}
+.hover-scale:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+}
 
-    .book-cover::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 15px; /* grosor del borde de la portada */
-      height: 100%;
-      background: linear-gradient(to right, #505050d2, transparent);
-      box-shadow: 2px 0 5px rgba(10, 10, 10, 0.3);
-      border-right: 1px solid rgba(107, 107, 107, 0.342);
-      z-index: 1;
-    }
-    
+.card-hover img {
+  width: 100%;
+  height: auto;
+  max-height: 330px;
+  object-fit: cover;
+  transition: transform .5s;
+}
+.card-hover:hover img {
+  transform: scale(1.05);
+}
+
+.book-cover {
+  position: relative;
+  width: 100%;
+  max-width: 200px;
+  aspect-ratio: 2 / 3;
+  margin: auto;
+}
+
+.book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.book-cover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 100%;
+  background: linear-gradient(to right, #505050d2, transparent);
+  box-shadow: 2px 0 5px rgba(10, 10, 10, 0.3);
+  border-right: 1px solid rgba(107, 107, 107, 0.342);
+  z-index: 1;
+}
+
   </style>
 </head>
 <body class="bg-light">
