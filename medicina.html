@@ -79,6 +79,30 @@
       font-size: 0.9rem;
     }
     
+          .book-cover {
+      position: relative;
+      width: 200px; /* ajusta según la imagen real */
+      height: 300px;
+    }
+
+    .book-cover img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .book-cover::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 15px; /* grosor del borde de la portada */
+      height: 100%;
+      background: linear-gradient(to right, #505050d2, transparent);
+      box-shadow: 2px 0 5px rgba(10, 10, 10, 0.3);
+      border-right: 1px solid rgba(107, 107, 107, 0.342);
+      z-index: 1;
+    }
     /* Categorías */
     .categoria-card {
       height: 100px;
@@ -226,8 +250,10 @@
           
           <!-- Card 1 -->
           <div class="col">
-            <div class="card h-100 border-0 rounded-4 shadow-sm hover-scale card-hover">
-              <img src="img/libros/libro1.jpg" class="card-img-top rounded-top-4 card-img-libro" alt="Libro 1">
+            <div class="card h-100 border-0 shadow-sm hover-scale  ">
+              <div class="book-cover">
+                <img src="img/libros/libro1.jpg" class="card-img-top  card-img-libro " alt="Libro 1">
+              </div>
               <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
               <div class="card-body">
                 <h5 class="card-title fw-bold">Título del Libro 1</h5>
@@ -241,9 +267,13 @@
           </div>
       
           <!-- Card 2 -->
+          
           <div class="col">
-            <div class="card h-100 border-0 rounded-4 shadow-sm hover-scale card-hover">
-              <img src="img/libros/libro2.jpg" class="card-img-top rounded-top-4 card-img-libro" alt="Libro 1">
+          <a href="libroMedicina.html">
+            <div class="card h-100 border-0 shadow-sm hover-scale  ">
+              <div class="book-cover">
+                <img src="img/libros/libro2.jpg" class="card-img-top  card-img-libro " alt="Libro 1">
+              </div>
               <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
               <div class="card-body">
                 <h5 class="card-title fw-bold">Título del Libro 1</h5>
@@ -254,12 +284,15 @@
                 <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
               </div>
             </div>
+          </a>
           </div>
       
           <!-- Card 3 -->
           <div class="col">
-            <div class="card h-100 border-0 rounded-4 shadow-sm hover-scale card-hover">
-              <img src="img/libros/libro3.jpg" class="card-img-top rounded-top-4 card-img-libro" alt="Libro 1">
+            <div class="card h-100 border-0 shadow-sm hover-scale  ">
+              <div class="book-cover">
+                <img src="img/libros/libro3.jpg" class="card-img-top  card-img-libro " alt="Libro 1">
+              </div>
               <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
               <div class="card-body">
                 <h5 class="card-title fw-bold">Título del Libro 1</h5>
@@ -271,12 +304,15 @@
               </div>
             </div>
           </div>
+         
       
           <!-- Card 4 -->
           <div class="col">
-            <div class="card h-100 border-0 rounded-4 shadow-sm hover-scale card-hover">
-              <img src="img/libros/libro4.jpg" class="card-img-top rounded-top-4 card-img-libro" alt="Libro 1">
-              <span class="badge bg-secondary position-absolute top-0 start-0 m-3" href="#">Aventura</span>
+            <div class="card h-100 border-0 shadow-sm hover-scale  ">
+              <div class="book-cover">
+                <img src="img/libros/libro4.jpg" class="card-img-top  card-img-libro " alt="Libro 1">
+              </div>
+              <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
               <div class="card-body">
                 <h5 class="card-title fw-bold">Título del Libro 1</h5>
                 <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
@@ -290,9 +326,11 @@
     
           <!-- Card 5 -->
           <div class="col">
-            <div class="card h-100 border-0 rounded-4 shadow-sm hover-scale card-hover">
-              <img src="img/libros/libro2.jpg" class="card-img-top rounded-top-4 card-img-libro" alt="Libro 1">
-              <span class="badge bg-secondary position-absolute top-0 start-0 m-3" href="#">Aventura</span>
+            <div class="card h-100 border-0 shadow-sm hover-scale  ">
+              <div class="book-cover">
+                <img src="img/libros/libro2.jpg" class="card-img-top  card-img-libro " alt="Libro 1">
+              </div>
+              <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
               <div class="card-body">
                 <h5 class="card-title fw-bold">Título del Libro 1</h5>
                 <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>

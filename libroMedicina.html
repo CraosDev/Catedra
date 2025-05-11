@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La Araña Negra - Tienda Online</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    /* Efecto lomo de libro mejorado */
+   :root {
+      --bs-primary: #1F3B5A;
+      --bs-primary-rgb: 31,59,90;
+      --bs-secondary: #3CAEA3;
+      --bs-secondary-rgb: 60,174,163;
+      --bs-body-bg: #F8F9FA;
+      --bs-body-color: #343A40;
+
+      --book-width: 400px;
+      --book-height: 600px;
+      --book-perspective: 1500px;
+      --book-radius: 6px;
+      --cover-translateZ: 20px;
+      --pages-translateZ: -1px;
+      --hover-rotate: -30deg;
+    }
+     body {
+      background-color: var(--bs-body-bg);
+      color: var(--bs-body-color);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.6;
+      letter-spacing: 0.1px;
+    }
+    
+    a.text-secondary:hover {
+      color: var(--bs-primary) !important;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 600;
+      letter-spacing: -0.3px;
+      line-height: 1.2;
+      margin-bottom: 0.6em;
+    }
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.6rem; }
+    h4 { font-size: 1.3rem; }
+    h5 { font-size: 1.1rem; }
+    h6 { font-size: 1rem; }
+    
+    p, small {
+      font-weight: 200;
+      letter-spacing: 0.1px;
+      margin-bottom: 1rem;
+    }
+    .book {
+      width: var(--book-width);
+      height: var(--book-height);
+      perspective: var(--book-perspective);
+    }
+
+    .cover {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transform-origin: right center;
+      transition: transform 0.5s ease;
+    }
+
+    .book:hover .cover {
+      transform: rotateY(var(--hover-rotate));
+    }
+
+    .cover > div {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: var(--book-radius);
+    }
+
+    .front {
+      transform: translateZ(var(--cover-translateZ));
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+    }
+
+    .front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .cover::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #cecdcd;
+      transform: translateZ(var(--pages-translateZ));
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+      border-radius: var(--book-radius);
+    }
+        .hover-scale {
+      transition: transform .2s, box-shadow .2s;
+    }
+    .hover-scale:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+    }
+    .card-hover img {
+      height: 330px;       /* Ajusta este valor al alto que desees */
+  width: 100%;         /* Que siempre ocupe todo el ancho de la card */
+  object-fit: cover; 
+      transition: transform .5s;
+
+    }
+    .card-hover:hover img { transform: scale(1.05); }
+
+        .book-cover {
+      position: relative;
+      width: 200px; /* ajusta según la imagen real */
+      height: 300px;
+    }
+
+    .book-cover img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .book-cover::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 15px; /* grosor del borde de la portada */
+      height: 100%;
+      background: linear-gradient(to right, #505050d2, transparent);
+      box-shadow: 2px 0 5px rgba(10, 10, 10, 0.3);
+      border-right: 1px solid rgba(107, 107, 107, 0.342);
+      z-index: 1;
+    }
+    
+  </style>
+</head>
+<body class="bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="img/logo.png" alt="Logo" width="140" class="me-2" />
+    </a>
+    <button class="navbar-toggler border-0" type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNav"
+      aria-controls="mainNav"
+      aria-expanded="false"
+      aria-label="Abrir menú">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <!-- Barra de búsqueda -->
+      <form class="d-flex ms-auto me-3 align-items-center" role="search">
+        <div class="input-group">
+          <input class="form-control rounded-pill ps-3" type="search" placeholder="Buscar..." aria-label="Buscar">
+          <a class="btn btn-light rounded-pill mx-1" type="submit" style="z-index:1;" href="buscar.html">
+            <i class="bi bi-search"></i>
+          </a>
+        </div>
+
+        <!-- Botón de sesión SOLO visible en pantallas pequeñas (junto a la búsqueda) -->
+        <button class="btn btn-light rounded-pill mx-1 d-lg-none" type="button"  data-bs-toggle="modal" data-bs-target="#loginModal">
+          <i class="bi bi-person-fill"></i>
+        </button>
+      </form>
+
+      <!-- Enlaces de navegación -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+  
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="medicina.html">Inicio</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Ofertas</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Categorías
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Anatomía</a></li>
+            <li><a class="dropdown-item" href="#">Farmacología</a></li>
+            <li><a class="dropdown-item" href="#">Cirugía</a></li>
+            <li><a class="dropdown-item" href="#">Pediatría</a></li>
+            <li><a class="dropdown-item" href="#">Ginecología</a></li>
+            <li><a class="dropdown-item" href="#">Medicina Interna</a></li>
+            <li><a class="dropdown-item" href="#">Emergencias</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#contacto">Contacto</a>
+        </li>
+
+      </ul>
+
+      <!-- Botón de sesión SOLO visible en pantallas grandes (al final) -->
+      <button class="btn btn-light rounded-pill mx-1 d-none d-lg-inline" type="button"  data-bs-toggle="modal" data-bs-target="#loginModal">
+        <i class="bi bi-person-fill"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+<div class="container py-5">
+  <div class="row g-4 align-items-start">
+    <!-- Columna imagen -->
+    <div class="book">
+        <div class="cover">
+            <div class="front">
+            <img src="img/libros/libro2.jpg" alt="Portada del libro" loading="lazy">
+            </div>
+        </div>
+    </div>
+
+    <!-- Columna información -->
+    <div class="col-12 col-md-7">
+      <div class="ps-md-4">
+        <h1 class="display-4 fw-bold mb-2">La Araña Negra</h1>
+        <p class="lead text-muted mb-3">Vicente Blasco Ibáñez</p>
+        <div class="mb-3">
+          <span class="badge bg-dark fs-6 me-2">Clásico</span>
+          <span class="badge bg-secondary fs-6">Edición 3ª - 2024</span>
+        </div>
+
+        <p class="fs-6 text-secondary mb-4">
+          "La Araña Negra" explora los conflictos sociales y religiosos de la España del siglo XIX. Su narrativa apasionada y crítica al poder la convierten en una obra imprescindible.
+        </p>
+
+        <div class="row row-cols-1 row-cols-sm-2 g-3 mb-5">
+          <div class="col">
+            <dl class="row mb-0">
+              <dt class="col-5 text-uppercase text-muted">Editorial</dt>
+              <dd class="col-7">Biblioteca Digital</dd>
+              <dt class="col-5 text-uppercase text-muted">Año</dt>
+              <dd class="col-7">1892</dd>
+            </dl>
+          </div>
+          <div class="col">
+            <dl class="row mb-0">
+              <dt class="col-5 text-uppercase text-muted">Idioma</dt>
+              <dd class="col-7">Español</dd>
+              <dt class="col-5 text-uppercase text-muted">Páginas</dt>
+              <dd class="col-7">540</dd>
+            </dl>
+          </div>
+          <div class="col">
+            <dl class="row mb-0">
+              <dt class="col-5 text-uppercase text-muted">Edición</dt>
+              <dd class="col-7">3ª – Marzo 2024</dd>
+              <dt class="col-5 text-uppercase text-muted">ISBN</dt>
+              <dd class="col-7">978-84-123456-7-8</dd>
+            </dl>
+          </div>
+          <div class="col">
+            <dl class="row mb-0">
+              <dt class="col-5 text-uppercase text-muted">Formato</dt>
+              <dd class="col-7">Tapa blanda</dd>
+              <dt class="col-5 text-uppercase text-muted">Dimensiones</dt>
+              <dd class="col-7">14 x 21 cm</dd>
+            </dl>
+          </div>
+        </div>
+
+        <!-- Dentro de la sección de precio, reemplazar el botón existente por: -->
+<div class="bg-white rounded-4 p-4 shadow-sm">
+  <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between mb-3">
+    <div>
+      <h2 class="text-danger mb-0">$4.99 <small class="text-muted fs-6 ms-2"><del>$9.99</del></small></h2>
+      <div class="mt-1">
+        <span class="badge bg-success bg-opacity-10 text-success fs-6">
+          <i class="bi bi-check2-circle me-1"></i> Disponible
+        </span>
+      </div>
+    </div>
+    <span class="badge bg-success fs-6 text-uppercase mt-2 mt-sm-0">50% OFF</span>
+  </div>
+
+  <!-- Selector de cantidad -->
+  <div class="input-group mb-3" style="max-width: 200px;">
+    <button class="btn btn-outline-secondary" type="button" id="decrement">
+      <i class="bi bi-dash-lg"></i>
+    </button>
+    <input type="number" class="form-control text-center" value="1" min="1" max="15">
+    <button class="btn btn-outline-secondary" type="button" id="increment">
+      <i class="bi bi-plus-lg"></i>
+    </button>
+  </div>
+
+  <!-- Botones de acción -->
+  <div class="row g-2 mb-3">
+    <div class="col-12 col-sm-6">
+      <button class="btn btn-danger btn-lg w-100">
+        <i class="bi bi-lightning-charge me-2"></i> Comprar ahora
+      </button>
+    </div>
+    <div class="col-12 col-sm-6">
+      <button class="btn btn-primary btn-lg w-100">
+        <i class="bi bi-cart-plus me-2"></i> Añadir al carrito
+      </button>
+    </div>
+  </div>
+
+  <!-- Formatos y seguridad -->
+  <div class="d-flex justify-content-around flex-wrap gap-2 mb-3">
+    <span class="badge bg-info bg-opacity-10 text-info fs-6">PDF disponible</span>
+    <span class="badge bg-info bg-opacity-10 text-info fs-6">ePub incluido</span>
+  </div>
+
+</div>
+      </div>
+    </div>
+  </div>
+<section>
+  <!-- Recomendaciones de libros -->
+  <div class="container py-5">
+    <h3>Libros que quizá te interesen</h3>
+    <div class="row row-cols-2 row-cols-md-5 g-3">
+      
+      <!-- Card 1 -->
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm hover-scale">
+          <div class="book-cover">
+            <img src="img/libros/libro1.jpg" class="card-img-top card-img-libro" alt="Portada de La Odisea de los Mares">
+          </div>
+          <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
+          <div class="card-body">
+            <h5 class="card-title fw-bold">La Odisea de los Mares</h5>
+            <small class="card-text text-secondary">
+              Una travesía épica por océanos desconocidos, perfecta para los amantes de la acción y el suspenso.
+            </small>
+          </div>
+          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+            <span class="precio-libro">$15.99</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 2 -->
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm hover-scale">
+          <div class="book-cover">
+            <img src="img/libros/libro3.jpg" class="card-img-top card-img-libro" alt="Portada de El Murmullo de las Sombras">
+          </div>
+          <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Misterio</a>
+          <div class="card-body">
+            <h5 class="card-title fw-bold">El Murmullo de las Sombras</h5>
+            <small class="card-text text-secondary">
+              Un relato intrigante donde cada pista revela más secretos de una ciudad en penumbra.
+            </small>
+          </div>
+          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+            <span class="precio-libro">$12.50</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 3 -->
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm hover-scale">
+          <div class="book-cover">
+            <img src="img/libros/libro4.jpg" class="card-img-top card-img-libro" alt="Portada de Ecos del Pasado">
+          </div>
+          <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Ficción histórica</a>
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Ecos del Pasado</h5>
+            <small class="card-text text-secondary">
+              Una inmersión en los grandes eventos que moldearon nuestra historia.
+            </small>
+          </div>
+          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+            <span class="precio-libro">$18.20</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 4 -->
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm hover-scale">
+          <div class="book-cover">
+            <img src="img/libros/libro3.jpg" class="card-img-top card-img-libro" alt="Portada de Horizonte de Hierro">
+          </div>
+          <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Ciencia ficción</a>
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Horizonte de Hierro</h5>
+            <small class="card-text text-secondary">
+              Aventuras interestelares y tecnología futurista en un universo implacable.
+            </small>
+          </div>
+          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+            <span class="precio-libro">$14.75</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm hover-scale">
+          <div class="book-cover">
+            <img src="img/libros/libro2.jpg" class="card-img-top card-img-libro" alt="Portada de Corazones en Guerra">
+          </div>
+          <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Romance</a>
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Corazones en Guerra</h5>
+            <small class="card-text text-secondary">
+              Una apasionante historia de amor y sacrificio en tiempos convulsos.
+            </small>
+          </div>
+          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+            <span class="precio-libro">$13.99</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+</section>
+
+
+</div>
+
+  <!-- Pie de página -->
+  <footer class="bg-primary text-light pt-5 mt-5">
+    <div class="container">
+      <div class="row gy-4">
+        <!-- Sobre nosotros -->
+        <div class="col-md-4">
+          <h5 class="fw-bold mb-3">Cátedra del Saber</h5>
+          <p>Fomentando la pasión por la lectura especializada desde 1995.</p>
+          <div class="d-flex gap-3 fs-4">
+            <a href="#" class="text-light"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-light"><i class="bi bi-twitter"></i></a>
+          </div>
+        </div>
+        <!-- Enlaces rápidos -->
+        <div class="col-md-4">
+          <h6 class="text-uppercase fw-semibold mb-3">Enlaces rápidos</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-light text-decoration-none py-1 d-block">Inicio</a></li>
+            <li><a href="#secciones" class="text-light text-decoration-none py-1 d-block">Secciones</a></li>
+            <li><a href="#nosotros" class="text-light text-decoration-none py-1 d-block">Nosotros</a></li>
+            <li><a href="#contacto" class="text-light text-decoration-none py-1 d-block">Contacto</a></li>
+          </ul>
+        </div>
+        <!-- Newsletter -->
+        <div class="col-md-4">
+          <h6 class="text-uppercase fw-semibold mb-3">Suscríbete</h6>
+          <p class="small mb-3">Recibe novedades y promociones directamente en tu correo.</p>
+          <form class="d-flex" onsubmit="event.preventDefault(); alert('Suscripción enviada!')">
+            <input type="email" class="form-control me-2" placeholder="Tu correo" required>
+            <button class="btn btn-secondary btn-sm btn-custom px-3" type="submit">Suscribir</button>
+          </form>
+        </div>
+      </div>
+      <hr class="border-secondary my-4" />
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small">
+        <p class="mb-2 mb-md-0">&copy; 2025 Cátedra del Saber. Todos los derechos reservados.</p>
+        <a href="#inicio" class="btn btn-outline-light btn-sm"><i class="bi bi-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
