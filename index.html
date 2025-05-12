@@ -15,71 +15,175 @@
   <!-- Estilos personalizados -->
   <style>
     :root {
-  --bs-primary: #1F3B5A;
-  --bs-primary-rgb: 31,59,90;
-  --bs-secondary: #3CAEA3;
-  --bs-secondary-rgb: 60,174,163;
-  --bs-body-bg: #F8F9FA;
-  --bs-body-color: #343A40;
-}
+      --bs-primary: #1F3B5A;
+      --bs-primary-rgb: 31, 59, 90;
+      --bs-secondary: #3CAEA3;
+      --bs-secondary-rgb: 60, 174, 163;
+      --bs-body-bg: #F8F9FA;
+      --bs-body-color: #343A40;
+    }
 
-body {
-  background-color: var(--bs-body-bg);
-  color: var(--bs-body-color);
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.6;
-  letter-spacing: 0.1px;
-}
+    body {
+      background-color: var(--bs-body-bg);
+      color: var(--bs-body-color);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.6;
+      letter-spacing: 0.1px;
+    }
 
-a.text-secondary:hover {
-  color: var(--bs-primary) !important;
-}
+    a.text-secondary:hover {
+      color: var(--bs-primary) !important;
+    }
 
-.hover-scale {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    .hover-scale {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hover-scale:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 1.2rem 2rem rgba(0, 0, 0, 0.1);
+    }
+    .hover-scale {
+  transition: transform .2s, box-shadow .2s;
 }
 .hover-scale:hover {
   transform: translateY(-6px);
-  box-shadow: 0 1.2rem 2rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-  letter-spacing: -0.3px;
-  line-height: 1.2;
-  margin-bottom: 0.6em;
+.card-hover img {
+  width: 100%;
+  aspect-ratio: 3 / 4; /* En lugar de altura fija */
+  object-fit: cover;
+  transition: transform .5s;
+  display: block;
+}
+.card-hover:hover img {
+  transform: scale(1.05);
+}
+/* RESPONSIVE book cover */
+.book-cover {
+  position: relative;
+  width: 100%;
+  max-width: 200px;
+  aspect-ratio: 2 / 3; /* En lugar de height fija */
+  margin: auto;
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.6rem; }
-h4 { font-size: 1.3rem; }
-h5 { font-size: 1.1rem; }
-h6 { font-size: 1rem; }
-
-p, small {
-  letter-spacing: 0.1px;
-  font-weight: 400;
-  margin-bottom: 1rem;
+.book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-.btn-custom {
-  font-weight: 500;
-  font-size: 0.95rem;
-  letter-spacing: 0.3px;
-  transition: background-color 0.3s, transform 0.2s;
-  border-radius: 0.5rem;
-}
-.btn-custom:hover {
-  transform: translateY(-2px);
-}
-
-footer {
-  font-size: 0.9rem;
+.book-cover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 100%;
+  background: linear-gradient(to right, #505050d2, transparent);
+  box-shadow: 2px 0 5px rgba(10, 10, 10, 0.3);
+  border-right: 1px solid rgba(107, 107, 107, 0.342);
+  z-index: 1;
 }
 
+/* MEDIA QUERIES para responsividad adicional */
+@media (max-width: 768px) {
+  .book-cover {
+    max-width: 150px;
+  }
+  .card-hover img {
+    aspect-ratio: 2.5 / 3;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-cover {
+    max-width: 120px;
+  }
+  
+  .card-hover img {
+    aspect-ratio: 2 / 3;
+  }
+}
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 600;
+      letter-spacing: -0.3px;
+      line-height: 1.2;
+      margin-bottom: 0.6em;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    h3 {
+      font-size: 1.6rem;
+    }
+
+    h4 {
+      font-size: 1.3rem;
+    }
+
+    h5 {
+      font-size: 1.1rem;
+    }
+
+    h6 {
+      font-size: 1rem;
+    }
+
+    p, small {
+      letter-spacing: 0.1px;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+
+    .btn-custom {
+      font-weight: 500;
+      font-size: 0.95rem;
+      letter-spacing: 0.3px;
+      transition: background-color 0.3s, transform 0.2s;
+      border-radius: 0.5rem;
+    }
+
+    .btn-custom:hover {
+      transform: translateY(-2px);
+    }
+
+    footer {
+      font-size: 0.9rem;
+    }
+
+    .navbar-nav .nav-link {
+      transition: all 0.2s ease;
+    }
+
+    .navbar-nav .nav-link:hover {
+      transform: translateY(-2px);
+    }
+
+    .hover-lift:hover {
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        background: var(--bs-primary);
+        padding: 1rem;
+        margin-top: 0.5rem;
+        border-radius: 0.5rem;
+      }
+    }
   </style>
 </head>
 <body 
@@ -91,135 +195,496 @@ footer {
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
   <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="#">
-      <img src="img/logo.png" alt="Logo" width="140" class="me-2" />
+    <a class="navbar-brand" href="#">
+      <img src="img/logo.png" alt="Logo" width="140">
     </a>
-    <button class="navbar-toggler border-0" type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#mainNav"
-      aria-controls="mainNav"
-      aria-expanded="false"
-      aria-label="Abrir menú">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="mainNav">
-      <!-- Barra de búsqueda -->
-      <form class="d-flex ms-auto me-3 align-items-center" role="search">
+    <div class="d-flex align-items-center order-lg-3 ms-auto">
+      <form class="d-flex me-2">
         <div class="input-group">
-          <input class="form-control rounded-pill ps-3" type="search" placeholder="Buscar..." aria-label="Buscar">
-          <a class="btn btn-light rounded-pill mx-1" type="submit" style="z-index:1;" href="buscar.html">
+          <input class="form-control rounded-pill pe-5" type="search" placeholder="Buscar...">
+          <button class="btn btn-light rounded-pill position-absolute end-0 hover-lift" type="submit" style="z-index: 2;">
             <i class="bi bi-search"></i>
-          </a>
+          </button>
         </div>
-
-        <!-- Botón de sesión SOLO visible en pantallas pequeñas (junto a la búsqueda) -->
-        <button class="btn btn-light rounded-pill mx-1 d-lg-none" type="button"  data-bs-toggle="modal" data-bs-target="#loginModal">
-          <i class="bi bi-person-fill"></i>
-        </button>
       </form>
 
-      <!-- Enlaces de navegación -->
-      <ul class="navbar-nav text-uppercase">
-        <li class="nav-item"><a class="nav-link px-3 active" href="#inicio">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link px-3" href="#secciones">Secciones</a></li>
-        <li class="nav-item"><a class="nav-link px-3" href="#nosotros">Nosotros</a></li>
-        <li class="nav-item"><a class="nav-link px-3" href="#contacto">Contacto</a></li>
-      </ul>
-
-      <!-- Botón de sesión SOLO visible en pantallas grandes (al final) -->
-      <button class="btn btn-light rounded-pill mx-1 d-none d-lg-inline" type="button"  data-bs-toggle="modal" data-bs-target="#loginModal">
+      <button class="btn btn-light rounded-pill hover-lift d-lg-none" 
+              type="button" 
+              data-bs-toggle="modal" 
+              data-bs-target="#loginModal">
         <i class="bi bi-person-fill"></i>
       </button>
     </div>
+
+    <button class="navbar-toggler border-0" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse order-lg-2" id="mainNav">
+      <ul class="navbar-nav text-uppercase">
+        <li class="nav-item">
+          <a class="nav-link active py-2 px-3 fw-medium" href="#inicio">Inicio</a>
+        </li>
+
+        <!-- Dropdown Medicina -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle py-2 px-3 fw-medium" 
+             href="#medicina" 
+             data-bs-toggle="dropdown"
+             onclick="window.location.href='#medicina';">
+            Medicina
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark mt-2 rounded-3 py-2">
+            <li><a class="dropdown-item px-4 py-2" href="#">Libros</a></li>
+            <li><a class="dropdown-item px-4 py-2" href="#">Cráneos 3D</a></li>
+            <li><a class="dropdown-item px-4 py-2" href="#">Esqueletos</a></li>
+          </ul>
+        </li>
+
+        <!-- Dropdown Infantil -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-medium px-3 py-2" 
+             href="#infantil" 
+             data-bs-toggle="dropdown" 
+             onclick="window.location.href='#infantil';">
+            Infantil
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark mt-2 rounded-3 py-2">
+            <li><a class="dropdown-item px-4 py-2" href="#">Libros</a></li>
+            <li><a class="dropdown-item px-4 py-2" href="#">Rompecabezas</a></li>
+            <li><a class="dropdown-item px-4 py-2" href="#">Pizarras</a></li>
+            <li><a class="dropdown-item px-4 py-2" href="#">Juegos</a></li>
+          </ul>
+        </li>
+
+        <!-- Resto del menú -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle py-2 px-3 fw-medium" 
+             href="#otros" 
+             data-bs-toggle="dropdown"
+             onclick="window.location.href='#otros';">
+            Otros
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark mt-2 rounded-3 py-2">
+            <li><a class="dropdown-item px-4 py-2" href="#">Gastronomía</a></li>
+            <li><a class="dropdown-item px-4 py-2" href="#">Diccionarios</a></li>
+            <li><a class="dropdown-item px-4 py-2" href="#">Otros</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link py-2 px-3 fw-medium" href="#nosotros">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link py-2 px-3 fw-medium" href="#contacto">Contacto</a>
+        </li>
+      </ul>
+    </div>
+
+    <button class="btn btn-light rounded-pill hover-lift d-none d-lg-inline-flex ms-2 order-lg-4" 
+            type="button" 
+            data-bs-toggle="modal" 
+            data-bs-target="#loginModal">
+      <i class="bi bi-person-fill"></i>
+    </button>
   </div>
 </nav>
+<!-- Hero / Portada -->
+<section id="inicio" class="position-relative d-flex align-items-center text-white" style="min-height:75vh; overflow: hidden;">
+  <!-- VIDEO DE FONDO -->
+  <video autoplay muted loop playsinline class="position-absolute w-100 h-100 object-fit-cover" style="top: 0; left: 0; z-index: 0;">
+    <source src="video/libreria.mp4" type="video/mp4">
+    Tu navegador no soporta video HTML5.
+  </video>
 
-  
+  <!-- CAPA OSCURA PARA MEJORAR LEGIBILIDAD -->
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.6); z-index: 1;"></div>
 
-  <!-- Hero / Portada -->
-  <section id="inicio" class="position-relative d-flex align-items-center text-white" style="min-height:75vh; overflow: hidden;">
-    <!-- VIDEO DE FONDO -->
-    <video autoplay muted loop playsinline class="position-absolute w-100 h-100 object-fit-cover" style="top: 0; left: 0; z-index: 0;">
-      <source src="video/libreria.mp4" type="video/mp4">
-      Tu navegador no soporta video HTML5.
-    </video>
-  
-    <!-- CAPA OSCURA PARA MEJORAR LEGIBILIDAD -->
-    <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.6); z-index: 1;"></div>
-  
-    <!-- CONTENIDO ENCIMA DEL VIDEO Y DEL FILTRO -->
-    <div class="container text-center py-5 px-3 position-relative" style="max-width: 900px; z-index: 2;">
-      <h1 class="display-3 fw-bold mb-4" style="text-shadow:0 0.5rem 1rem rgba(0,0,0,0.7); font-family:'Montserrat', sans-serif;">
-        Descubre el Placer de Leer
-      </h1>
-      <p class="fs-4 mb-4" style="text-shadow:0 0.3rem 0.7rem rgba(0,0,0,0.1);">
-        Libros especializados en medicina y literatura infantil, solo en Cátedra del Saber.
-      </p>
-      <div class="d-flex justify-content-center gap-3 flex-wrap">
-        <a href="#secciones" class="btn btn-lg btn-secondary btn-custom px-4 py-3">Ver Secciones</a>
-        <a href="#contacto" class="btn btn-outline-light btn-lg btn-custom px-4 py-3">Visítanos</a>
-      </div>
-      <div class="mt-5">
-        <a href="#secciones" class="text-white fs-2"><i class="bi bi-chevron-down"></i></a>
-      </div>
+  <!-- CONTENIDO ENCIMA DEL VIDEO Y DEL FILTRO -->
+  <div class="container text-center py-5 px-3 position-relative" style="max-width: 900px; z-index: 2;">
+    <h1 class="display-3 fw-bold mb-4" style="text-shadow:0 0.5rem 1rem rgba(0,0,0,0.7); font-family:'Montserrat', sans-serif;">
+      Descubre el Placer de Leer
+    </h1>
+    <p class="fs-4 mb-4" style="text-shadow:0 0.3rem 0.7rem rgba(0,0,0,0.1);">
+      Libros especializados en medicina y literatura infantil, solo en Cátedra del Saber.
+    </p>
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a href="#secciones" class="btn btn-lg btn-secondary btn-custom px-4 py-3">Ver Secciones</a>
+      <a href="#contacto" class="btn btn-outline-light btn-lg btn-custom px-4 py-3">Visítanos</a>
     </div>
-  </section>
+    <div class="mt-5">
+      <a href="#secciones" class="text-white fs-2"><i class="bi bi-chevron-down"></i></a>
+    </div>
+  </div>
+</section>
+<!-- Secciones / Medicina/Infantiles/otros -->
+<section id="secciones" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold display-5 text-primary mb-3">Nuestras Áreas de Especialización</h2>
+      <p class="lead text-secondary">Explora nuestras categorías diseñadas para todos los amantes de la lectura</p>
+    </div>
+    <div class="row g-4">
 
-  <section id="secciones" class="py-5 bg-light">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="fw-bold display-5 text-primary mb-3">Nuestras Áreas de Especialización</h2>
-        <p class="lead text-secondary">Explora nuestras categorías diseñadas para todos los amantes de la lectura</p>
+      <!-- Medicina -->
+      <div class="col-lg-12" id="medicina">
+        <div class="card border-0 shadow h-75 rounded-3 overflow-hidden position-relative hover-scale">
+          <!-- Video de fondo -->
+          <video autoplay muted loop playsinline class="w-100 h-100 position-absolute top-0 start-0 object-fit-cover" style="z-index: 0;">
+            <source src="video/medicina.mp4" type="video/mp4">
+            Tu navegador no soporta video HTML5.
+          </video>
+          <!-- Filtro oscuro -->
+          <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.7); z-index: 1;"></div>
+          <!-- Contenido -->
+          <div class="card-body position-relative text-center text-white d-flex flex-column justify-content-center align-items-center p-4" style="z-index: 2; min-height: 100px;">
+            <i class="bi bi-heart-pulse fs-1 mt-2"></i>
+            <h3 class="fw-semibold mb-3">Medicina</h3>
+            <p class="mb-2">Una selección completa de textos médicos y publicaciones especializadas para profesionales y estudiantes.</p>
+            <a href="medicina.html" class="btn btn-light btn-sm px-4 mb-3">Explorar</a>
+          </div>
+        </div>
       </div>
-      <div class="row g-4">
-  
-        <!-- Medicina -->
-        <div class="col-lg-6">
-          <div class="card border-0 shadow h-100 rounded-3 overflow-hidden position-relative hover-scale">
-            <!-- Video de fondo -->
-            <video autoplay muted loop playsinline class="w-100 h-100 position-absolute top-0 start-0 object-fit-cover" style="z-index: 0;">
-              <source src="video/medicina.mp4" type="video/mp4">
-              Tu navegador no soporta video HTML5.
-            </video>
-            <!-- Filtro oscuro -->
-            <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.7); z-index: 1;"></div>
-            <!-- Contenido -->
-            <div class="card-body position-relative text-center text-white d-flex flex-column justify-content-center align-items-center p-4"
-                 style="z-index: 2; min-height: 300px;">
-              <i class="bi bi-heart-pulse fs-1 mb-3"></i>
-              <h3 class="fw-semibold mb-3">Medicina</h3>
-              <p class="mb-4">Una selección completa de textos médicos y publicaciones especializadas para profesionales y estudiantes.</p>
-              <a href="medicina.html" class="btn btn-light btn-sm px-4 py-2">Explorar</a>
+
+      <section>
+        <!-- Cards de libros -->
+        <div class="container">
+          <div class="row row-cols-2 row-cols-md-5 g-3">
+
+            <!-- Card 1 -->
+            <div class="col">
+              <div class="card h-100 border-0 shadow-sm hover-scale">
+                <div class="book-cover">
+                  <img src="img/libros/libro1.jpg" class="card-img-top card-img-libro" alt="Libro 1">
+                </div>
+                <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Título del Libro 1</h5>
+                  <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
+                </div>
+                <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                  <span class="precio-libro">$15.99</span>
+                  <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col">
+              <div class="card h-100 border-0 shadow-sm hover-scale">
+                <div class="book-cover">
+                  <img src="img/libros/libro3.jpg" class="card-img-top card-img-libro" alt="Libro 1">
+                </div>
+                <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Título del Libro 1</h5>
+                  <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
+                </div>
+                <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                  <span class="precio-libro">$15.99</span>
+                  <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col">
+              <div class="card h-100 border-0 shadow-sm hover-scale">
+                <div class="book-cover">
+                  <img src="img/libros/libro4.jpg" class="card-img-top card-img-libro" alt="Libro 1">
+                </div>
+                <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Título del Libro 1</h5>
+                  <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
+                </div>
+                <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                  <span class="precio-libro">$15.99</span>
+                  <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col">
+              <div class="card h-100 border-0 shadow-sm hover-scale">
+                <div class="book-cover">
+                  <img src="img/libros/libro3.jpg" class="card-img-top card-img-libro" alt="Libro 1">
+                </div>
+                <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Título del Libro 1</h5>
+                  <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
+                </div>
+                <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                  <span class="precio-libro">$15.99</span>
+                  <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col">
+              <div class="card h-100 border-0 shadow-sm hover-scale">
+                <div class="book-cover">
+                  <img src="img/libros/libro2.jpg" class="card-img-top card-img-libro" alt="Libro 1">
+                </div>
+                <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Título del Libro 1</h5>
+                  <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
+                </div>
+                <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                  <span class="precio-libro">$15.99</span>
+                  <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-  
-        <!-- Literatura infantil -->
-        <div class="col-lg-6">
-          <div class="card border-0 shadow h-100 rounded-3 overflow-hidden position-relative hover-scale">
-            <!-- Video de fondo -->
-            <video autoplay muted loop playsinline class="w-100 h-100 position-absolute top-0 start-0 object-fit-cover" style="z-index: 0;">
-              <source src="video/infantiles.mp4" type="video/mp4">
-              Tu navegador no soporta video HTML5.
-            </video>
-            <!-- Filtro oscuro -->
-            <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.7); z-index: 1;"></div>
-            <!-- Contenido -->
-            <div class="card-body position-relative text-center text-white d-flex flex-column justify-content-center align-items-center p-4"
-                 style="z-index: 2; min-height: 300px;">
-              <i class="bi bi-book-half fs-1 mb-3"></i>
-              <h3 class="fw-semibold mb-3">Infantiles</h3>
-              <p class="mb-4">Un mundo mágico de cuentos y conocimientos para los pequeños lectores y sus familias.</p>
-              <a href="infantiles.html" class="btn btn-light btn-sm px-4 py-2">Explorar</a>
+      </section>
+
+      <!-- Literatura infantil -->
+      <div class="col-lg-12" id="infantil">
+        <div class="card border-0 shadow h-75 rounded-3 overflow-hidden position-relative hover-scale">
+          <!-- Video de fondo -->
+          <video autoplay muted loop playsinline class="w-100 h-100 position-absolute top-0 start-0 object-fit-cover" style="z-index: 0;">
+            <source src="video/infantiles.mp4" type="video/mp4">
+            Tu navegador no soporta video HTML5.
+          </video>
+          <!-- Filtro oscuro -->
+          <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.7); z-index: 1;"></div>
+          <!-- Contenido -->
+          <div class="card-body position-relative text-center text-white d-flex flex-column justify-content-center align-items-center p-4" style="z-index: 2; min-height: 100px;">
+            <i class="bi bi-easel fs-1 mt-2"></i>
+            <h3 class="fw-semibold mb-3">Infantiles</h3>
+            <p class="mb-2">Un mundo mágico de cuentos y conocimientos para los pequeños lectores y sus familias.</p>
+            <a href="infantiles.html" class="btn btn-light btn-sm px-4 mb-3">Explorar</a>
+          </div>
+        </div>
+      </div>
+
+      <section>
+        <!-- Cards de libros -->
+        <div class="container">
+          <div class="row row-cols-2 row-cols-md-5 g-3">
+
+            <!-- Card 1 -->
+            <div class="col">
+              <div class="card h-100 border-0 shadow-sm hover-scale">
+                <div class="book-cover">
+                  <img src="img/libros/libro1.jpg" class="card-img-top card-img-libro" alt="Libro 1">
+                </div>
+                <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Título del Libro 1</h5>
+                  <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
+                </div>
+                <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                  <span class="precio-libro">$15.99</span>
+                  <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col">
+              <div class="card h-100 border-0 shadow-sm hover-scale">
+                <div class="book-cover">
+                  <img src="img/libros/libro3.jpg" class="card-img-top card-img-libro" alt="Libro 1">
+                </div>
+                <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Título del Libro 1</h5>
+                  <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
+                </div>
+                <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                  <span class="precio-libro">$15.99</span>
+                  <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col">
+              <div class="card h-100 border-0 shadow-sm hover-scale">
+                <div class="book-cover">
+                  <img src="img/libros/libro4.jpg" class="card-img-top card-img-libro" alt="Libro 1">
+                </div>
+                <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Título del Libro 1</h5>
+                  <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
+                </div>
+                <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                  <span class="precio-libro">$15.99</span>
+                  <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col">
+              <div class="card h-100 border-0 shadow-sm hover-scale">
+                <div class="book-cover">
+                  <img src="img/libros/libro3.jpg" class="card-img-top card-img-libro" alt="Libro 1">
+                </div>
+                <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Título del Libro 1</h5>
+                  <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
+                </div>
+                <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                  <span class="precio-libro">$15.99</span>
+                  <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col">
+              <div class="card h-100 border-0 shadow-sm hover-scale">
+                <div class="book-cover">
+                  <img src="img/libros/libro2.jpg" class="card-img-top card-img-libro" alt="Libro 1">
+                </div>
+                <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Título del Libro 1</h5>
+                  <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
+                </div>
+                <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                  <span class="precio-libro">$15.99</span>
+                  <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-  
+      </section>
+      <!-- Literatura otros -->
+      <div class="col-lg-12" id="otros">
+        <div class="card border-0 shadow h-75 rounded-3 overflow-hidden position-relative hover-scale">
+          <!-- Video de fondo -->
+          <video autoplay muted loop playsinline class="w-100 h-100 position-absolute top-0 start-0 object-fit-cover" style="z-index: 0;">
+            <source src="video/infantiles.mp4" type="video/mp4">
+            Tu navegador no soporta video HTML5.
+          </video>
+          <!-- Filtro oscuro -->
+          <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.7); z-index: 1;"></div>
+          <!-- Contenido -->
+          <div class="card-body position-relative text-center text-white d-flex flex-column justify-content-center align-items-center p-4" style="z-index: 2; min-height: 100px;">
+            <i class="bi bi-book-half fs-1 mt-2"></i>
+            <h3 class="fw-semibold mb-3">Otros</h3>
+            <p class="mb-2">Varios libros educativos, gastronomía, etc.</p>
+            <a href="infantiles.html" class="btn btn-light btn-sm px-4 mb-3">Explorar</a>
+          </div>
+        </div>
       </div>
+
+      <section>
+        <!-- Cards de libros -->
+        <div class="container">
+          <div class="row row-cols-2 row-cols-md-5 g-3">
+
+            <!-- Card 1 -->
+            <div class="col">
+              <div class="card h-100 border-0 shadow-sm hover-scale">
+                <div class="book-cover">
+                  <img src="img/libros/libro1.jpg" class="card-img-top card-img-libro" alt="Libro 1">
+                </div>
+                <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Título del Libro 1</h5>
+                  <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
+                </div>
+                <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                  <span class="precio-libro">$15.99</span>
+                  <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col">
+              <div class="card h-100 border-0 shadow-sm hover-scale">
+                <div class="book-cover">
+                  <img src="img/libros/libro3.jpg" class="card-img-top card-img-libro" alt="Libro 1">
+                </div>
+                <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Título del Libro 1</h5>
+                  <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
+                </div>
+                <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                  <span class="precio-libro">$15.99</span>
+                  <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col">
+              <div class="card h-100 border-0 shadow-sm hover-scale">
+                <div class="book-cover">
+                  <img src="img/libros/libro4.jpg" class="card-img-top card-img-libro" alt="Libro 1">
+                </div>
+                <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Título del Libro 1</h5>
+                  <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
+                </div>
+                <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                  <span class="precio-libro">$15.99</span>
+                  <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col">
+              <div class="card h-100 border-0 shadow-sm hover-scale">
+                <div class="book-cover">
+                  <img src="img/libros/libro3.jpg" class="card-img-top card-img-libro" alt="Libro 1">
+                </div>
+                <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Título del Libro 1</h5>
+                  <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
+                </div>
+                <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                  <span class="precio-libro">$15.99</span>
+                  <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col">
+              <div class="card h-100 border-0 shadow-sm hover-scale">
+                <div class="book-cover">
+                  <img src="img/libros/libro2.jpg" class="card-img-top card-img-libro" alt="Libro 1">
+                </div>
+                <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Título del Libro 1</h5>
+                  <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
+                </div>
+                <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                  <span class="precio-libro">$15.99</span>
+                  <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-  </section>
-  
+  </div>
+</section>
 
   <!-- Sobre Nosotros -->
   <section id="nosotros" class="py-5">
@@ -230,7 +695,9 @@ footer {
       </div>
       <div class="row g-4 align-items-center">
         <div class="col-lg-6">
-          <p class="text-muted mb-4">En Cátedra del Saber, nos enorgullece ser un referente en literatura médica y infantil. Nuestro compromiso es ofrecer contenidos de alta calidad que apoyen el crecimiento profesional y personal de nuestros lectores, en un espacio que combina tradición, innovación y pasión por la lectura.</p>
+          <p class="text-muted mb-4">
+            En Cátedra del Saber, nos enorgullece ser un referente en literatura médica y infantil. Nuestro compromiso es ofrecer contenidos de alta calidad que apoyen el crecimiento profesional y personal de nuestros lectores, en un espacio que combina tradición, innovación y pasión por la lectura.
+          </p>
           <div class="row g-3">
             <!-- Datos destacados -->
             <div class="col-sm-6">
