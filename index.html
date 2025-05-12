@@ -184,6 +184,37 @@
         border-radius: 0.5rem;
       }
     }
+
+      .parallax-section {
+        min-height: 20vh;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+      
+      .parallax-overlay {
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.459);
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+        color: white;
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+      }
+      
+      /* Eliminar cualquier padding/margin del container-fluid */
+      .full-width-container {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
   </style>
 </head>
 <body 
@@ -307,14 +338,14 @@
   <!-- CONTENIDO ENCIMA DEL VIDEO Y DEL FILTRO -->
   <div class="container text-center py-5 px-3 position-relative" style="max-width: 900px; z-index: 2;">
     <h1 class="display-3 fw-bold mb-4" style="text-shadow:0 0.5rem 1rem rgba(0,0,0,0.7); font-family:'Montserrat', sans-serif;">
-      Descubre el Placer de Leer
+      Tu Librería Especializada en Medicina e Infantil
     </h1>
     <p class="fs-4 mb-4" style="text-shadow:0 0.3rem 0.7rem rgba(0,0,0,0.1);">
-      Libros especializados en medicina y literatura infantil, solo en Cátedra del Saber.
+      Encuentra libros médicos, materiales didácticos y literatura para todas las edades. Apoyamos tu aprendizaje, vocación y creatividad desde 1995.
     </p>
     <div class="d-flex justify-content-center gap-3 flex-wrap">
-      <a href="#secciones" class="btn btn-lg btn-secondary btn-custom px-4 py-3">Ver Secciones</a>
-      <a href="#contacto" class="btn btn-outline-light btn-lg btn-custom px-4 py-3">Visítanos</a>
+      <a href="#secciones" class="btn btn-lg btn-secondary btn-custom px-4 py-3">Explora Secciones</a>
+      <a href="#contacto" class="btn btn-outline-light btn-lg btn-custom px-4 py-3">Contáctanos</a>
     </div>
     <div class="mt-5">
       <a href="#secciones" class="text-white fs-2"><i class="bi bi-chevron-down"></i></a>
@@ -322,31 +353,25 @@
   </div>
 </section>
 <!-- Secciones / Medicina/Infantiles/otros -->
-<section id="secciones" class="py-5 bg-light">
-  <div class="container">
+<section id="secciones" class="py-5 bg-light ">
+  <div class="container-fluid">
     <div class="text-center mb-5">
-      <h2 class="fw-bold display-5 text-primary mb-3">Nuestras Áreas de Especialización</h2>
-      <p class="lead text-secondary">Explora nuestras categorías diseñadas para todos los amantes de la lectura</p>
+      <h2 class="fw-bold display-5 text-primary mb-3">Explora Nuestros Libros Especializados</h2>
+      <p class="lead text-secondary">Encuentra literatura médica, infantil y una selección de libros para ampliar tu conocimiento y creatividad.</p>
     </div>
     <div class="row g-4">
 
       <!-- Medicina -->
-      <div class="col-lg-12" id="medicina">
-        <div class="card border-0 shadow h-75 rounded-3 overflow-hidden position-relative hover-scale">
-          <!-- Video de fondo -->
-          <video autoplay muted loop playsinline class="w-100 h-100 position-absolute top-0 start-0 object-fit-cover" style="z-index: 0;">
-            <source src="video/medicina.mp4" type="video/mp4">
-            Tu navegador no soporta video HTML5.
-          </video>
-          <!-- Filtro oscuro -->
-          <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.7); z-index: 1;"></div>
-          <!-- Contenido -->
-          <div class="card-body position-relative text-center text-white d-flex flex-column justify-content-center align-items-center p-4" style="z-index: 2; min-height: 100px;">
-            <i class="bi bi-heart-pulse fs-1 mt-2"></i>
-            <h3 class="fw-semibold mb-3">Medicina</h3>
-            <p class="mb-2">Una selección completa de textos médicos y publicaciones especializadas para profesionales y estudiantes.</p>
-            <a href="medicina.html" class="btn btn-light btn-sm px-4 mb-3">Explorar</a>
-          </div>
+      <div id="medicina"
+        class="container-fluid full-width-container d-flex justify-content-center align-items-center parallax-section"
+        style="background-image: url('img/medicina.JPG');">
+        <div class="parallax-overlay">
+          <i class="bi bi-heart-pulse fs-1"></i>
+          <h3 class="fw-semibold">Literatura Médica</h3>
+          <p class="">
+        Libros, manuales y recursos especializados para estudiantes y profesionales de las ciencias de la salud.
+          </p>
+          <a href="medicina.html" class="btn btn-light btn-sm">Explorar</a>
         </div>
       </div>
 
@@ -356,92 +381,93 @@
           <div class="row row-cols-2 row-cols-md-5 g-3">
 
             <!-- Card 1 -->
+            <!-- Card 1 -->
             <div class="col">
               <div class="card h-100 border-0 shadow-sm hover-scale">
-                <div class="book-cover">
-                  <img src="img/libros/libro1.jpg" class="card-img-top card-img-libro" alt="Libro 1">
-                </div>
-                <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
-                <div class="card-body">
-                  <h5 class="card-title fw-bold">Título del Libro 1</h5>
-                  <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
-                </div>
-                <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-                  <span class="precio-libro">$15.99</span>
-                  <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
-                </div>
+              <div class="book-cover">
+                <img src="img/libros/medicina/cirugia.jpg" class="card-img-top card-img-libro" alt="Cirugía">
+              </div>
+              <a class="badge bg-danger position-absolute top-0 start-0 m-3">Cirugía</a>
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Cirugía</h5>
+                <small class="card-text text-secondary">Manual esencial para estudiantes y profesionales de cirugía general y especialidades quirúrgicas.</small>
+              </div>
+              <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                <span class="precio-libro">$49.99</span>
+                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+              </div>
               </div>
             </div>
 
             <!-- Card 2 -->
             <div class="col">
               <div class="card h-100 border-0 shadow-sm hover-scale">
-                <div class="book-cover">
-                  <img src="img/libros/libro3.jpg" class="card-img-top card-img-libro" alt="Libro 1">
-                </div>
-                <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
-                <div class="card-body">
-                  <h5 class="card-title fw-bold">Título del Libro 1</h5>
-                  <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
-                </div>
-                <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-                  <span class="precio-libro">$15.99</span>
-                  <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
-                </div>
+              <div class="book-cover">
+                <img src="img/libros/medicina/enfermeria.jpg" class="card-img-top card-img-libro" alt="Enfermería de Salud Mental">
+              </div>
+              <a class="badge bg-info position-absolute top-0 start-0 m-3">Enfermería</a>
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Enfermería de Salud Mental</h5>
+                <small class="card-text text-secondary">Guía práctica sobre cuidados y abordajes en salud mental para enfermeros y estudiantes.</small>
+              </div>
+              <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                <span class="precio-libro">$34.50</span>
+                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+              </div>
               </div>
             </div>
 
             <!-- Card 3 -->
             <div class="col">
               <div class="card h-100 border-0 shadow-sm hover-scale">
-                <div class="book-cover">
-                  <img src="img/libros/libro4.jpg" class="card-img-top card-img-libro" alt="Libro 1">
-                </div>
-                <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
-                <div class="card-body">
-                  <h5 class="card-title fw-bold">Título del Libro 1</h5>
-                  <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
-                </div>
-                <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-                  <span class="precio-libro">$15.99</span>
-                  <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
-                </div>
+              <div class="book-cover">
+                <img src="img/libros/medicina/otologia.jpg" class="card-img-top card-img-libro" alt="Otología">
+              </div>
+              <a class="badge bg-success position-absolute top-0 start-0 m-3">Otorrinolaringología</a>
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Otología</h5>
+                <small class="card-text text-secondary">Referencia completa sobre enfermedades y tratamientos del oído para especialistas y residentes.</small>
+              </div>
+              <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                <span class="precio-libro">$42.00</span>
+                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+              </div>
               </div>
             </div>
 
             <!-- Card 4 -->
             <div class="col">
               <div class="card h-100 border-0 shadow-sm hover-scale">
-                <div class="book-cover">
-                  <img src="img/libros/libro3.jpg" class="card-img-top card-img-libro" alt="Libro 1">
-                </div>
-                <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
-                <div class="card-body">
-                  <h5 class="card-title fw-bold">Título del Libro 1</h5>
-                  <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
-                </div>
-                <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-                  <span class="precio-libro">$15.99</span>
-                  <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
-                </div>
+              <div class="book-cover">
+                <img src="img/libros/medicina/psiquiatria.jpg" class="card-img-top card-img-libro" alt="Psiquiatría">
+              </div>
+              <a class="badge bg-primary position-absolute top-0 start-0 m-3">Psiquiatría</a>
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Psiquiatría</h5>
+                <small class="card-text text-secondary">Actualización en diagnóstico y tratamiento de trastornos mentales para médicos y psicólogos.</small>
+              </div>
+              <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                <span class="precio-libro">$55.75</span>
+                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+              </div>
               </div>
             </div>
 
             <!-- Card 5 -->
             <div class="col">
               <div class="card h-100 border-0 shadow-sm hover-scale">
-                <div class="book-cover">
-                  <img src="img/libros/libro2.jpg" class="card-img-top card-img-libro" alt="Libro 1">
-                </div>
-                <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
-                <div class="card-body">
-                  <h5 class="card-title fw-bold">Título del Libro 1</h5>
-                  <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
-                </div>
-                <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-                  <span class="precio-libro">$15.99</span>
-                  <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
-                </div>
+              <div class="book-cover">
+                <img src="img/libros/medicina/semiologia.jpg" class="card-img-top card-img-libro" alt="Semiología Médica">
+              </div>
+              <a class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Semiología</a>
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Semiología Médica</h5>
+                <small class="card-text text-secondary">Fundamentos y técnicas de exploración clínica para estudiantes de medicina.</small>
+              </div>
+              <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                <span class="precio-libro">$38.90</span>
+                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+              </div>
               </div>
             </div>
           </div>
@@ -449,22 +475,16 @@
       </section>
 
       <!-- Literatura infantil -->
-      <div class="col-lg-12" id="infantil">
-        <div class="card border-0 shadow h-75 rounded-3 overflow-hidden position-relative hover-scale">
-          <!-- Video de fondo -->
-          <video autoplay muted loop playsinline class="w-100 h-100 position-absolute top-0 start-0 object-fit-cover" style="z-index: 0;">
-            <source src="video/infantiles.mp4" type="video/mp4">
-            Tu navegador no soporta video HTML5.
-          </video>
-          <!-- Filtro oscuro -->
-          <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.7); z-index: 1;"></div>
-          <!-- Contenido -->
-          <div class="card-body position-relative text-center text-white d-flex flex-column justify-content-center align-items-center p-4" style="z-index: 2; min-height: 100px;">
-            <i class="bi bi-easel fs-1 mt-2"></i>
-            <h3 class="fw-semibold mb-3">Infantiles</h3>
-            <p class="mb-2">Un mundo mágico de cuentos y conocimientos para los pequeños lectores y sus familias.</p>
-            <a href="infantiles.html" class="btn btn-light btn-sm px-4 mb-3">Explorar</a>
-          </div>
+      <div id="infantil"
+        class="container-fluid full-width-container d-flex justify-content-center align-items-center parallax-section mt-3"
+        style="background-image: url('img/infantiles.JPG');">
+        <div class="parallax-overlay">
+          <i class="bi bi-emoji-smile fs-1"></i>
+          <h3 class="fw-semibold">Literatura Infantil</h3>
+          <p class="">
+        Libros ilustrados, cuentos, juegos y materiales didácticos para estimular la imaginación y el aprendizaje de los más pequeños.
+          </p>
+          <a href="infantiles.html" class="btn btn-light btn-sm">Explorar</a>
         </div>
       </div>
 
@@ -476,112 +496,106 @@
             <!-- Card 1 -->
             <div class="col">
               <div class="card h-100 border-0 shadow-sm hover-scale">
-                <div class="book-cover">
-                  <img src="img/libros/libro1.jpg" class="card-img-top card-img-libro" alt="Libro 1">
-                </div>
-                <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
-                <div class="card-body">
-                  <h5 class="card-title fw-bold">Título del Libro 1</h5>
-                  <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
-                </div>
-                <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-                  <span class="precio-libro">$15.99</span>
-                  <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
-                </div>
+          <div class="book-cover">
+            <img src="img/libros/infantiles/100 cuentos.jpg" class="card-img-top card-img-libro" alt="100 cuentos para niños">
+          </div>
+          <a class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Cuentos</a>
+          <div class="card-body">
+            <h5 class="card-title fw-bold">100 cuentos para niños</h5>
+            <small class="card-text text-secondary">Colección de relatos cortos para estimular la imaginación y el hábito de la lectura en los más pequeños.</small>
+          </div>
+          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+            <span class="precio-libro">$18.50</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+          </div>
               </div>
             </div>
 
             <!-- Card 2 -->
             <div class="col">
               <div class="card h-100 border-0 shadow-sm hover-scale">
-                <div class="book-cover">
-                  <img src="img/libros/libro3.jpg" class="card-img-top card-img-libro" alt="Libro 1">
-                </div>
-                <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
-                <div class="card-body">
-                  <h5 class="card-title fw-bold">Título del Libro 1</h5>
-                  <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
-                </div>
-                <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-                  <span class="precio-libro">$15.99</span>
-                  <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
-                </div>
+          <div class="book-cover">
+            <img src="img/libros/infantiles/animales.jpg" class="card-img-top card-img-libro" alt="Animales Del Bosque">
+          </div>
+          <a class="badge bg-success position-absolute top-0 start-0 m-3">Naturaleza</a>
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Animales Del Bosque</h5>
+            <small class="card-text text-secondary">Descubre la vida de los animales del bosque con ilustraciones y datos curiosos para niños curiosos.</small>
+          </div>
+          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+            <span class="precio-libro">$13.99</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+          </div>
               </div>
             </div>
 
             <!-- Card 3 -->
             <div class="col">
               <div class="card h-100 border-0 shadow-sm hover-scale">
-                <div class="book-cover">
-                  <img src="img/libros/libro4.jpg" class="card-img-top card-img-libro" alt="Libro 1">
-                </div>
-                <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
-                <div class="card-body">
-                  <h5 class="card-title fw-bold">Título del Libro 1</h5>
-                  <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
-                </div>
-                <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-                  <span class="precio-libro">$15.99</span>
-                  <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
-                </div>
+          <div class="book-cover">
+            <img src="img/libros/infantiles/autum.jpg" class="card-img-top card-img-libro" alt="Autumn">
+          </div>
+          <a class="badge bg-info position-absolute top-0 start-0 m-3">Estaciones</a>
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Autumn</h5>
+            <small class="card-text text-secondary">Un cuento ilustrado sobre la magia del otoño y los cambios en la naturaleza, ideal para primeros lectores.</small>
+          </div>
+          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+            <span class="precio-libro">$11.50</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+          </div>
               </div>
             </div>
 
             <!-- Card 4 -->
             <div class="col">
               <div class="card h-100 border-0 shadow-sm hover-scale">
-                <div class="book-cover">
-                  <img src="img/libros/libro3.jpg" class="card-img-top card-img-libro" alt="Libro 1">
-                </div>
-                <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
-                <div class="card-body">
-                  <h5 class="card-title fw-bold">Título del Libro 1</h5>
-                  <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
-                </div>
-                <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-                  <span class="precio-libro">$15.99</span>
-                  <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
-                </div>
+          <div class="book-cover">
+            <img src="img/libros/infantiles/el zorro.jpg" class="card-img-top card-img-libro" alt="El zorro en el Bosque">
+          </div>
+          <a class="badge bg-primary position-absolute top-0 start-0 m-3">Fábula</a>
+          <div class="card-body">
+            <h5 class="card-title fw-bold">El zorro en el Bosque</h5>
+            <small class="card-text text-secondary">Aventura y valores en la historia de un zorro astuto que aprende sobre la amistad y el respeto.</small>
+          </div>
+          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+            <span class="precio-libro">$12.75</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+          </div>
               </div>
             </div>
 
             <!-- Card 5 -->
             <div class="col">
               <div class="card h-100 border-0 shadow-sm hover-scale">
-                <div class="book-cover">
-                  <img src="img/libros/libro2.jpg" class="card-img-top card-img-libro" alt="Libro 1">
-                </div>
-                <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
-                <div class="card-body">
-                  <h5 class="card-title fw-bold">Título del Libro 1</h5>
-                  <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
-                </div>
-                <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-                  <span class="precio-libro">$15.99</span>
-                  <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
-                </div>
+          <div class="book-cover">
+            <img src="img/libros/infantiles/javier.jpg" class="card-img-top card-img-libro" alt="Javier el Dinosaurio">
+          </div>
+          <a class="badge bg-danger position-absolute top-0 start-0 m-3">Dinosaurios</a>
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Javier el Dinosaurio</h5>
+            <small class="card-text text-secondary">Sigue las aventuras de Javier, un pequeño dinosaurio curioso, en un mundo prehistórico lleno de diversión.</small>
+          </div>
+          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+            <span class="precio-libro">$14.20</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+          </div>
               </div>
             </div>
           </div>
         </div>
       </section>
       <!-- Literatura otros -->
-      <div class="col-lg-12" id="otros">
-        <div class="card border-0 shadow h-75 rounded-3 overflow-hidden position-relative hover-scale">
-          <!-- Video de fondo -->
-          <video autoplay muted loop playsinline class="w-100 h-100 position-absolute top-0 start-0 object-fit-cover" style="z-index: 0;">
-            <source src="video/infantiles.mp4" type="video/mp4">
-            Tu navegador no soporta video HTML5.
-          </video>
-          <!-- Filtro oscuro -->
-          <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.7); z-index: 1;"></div>
-          <!-- Contenido -->
-          <div class="card-body position-relative text-center text-white d-flex flex-column justify-content-center align-items-center p-4" style="z-index: 2; min-height: 100px;">
-            <i class="bi bi-book-half fs-1 mt-2"></i>
-            <h3 class="fw-semibold mb-3">Otros</h3>
-            <p class="mb-2">Varios libros educativos, gastronomía, etc.</p>
-            <a href="infantiles.html" class="btn btn-light btn-sm px-4 mb-3">Explorar</a>
-          </div>
+      <div id="otros"
+        class="container-fluid full-width-container d-flex justify-content-center align-items-center parallax-section mt-3"
+        style="background-image: url('img/varios.jpg');">
+        <div class="parallax-overlay">
+          <i class="bi bi-journal-richtext fs-1"></i>
+          <h3 class="fw-semibold">Literatura Variada</h3>
+          <p class="">
+        Gastronomía, diccionarios, arte, historia y mucho más para ampliar tus horizontes y descubrir nuevas pasiones.
+          </p>
+          <a href="otros.html" class="btn btn-light btn-sm">Explorar</a>
         </div>
       </div>
 
@@ -591,74 +605,75 @@
           <div class="row row-cols-2 row-cols-md-5 g-3">
 
             <!-- Card 1 -->
+            <!-- Card 1 -->
             <div class="col">
               <div class="card h-100 border-0 shadow-sm hover-scale">
-                <div class="book-cover">
-                  <img src="img/libros/libro1.jpg" class="card-img-top card-img-libro" alt="Libro 1">
-                </div>
-                <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
-                <div class="card-body">
-                  <h5 class="card-title fw-bold">Título del Libro 1</h5>
-                  <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
-                </div>
-                <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-                  <span class="precio-libro">$15.99</span>
-                  <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
-                </div>
+              <div class="book-cover">
+                <img src="img/libros/varios/cocina.jpg" class="card-img-top card-img-libro" alt="Cocina Vegana">
+              </div>
+              <a class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Gastronomía</a>
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Cocina Vegana</h5>
+                <small class="card-text text-secondary">Recetas saludables y deliciosas para quienes buscan una alimentación basada en plantas.</small>
+              </div>
+              <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                <span class="precio-libro">$22.50</span>
+                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+              </div>
               </div>
             </div>
 
             <!-- Card 2 -->
             <div class="col">
               <div class="card h-100 border-0 shadow-sm hover-scale">
-                <div class="book-cover">
-                  <img src="img/libros/libro3.jpg" class="card-img-top card-img-libro" alt="Libro 1">
-                </div>
-                <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
-                <div class="card-body">
-                  <h5 class="card-title fw-bold">Título del Libro 1</h5>
-                  <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
-                </div>
-                <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-                  <span class="precio-libro">$15.99</span>
-                  <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
-                </div>
+              <div class="book-cover">
+                <img src="img/libros/varios/diccionario.jpg" class="card-img-top card-img-libro" alt="Larousse Diccionario Básico">
+              </div>
+              <a class="badge bg-info position-absolute top-0 start-0 m-3">Diccionario</a>
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Larousse Diccionario Básico</h5>
+                <small class="card-text text-secondary">Herramienta esencial para estudiantes y profesionales que buscan definiciones claras y precisas.</small>
+              </div>
+              <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                <span class="precio-libro">$18.90</span>
+                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+              </div>
               </div>
             </div>
 
             <!-- Card 3 -->
             <div class="col">
               <div class="card h-100 border-0 shadow-sm hover-scale">
-                <div class="book-cover">
-                  <img src="img/libros/libro4.jpg" class="card-img-top card-img-libro" alt="Libro 1">
-                </div>
-                <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
-                <div class="card-body">
-                  <h5 class="card-title fw-bold">Título del Libro 1</h5>
-                  <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
-                </div>
-                <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-                  <span class="precio-libro">$15.99</span>
-                  <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
-                </div>
+              <div class="book-cover">
+                <img src="img/libros/varios/guines.jpg" class="card-img-top card-img-libro" alt="Guinness World Records 2022">
+              </div>
+              <a class="badge bg-success position-absolute top-0 start-0 m-3">Curiosidades</a>
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Guinness World Records 2022</h5>
+                <small class="card-text text-secondary">Descubre los récords más sorprendentes y hazañas increíbles del mundo actual.</small>
+              </div>
+              <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                <span class="precio-libro">$29.99</span>
+                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+              </div>
               </div>
             </div>
 
             <!-- Card 4 -->
             <div class="col">
               <div class="card h-100 border-0 shadow-sm hover-scale">
-                <div class="book-cover">
-                  <img src="img/libros/libro3.jpg" class="card-img-top card-img-libro" alt="Libro 1">
-                </div>
-                <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
-                <div class="card-body">
-                  <h5 class="card-title fw-bold">Título del Libro 1</h5>
-                  <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
-                </div>
-                <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-                  <span class="precio-libro">$15.99</span>
-                  <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
-                </div>
+              <div class="book-cover">
+                <img src="img/libros/varios/planos.jpg" class="card-img-top card-img-libro" alt="Planos y Edificios">
+              </div>
+              <a class="badge bg-primary position-absolute top-0 start-0 m-3">Arquitectura</a>
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Planos y Edificios</h5>
+                <small class="card-text text-secondary">Guía visual sobre diseño arquitectónico, planos y estructuras emblemáticas.</small>
+              </div>
+              <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                <span class="precio-libro">$24.75</span>
+                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+              </div>
               </div>
             </div>
 
@@ -666,16 +681,16 @@
             <div class="col">
               <div class="card h-100 border-0 shadow-sm hover-scale">
                 <div class="book-cover">
-                  <img src="img/libros/libro2.jpg" class="card-img-top card-img-libro" alt="Libro 1">
+                <img src="img/libros/varios/musica.jpg" class="card-img-top card-img-libro" alt="Musica Fácil">
                 </div>
-                <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
+                <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Música</a>
                 <div class="card-body">
-                  <h5 class="card-title fw-bold">Título del Libro 1</h5>
-                  <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
+                <h5 class="card-title fw-bold">Musica Fácil</h5>
+                <small class="card-text text-secondary">Guía práctica para aprender a tocar instrumentos y leer partituras, ideal para principiantes y entusiastas de la música.</small>
                 </div>
                 <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-                  <span class="precio-libro">$15.99</span>
-                  <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+                <span class="precio-libro">$19.80</span>
+                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
                 </div>
               </div>
             </div>
