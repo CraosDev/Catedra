@@ -135,16 +135,17 @@
     }
 
     h5 {
-      font-size: 1.1rem;
+      font-size: 0.9rem;
     }
 
     h6 {
-      font-size: 1rem;
+      font-size: 0.9rem;
     }
 
     p, small {
       letter-spacing: 0.1px;
       font-weight: 400;
+     
       margin-bottom: 1rem;
     }
 
@@ -183,6 +184,8 @@
         margin-top: 0.5rem;
         border-radius: 0.5rem;
       }
+
+
     }
 
       .parallax-section {
@@ -214,7 +217,13 @@
         margin-left: 0;
         margin-right: 0;
       }
-
+.texto-cortado-multilinea {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;     /* Número de líneas a mostrar */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
   </style>
 </head>
 <body 
@@ -376,98 +385,114 @@
       <section>
         <!-- Cards de libros -->
         <div class="container">
-          <div class="row row-cols-2 row-cols-md-5 g-3">
+          <div class="row row-cols-2 row-cols-md-6 g-3">
 
-            <!-- Card 1 -->
-            <!-- Card 1 -->
-            <div class="col">
-              <div class="card h-100 border-0 shadow-sm hover-scale">
-              <div class="book-cover">
-                <img src="img/libros/medicina/cirugia.jpg" class="card-img-top card-img-libro" alt="Cirugía">
-              </div>
-              <a class="badge bg-danger position-absolute top-0 start-0 m-3">Cirugía</a>
-              <div class="card-body">
-                <h5 class="card-title fw-bold">Cirugía</h5>
-                <small class="card-text text-secondary">Manual esencial para estudiantes y profesionales de cirugía general y especialidades quirúrgicas.</small>
-              </div>
-              <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-                <span class="precio-libro">$49.99</span>
-                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
-              </div>
-              </div>
-            </div>
+        <!-- Card 1 -->
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm hover-scale">
+          <div class="book-cover">
+            <img src="img/libros/medicina/cirugia.jpg" class="card-img-top card-img-libro" alt="Cirugía">
+          </div>
+          
+          <div class="card-body">
+            <h5 class="card-title fw-bold texto-cortado-multilinea">Cirugía para el grado de medicina</h5>
+            <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Cirugía</a>
+          </div>
+          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+            <span class="precio-libro">Bs 345.00</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+          </div>
+          </div>
+        </div>
 
-            <!-- Card 2 -->
-            <div class="col">
-              <div class="card h-100 border-0 shadow-sm hover-scale">
-              <div class="book-cover">
-                <img src="img/libros/medicina/enfermeria.jpg" class="card-img-top card-img-libro" alt="Enfermería de Salud Mental">
-              </div>
-              <a class="badge bg-info position-absolute top-0 start-0 m-3">Enfermería</a>
-              <div class="card-body">
-                <h5 class="card-title fw-bold">Enfermería de Salud Mental</h5>
-                <small class="card-text text-secondary">Guía práctica sobre cuidados y abordajes en salud mental para enfermeros y estudiantes.</small>
-              </div>
-              <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-                <span class="precio-libro">$34.50</span>
-                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
-              </div>
-              </div>
-            </div>
+        <!-- Card 2 -->
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm hover-scale">
+          <div class="book-cover">
+            <img src="img/libros/medicina/enfermeria.jpg" class="card-img-top card-img-libro" alt="Enfermería de Salud Mental">
+          </div>
+          
+          <div class="card-body">
+            <h5 class="card-title fw-bold texto-cortado-multilinea">Enfermería de Salud Mental</h5>
+            <a class="badge bg-primary position-absolute top-0 start-0 "style="z-index: 1;">Enfermería</a>
+          </div>
+          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+            <span class="precio-libro">Bs 238.00</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+          </div>
+          </div>
+        </div>
 
-            <!-- Card 3 -->
-            <div class="col">
-              <div class="card h-100 border-0 shadow-sm hover-scale">
-              <div class="book-cover">
-                <img src="img/libros/medicina/otologia.jpg" class="card-img-top card-img-libro" alt="Otología">
-              </div>
-              <a class="badge bg-success position-absolute top-0 start-0 m-3">Otorrinolaringología</a>
-              <div class="card-body">
-                <h5 class="card-title fw-bold">Otología</h5>
-                <small class="card-text text-secondary">Referencia completa sobre enfermedades y tratamientos del oído para especialistas y residentes.</small>
-              </div>
-              <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-                <span class="precio-libro">$42.00</span>
-                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
-              </div>
-              </div>
-            </div>
+        <!-- Card 3 -->
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm hover-scale">
+          <div class="book-cover">
+            <img src="img/libros/medicina/otologia.jpg" class="card-img-top card-img-libro" alt="Otología">
+          </div>
+          
+          <div class="card-body">
+            <h5 class="card-title fw-bold texto-cortado-multilinea">Otología</h5>
+            <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Otorrinolaringología</a>
+          </div>
+          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+            <span class="precio-libro">Bs 290.00</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+          </div>
+          </div>
+        </div>
 
-            <!-- Card 4 -->
-            <div class="col">
-              <div class="card h-100 border-0 shadow-sm hover-scale">
-              <div class="book-cover">
-                <img src="img/libros/medicina/psiquiatria.jpg" class="card-img-top card-img-libro" alt="Psiquiatría">
-              </div>
-              <a class="badge bg-primary position-absolute top-0 start-0 m-3">Psiquiatría</a>
-              <div class="card-body">
-                <h5 class="card-title fw-bold">Psiquiatría</h5>
-                <small class="card-text text-secondary">Actualización en diagnóstico y tratamiento de trastornos mentales para médicos y psicólogos.</small>
-              </div>
-              <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-                <span class="precio-libro">$55.75</span>
-                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
-              </div>
-              </div>
-            </div>
+        <!-- Card 4 -->
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm hover-scale">
+          <div class="book-cover">
+            <img src="img/libros/medicina/psiquiatria.jpg" class="card-img-top card-img-libro" alt="Psiquiatría">
+          </div>
+          
+          <div class="card-body">
+            <h5 class="card-title fw-bold texto-cortado-multilinea">Psiquiatría para medicos no psiquiatras</h5>
+            <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Psiquiatría</a>
+          </div>
+          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+            <span class="precio-libro">Bs 385.00</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+          </div>
+          </div>
+        </div>
 
-            <!-- Card 5 -->
-            <div class="col">
-              <div class="card h-100 border-0 shadow-sm hover-scale">
-              <div class="book-cover">
-                <img src="img/libros/medicina/semiologia.jpg" class="card-img-top card-img-libro" alt="Semiología Médica">
-              </div>
-              <a class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Semiología</a>
-              <div class="card-body">
-                <h5 class="card-title fw-bold">Semiología Médica</h5>
-                <small class="card-text text-secondary">Fundamentos y técnicas de exploración clínica para estudiantes de medicina.</small>
-              </div>
-              <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-                <span class="precio-libro">$38.90</span>
-                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
-              </div>
-              </div>
-            </div>
+        <!-- Card 5 -->
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm hover-scale">
+          <div class="book-cover">
+            <img src="img/libros/medicina/semiologia.jpg" class="card-img-top card-img-libro" alt="Semiología Médica">
+          </div>
+          
+          <div class="card-body">
+            <h5 class="card-title fw-bold texto-cortado-multilinea">Semiología Médica,fisiopatologia,semiotecnia y propedeutica</h5>
+            <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Semiología</a>
+          </div>
+          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+            <span class="precio-libro">Bs 269.00</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+          </div>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm hover-scale">
+          <div class="book-cover">
+            <img src="img/libros/medicina/enfermeria.jpg" class="card-img-top card-img-libro" alt="Enfermería de Salud Mental">
+          </div>
+          
+          <div class="card-body">
+            <h5 class="card-title fw-bold texto-cortado-multilinea">Enfermería de Salud Mental</h5>
+            <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Enfermería</a>
+          </div>
+          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+            <span class="precio-libro">Bs 238.00</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+          </div>
+          </div>
+        </div>
           </div>
         </div>
       </section>
@@ -489,7 +514,7 @@
       <section>
         <!-- Cards de libros -->
         <div class="container">
-          <div class="row row-cols-2 row-cols-md-5 g-3">
+          <div class="row row-cols-2 row-cols-md-6 g-3">
 
             <!-- Card 1 -->
             <div class="col">
@@ -497,14 +522,14 @@
           <div class="book-cover">
             <img src="img/libros/infantiles/100 cuentos.jpg" class="card-img-top card-img-libro" alt="100 cuentos para niños">
           </div>
-          <a class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Cuentos</a>
+          
           <div class="card-body">
             <h5 class="card-title fw-bold">100 cuentos para niños</h5>
-            <small class="card-text text-secondary">Colección de relatos cortos para estimular la imaginación y el hábito de la lectura en los más pequeños.</small>
+            <a class="badge bg-primary position-absolute top-0 start-0"style="z-index: 1;">Cuentos</a>
           </div>
           <div class="card-footer border-0 d-flex justify-content-between align-items-center">
             <span class="precio-libro">$18.50</span>
-            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
           </div>
               </div>
             </div>
@@ -515,14 +540,14 @@
           <div class="book-cover">
             <img src="img/libros/infantiles/animales.jpg" class="card-img-top card-img-libro" alt="Animales Del Bosque">
           </div>
-          <a class="badge bg-success position-absolute top-0 start-0 m-3">Naturaleza</a>
+          
           <div class="card-body">
             <h5 class="card-title fw-bold">Animales Del Bosque</h5>
-            <small class="card-text text-secondary">Descubre la vida de los animales del bosque con ilustraciones y datos curiosos para niños curiosos.</small>
+            <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Naturaleza</a>
           </div>
           <div class="card-footer border-0 d-flex justify-content-between align-items-center">
             <span class="precio-libro">$13.99</span>
-            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
           </div>
               </div>
             </div>
@@ -533,14 +558,14 @@
           <div class="book-cover">
             <img src="img/libros/infantiles/autum.jpg" class="card-img-top card-img-libro" alt="Autumn">
           </div>
-          <a class="badge bg-info position-absolute top-0 start-0 m-3">Estaciones</a>
+          
           <div class="card-body">
             <h5 class="card-title fw-bold">Autumn</h5>
-            <small class="card-text text-secondary">Un cuento ilustrado sobre la magia del otoño y los cambios en la naturaleza, ideal para primeros lectores.</small>
+            <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Estaciones</a>
           </div>
           <div class="card-footer border-0 d-flex justify-content-between align-items-center">
             <span class="precio-libro">$11.50</span>
-            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
           </div>
               </div>
             </div>
@@ -551,14 +576,14 @@
           <div class="book-cover">
             <img src="img/libros/infantiles/el zorro.jpg" class="card-img-top card-img-libro" alt="El zorro en el Bosque">
           </div>
-          <a class="badge bg-primary position-absolute top-0 start-0 m-3">Fábula</a>
+          
           <div class="card-body">
             <h5 class="card-title fw-bold">El zorro en el Bosque</h5>
-            <small class="card-text text-secondary">Aventura y valores en la historia de un zorro astuto que aprende sobre la amistad y el respeto.</small>
+            <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Fábula</a>
           </div>
           <div class="card-footer border-0 d-flex justify-content-between align-items-center">
             <span class="precio-libro">$12.75</span>
-            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
           </div>
               </div>
             </div>
@@ -566,20 +591,38 @@
             <!-- Card 5 -->
             <div class="col">
               <div class="card h-100 border-0 shadow-sm hover-scale">
+              <div class="book-cover">
+                <img src="img/libros/infantiles/javier.jpg" class="card-img-top card-img-libro" alt="Javier el Dinosaurio">
+              </div>
+              
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Javier el Dinosaurio</h5>
+                <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Dinosaurios</a>
+              </div>
+              <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                <span class="precio-libro">$14.20</span>
+                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+              </div>
+                  </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col">
+              <div class="card h-100 border-0 shadow-sm hover-scale">
           <div class="book-cover">
-            <img src="img/libros/infantiles/javier.jpg" class="card-img-top card-img-libro" alt="Javier el Dinosaurio">
+            <img src="img/libros/infantiles/animales.jpg" class="card-img-top card-img-libro" alt="Animales Del Bosque">
           </div>
-          <a class="badge bg-danger position-absolute top-0 start-0 m-3">Dinosaurios</a>
+          
           <div class="card-body">
-            <h5 class="card-title fw-bold">Javier el Dinosaurio</h5>
-            <small class="card-text text-secondary">Sigue las aventuras de Javier, un pequeño dinosaurio curioso, en un mundo prehistórico lleno de diversión.</small>
+            <h5 class="card-title fw-bold">Animales Del Bosque</h5>
+            <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Naturaleza</a>
           </div>
           <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-            <span class="precio-libro">$14.20</span>
-            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+            <span class="precio-libro">$13.99</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
           </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
@@ -600,7 +643,7 @@
       <section>
         <!-- Cards de libros -->
         <div class="container">
-          <div class="row row-cols-2 row-cols-md-5 g-3">
+          <div class="row row-cols-2 row-cols-md-6 g-3">
 
             <!-- Card 1 -->
             <!-- Card 1 -->
@@ -609,14 +652,14 @@
               <div class="book-cover">
                 <img src="img/libros/varios/cocina.jpg" class="card-img-top card-img-libro" alt="Cocina Vegana">
               </div>
-              <a class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Gastronomía</a>
+              
               <div class="card-body">
                 <h5 class="card-title fw-bold">Cocina Vegana</h5>
-                <small class="card-text text-secondary">Recetas saludables y deliciosas para quienes buscan una alimentación basada en plantas.</small>
+                <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Gastronomía</a>
               </div>
               <div class="card-footer border-0 d-flex justify-content-between align-items-center">
                 <span class="precio-libro">$22.50</span>
-                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
               </div>
               </div>
             </div>
@@ -627,14 +670,14 @@
               <div class="book-cover">
                 <img src="img/libros/varios/diccionario.jpg" class="card-img-top card-img-libro" alt="Larousse Diccionario Básico">
               </div>
-              <a class="badge bg-info position-absolute top-0 start-0 m-3">Diccionario</a>
+              
               <div class="card-body">
                 <h5 class="card-title fw-bold">Larousse Diccionario Básico</h5>
-                <small class="card-text text-secondary">Herramienta esencial para estudiantes y profesionales que buscan definiciones claras y precisas.</small>
+                <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Diccionario</a>
               </div>
               <div class="card-footer border-0 d-flex justify-content-between align-items-center">
                 <span class="precio-libro">$18.90</span>
-                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
               </div>
               </div>
             </div>
@@ -645,14 +688,14 @@
               <div class="book-cover">
                 <img src="img/libros/varios/guines.jpg" class="card-img-top card-img-libro" alt="Guinness World Records 2022">
               </div>
-              <a class="badge bg-success position-absolute top-0 start-0 m-3">Curiosidades</a>
+              
               <div class="card-body">
                 <h5 class="card-title fw-bold">Guinness World Records 2022</h5>
-                <small class="card-text text-secondary">Descubre los récords más sorprendentes y hazañas increíbles del mundo actual.</small>
+                <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Curiosidades</a>
               </div>
               <div class="card-footer border-0 d-flex justify-content-between align-items-center">
                 <span class="precio-libro">$29.99</span>
-                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
               </div>
               </div>
             </div>
@@ -663,14 +706,14 @@
               <div class="book-cover">
                 <img src="img/libros/varios/planos.jpg" class="card-img-top card-img-libro" alt="Planos y Edificios">
               </div>
-              <a class="badge bg-primary position-absolute top-0 start-0 m-3">Arquitectura</a>
+              
               <div class="card-body">
                 <h5 class="card-title fw-bold">Planos y Edificios</h5>
-                <small class="card-text text-secondary">Guía visual sobre diseño arquitectónico, planos y estructuras emblemáticas.</small>
+                <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Arquitectura</a>
               </div>
               <div class="card-footer border-0 d-flex justify-content-between align-items-center">
                 <span class="precio-libro">$24.75</span>
-                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
               </div>
               </div>
             </div>
@@ -681,15 +724,32 @@
                 <div class="book-cover">
                 <img src="img/libros/varios/musica.jpg" class="card-img-top card-img-libro" alt="Musica Fácil">
                 </div>
-                <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Música</a>
+                
                 <div class="card-body">
                 <h5 class="card-title fw-bold">Musica Fácil</h5>
-                <small class="card-text text-secondary">Guía práctica para aprender a tocar instrumentos y leer partituras, ideal para principiantes y entusiastas de la música.</small>
+                <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Música</a>
                 </div>
                 <div class="card-footer border-0 d-flex justify-content-between align-items-center">
                 <span class="precio-libro">$19.80</span>
-                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
                 </div>
+              </div>
+            </div>
+             <!-- Card 3 -->
+            <div class="col">
+              <div class="card h-100 border-0 shadow-sm hover-scale">
+              <div class="book-cover">
+                <img src="img/libros/varios/guines.jpg" class="card-img-top card-img-libro" alt="Guinness World Records 2022">
+              </div>
+              
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Guinness World Records 2022</h5>
+                <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Curiosidades</a>
+              </div>
+              <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                <span class="precio-libro">$29.99</span>
+                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+              </div>
               </div>
             </div>
           </div>
