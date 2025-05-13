@@ -1,0 +1,213 @@
+:root {
+    --bs-primary: #1F3B5A;
+    --bs-primary-rgb: 31, 59, 90;
+    --bs-secondary: #3CAEA3;
+    --bs-secondary-rgb: 60, 174, 163;
+    --bs-body-bg: #F8F9FA;
+    --bs-body-color: #343A40;
+}
+
+body {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.1px;
+}
+
+a.text-secondary:hover {
+    color: var(--bs-primary) !important;
+}
+
+.hover-scale {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 1.2rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+.hover-scale {
+    transition: transform .2s, box-shadow .2s;
+}
+
+.hover-scale:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+}
+
+.card-hover img {
+    width: 100%;
+    aspect-ratio: 3 / 4; /* En lugar de altura fija */
+    object-fit: cover;
+    transition: transform .5s;
+    display: block;
+}
+
+.card-hover:hover img {
+    transform: scale(1.05);
+}
+
+/* RESPONSIVE book cover */
+.book-cover {
+    position: relative;
+    width: 100%;
+    max-width: 200px;
+    aspect-ratio: 2 / 3; /* En lugar de height fija */
+    margin: auto;
+}
+
+.book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.book-cover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 100%;
+    background: linear-gradient(to right, #505050d2, transparent);
+    box-shadow: 2px 0 5px rgba(10, 10, 10, 0.3);
+    border-right: 1px solid rgba(107, 107, 107, 0.342);
+    z-index: 1;
+}
+
+/* MEDIA QUERIES para responsividad adicional */
+@media (max-width: 768px) {
+    .book-cover {
+        max-width: 150px;
+    }
+    .card-hover img {
+        aspect-ratio: 2.5 / 3;
+    }
+}
+
+@media (max-width: 480px) {
+    .book-cover {
+        max-width: 120px;
+    }
+    .card-hover img {
+        aspect-ratio: 2 / 3;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+    margin-bottom: 0.6em;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+
+h5 {
+    font-size: 0.9rem;
+}
+
+h6 {
+    font-size: 0.9rem;
+}
+
+p, small {
+    letter-spacing: 0.1px;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.btn-custom {
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+    transition: background-color 0.3s, transform 0.2s;
+    border-radius: 0.5rem;
+}
+
+.btn-custom:hover {
+    transform: translateY(-2px);
+}
+
+footer {
+    font-size: 0.9rem;
+}
+
+.navbar-nav .nav-link {
+    transition: all 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    transform: translateY(-2px);
+}
+
+.hover-lift:hover {
+    transform: translateY(-2px);
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: var(--bs-primary);
+        padding: 1rem;
+        margin-top: 0.5rem;
+        border-radius: 0.5rem;
+    }
+}
+
+.parallax-section {
+    min-height: 20vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.parallax-overlay {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.459);
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Eliminar cualquier padding/margin del container-fluid */
+.full-width-container {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.texto-cortado-multilinea {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;     /* Número de líneas a mostrar */
+    line-clamp: 2;             /* Standard property for compatibility */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
