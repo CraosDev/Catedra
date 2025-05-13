@@ -195,190 +195,183 @@ footer {
 
   <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="img/logo.png" alt="Logo" width="140" class="me-2" />
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+    <a class="navbar-brand" href="index.html">
+      <img src="img/logo.png" alt="Logo" width="140">
     </a>
-    <button class="navbar-toggler border-0" type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#mainNav"
-      aria-controls="mainNav"
-      aria-expanded="false"
-      aria-label="Abrir menú">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="mainNav">
-      <!-- Barra de búsqueda -->
-      <form class="d-flex ms-auto me-3 align-items-center" role="search">
+    <div class="d-flex align-items-center order-lg-3 ms-auto">
+      <form class="d-flex me-2">
         <div class="input-group">
-          <input class="form-control rounded-pill ps-3" type="search" placeholder="Buscar..." aria-label="Buscar">
-          <a class="btn btn-light rounded-pill mx-1" type="submit" style="z-index:1;" href="buscar.html">
+          <input class="form-control rounded-pill pe-5" type="search" placeholder="Buscar..." style="max-width: 75%;">
+          <button class="btn btn-light rounded-pill position-absolute end-0 hover-lift" type="submit" style="z-index: 2;">
             <i class="bi bi-search"></i>
-          </a>
+          </button>
         </div>
-
-        <!-- Botón de sesión SOLO visible en pantallas pequeñas (junto a la búsqueda) -->
-        <button class="btn btn-light rounded-pill mx-1 d-lg-none" type="button"  data-bs-toggle="modal" data-bs-target="#loginModal">
-          <i class="bi bi-person-fill"></i>
-        </button>
       </form>
 
-      <!-- Enlaces de navegación -->
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-  
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">Ofertas</a>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Categorías
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Anatomía</a></li>
-            <li><a class="dropdown-item" href="#">Farmacología</a></li>
-            <li><a class="dropdown-item" href="#">Cirugía</a></li>
-            <li><a class="dropdown-item" href="#">Pediatría</a></li>
-            <li><a class="dropdown-item" href="#">Ginecología</a></li>
-            <li><a class="dropdown-item" href="#">Medicina Interna</a></li>
-            <li><a class="dropdown-item" href="#">Emergencias</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#contacto">Contacto</a>
-        </li>
-
-      </ul>
-
-      <!-- Botón de sesión SOLO visible en pantallas grandes (al final) -->
-      <button class="btn btn-light rounded-pill mx-1 d-none d-lg-inline" type="button"  data-bs-toggle="modal" data-bs-target="#loginModal">
+      <button class="btn btn-light rounded-pill hover-lift d-lg-none" 
+              type="button" 
+              data-bs-toggle="modal" 
+              data-bs-target="#loginModal">
         <i class="bi bi-person-fill"></i>
       </button>
+       <button class="navbar-toggler border-0" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
     </div>
+    <div class="collapse navbar-collapse order-lg-2" id="mainNav">
+      <ul class="navbar-nav text-uppercase">
+        <li class="nav-item">
+          <a class="nav-link active py-2 px-3 fw-medium" href="index.html">Inicio</a>
+        </li>
+
+        <!-- Dropdown Medicina -->
+        <li class="nav-item">
+          <a class="nav-link py-2 px-3 fw-medium" href="medicina.html">Medicina</a>
+        </li>
+
+        <!-- Dropdown Infantil -->
+        <li class="nav-item">
+          <a class="nav-link py-2 px-3 fw-medium" href="infantiles.html">Infantil</a>
+        </li>
+
+        <!-- Resto del menú -->
+        <li class="nav-item">
+          <a class="nav-link py-2 px-3 fw-medium" href="#otros">Otros</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link py-2 px-3 fw-medium" href="index.html#nosotros">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link py-2 px-3 fw-medium" href="index.html#contacto">Contacto</a>
+        </li>
+      </ul>
+    </div>
+
+    <button class="btn btn-light rounded-pill hover-lift d-none d-lg-inline-flex ms-2 order-lg-4" 
+            type="button" 
+            data-bs-toggle="modal" 
+            data-bs-target="#loginModal">
+      <i class="bi bi-person-fill"></i>
+    </button>
   </div>
 </nav>
 <!-- Banner principal -->
 <section class="bg-light py-5 text-center">
-    <div class="container">
-      <h1 class="display-5 fw-bold text-primary">Bienvenido a MediLibros</h1>
-      <p class="lead text-secondary">Tu librería especializada en libros médicos de alta calidad. Explora ofertas, novedades y más.</p>
-      <a href="#ofertas" class="btn btn-primary btn-lg mt-3 rounded-pill">Ver Ofertas</a>
-    </div>
-  </section>
-  
-  <!-- Sección de Ofertas -->
-  <section id="ofertas" class="py-2 bg-white">
-    <div class="container">
-      <h2 class="text-center fw-bold mb-4 text-primary">Ofertas Destacadas</h2>
-      <div class="container py-5">
-        <div class="row row-cols-2 row-cols-md-5 g-3">
-          
-          <!-- Card 1 -->
-          <div class="col">
-            <div class="card h-100 border-0 shadow-sm hover-scale  ">
-              <div class="book-cover">
-                <img src="img/libros/libro1.jpg" class="card-img-top  card-img-libro " alt="Libro 1">
-              </div>
-              <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
-              <div class="card-body">
-                <h5 class="card-title fw-bold">Título del Libro 1</h5>
-                <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
-              </div>
-              <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-                <span class="text-success fw-semibold">$34.99 <small class="text-muted text-decoration-line-through">$46.99</small></span>
-                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
-              </div>
+  <div class="container">
+    <h1 class="display-5 fw-bold text-primary">Bienvenido a la sección de Medicina</h1>
+    <p class="lead text-secondary">Explora nuestra selección de libros médicos especializados en Cátedra del Saber. Encuentra títulos de referencia, manuales y recursos para estudiantes y profesionales de la salud.</p>
+    <a href="#ofertas" class="btn btn-primary btn-lg mt-3 rounded-pill">Ver Libros en Oferta</a>
+  </div>
+</section>
+
+<!-- Sección de Ofertas -->
+<section id="ofertas" class="py-2 bg-white">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4 text-primary">Libros de Medicina Destacados</h2>
+    <div class="container py-5">
+      <div class="row row-cols-2 row-cols-md-5 g-3">
+        
+        <!-- Card 1 -->
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm hover-scale">
+            <div class="book-cover">
+              <img src="img/libros/anatomia-gray.jpg" class="card-img-top card-img-libro" alt="Gray Anatomía">
+            </div>
+            <span class="badge bg-secondary position-absolute top-0 start-0 m-3">Anatomía</span>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Gray. Anatomía para Estudiantes</h5>
+              <small class="card-text text-secondary">Referencia esencial para el estudio anatómico, ideal para estudiantes de medicina.</small>
+            </div>
+            <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+              <span class="text-success fw-semibold">$59.99 <small class="text-muted text-decoration-line-through">$75.00</small></span>
+              <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
             </div>
           </div>
-      
-          <!-- Card 2 -->
-          
-          <div class="col">
-          <a href="libroMedicina.html">
-            <div class="card h-100 border-0 shadow-sm hover-scale  ">
-              <div class="book-cover">
-                <img src="img/libros/libro2.jpg" class="card-img-top  card-img-libro " alt="Libro 1">
-              </div>
-              <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
-              <div class="card-body">
-                <h5 class="card-title fw-bold">Título del Libro 1</h5>
-                <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
-              </div>
-              <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-                <span class="text-success fw-semibold">$34.99 <small class="text-muted text-decoration-line-through">$46.99</small></span>
-                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
-              </div>
-            </div>
-          </a>
-          </div>
-      
-          <!-- Card 3 -->
-          <div class="col">
-            <div class="card h-100 border-0 shadow-sm hover-scale  ">
-              <div class="book-cover">
-                <img src="img/libros/libro3.jpg" class="card-img-top  card-img-libro " alt="Libro 1">
-              </div>
-              <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
-              <div class="card-body">
-                <h5 class="card-title fw-bold">Título del Libro 1</h5>
-                <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
-              </div>
-              <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-                <span class="text-success fw-semibold">$34.99 <small class="text-muted text-decoration-line-through">$46.99</small></span>
-                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
-              </div>
-            </div>
-          </div>
-         
-      
-          <!-- Card 4 -->
-          <div class="col">
-            <div class="card h-100 border-0 shadow-sm hover-scale  ">
-              <div class="book-cover">
-                <img src="img/libros/libro4.jpg" class="card-img-top  card-img-libro " alt="Libro 1">
-              </div>
-              <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
-              <div class="card-body">
-                <h5 class="card-title fw-bold">Título del Libro 1</h5>
-                <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
-              </div>
-              <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-                <span class="text-success fw-semibold">$34.99 <small class="text-muted text-decoration-line-through">$46.99</small></span>
-                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Card 5 -->
-          <div class="col">
-            <div class="card h-100 border-0 shadow-sm hover-scale  ">
-              <div class="book-cover">
-                <img src="img/libros/libro2.jpg" class="card-img-top  card-img-libro " alt="Libro 1">
-              </div>
-              <a class="badge bg-secondary position-absolute top-0 start-0 m-3">Aventura</a>
-              <div class="card-body">
-                <h5 class="card-title fw-bold">Título del Libro 1</h5>
-                <small class="card-text text-secondary">Una breve descripción del libro. Ideal para amantes de la aventura.</small>
-              </div>
-              <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-                <span class="text-success fw-semibold">$34.99 <small class="text-muted text-decoration-line-through">$46.99</small></span>
-                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
-              </div>
-            </div>
-          </div>
-      
         </div>
+    
+        <!-- Card 2 -->
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm hover-scale">
+            <div class="book-cover">
+              <img src="img/libros/farmacologia-katzung.jpg" class="card-img-top card-img-libro" alt="Farmacología Katzung">
+            </div>
+            <span class="badge bg-secondary position-absolute top-0 start-0 m-3">Farmacología</span>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Farmacología Básica y Clínica - Katzung</h5>
+              <small class="card-text text-secondary">Manual actualizado para comprender los principios farmacológicos y su aplicación clínica.</small>
+            </div>
+            <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+              <span class="text-success fw-semibold">$48.00 <small class="text-muted text-decoration-line-through">$60.00</small></span>
+              <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Card 3 -->
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm hover-scale">
+            <div class="book-cover">
+              <img src="img/libros/robbins-patologia.jpg" class="card-img-top card-img-libro" alt="Robbins Patología">
+            </div>
+            <span class="badge bg-secondary position-absolute top-0 start-0 m-3">Patología</span>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Robbins y Cotran. Patología Estructural y Funcional</h5>
+              <small class="card-text text-secondary">El texto más consultado para el aprendizaje de la patología médica.</small>
+            </div>
+            <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+              <span class="text-success fw-semibold">$65.00 <small class="text-muted text-decoration-line-through">$80.00</small></span>
+              <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+            </div>
+          </div>
+        </div>
+       
+        <!-- Card 4 -->
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm hover-scale">
+            <div class="book-cover">
+              <img src="img/libros/nelson-pediatria.jpg" class="card-img-top card-img-libro" alt="Nelson Pediatría">
+            </div>
+            <span class="badge bg-secondary position-absolute top-0 start-0 m-3">Pediatría</span>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Nelson. Tratado de Pediatría</h5>
+              <small class="card-text text-secondary">Obra de referencia para el diagnóstico y tratamiento en pediatría.</small>
+            </div>
+            <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+              <span class="text-success fw-semibold">$72.00 <small class="text-muted text-decoration-line-through">$90.00</small></span>
+              <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Card 5 -->
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm hover-scale">
+            <div class="book-cover">
+              <img src="img/libros/cirugia-sabiston.jpg" class="card-img-top card-img-libro" alt="Sabiston Cirugía">
+            </div>
+            <span class="badge bg-secondary position-absolute top-0 start-0 m-3">Cirugía</span>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Sabiston. Tratado de Cirugía</h5>
+              <small class="card-text text-secondary">Guía completa para el aprendizaje y la práctica quirúrgica moderna.</small>
+            </div>
+            <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+              <span class="text-success fw-semibold">$80.00 <small class="text-muted text-decoration-line-through">$99.00</small></span>
+              <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
+            </div>
+          </div>
+        </div>
+    
       </div>
     </div>
-  </section>
-  
- <!-- Categorías -->
+  </div>
+</section>
+<!-- Categorías -->
 <section id="categorias" class="py-5 bg-light">
   <div class="container">
     <h2 class="text-center fw-bold mb-5 text-primary">Categorías Médicas</h2>

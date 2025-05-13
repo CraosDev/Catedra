@@ -20,7 +20,9 @@ body {
 a.text-secondary:hover {
     color: var(--bs-primary) !important;
 }
-
+a{
+    text-decoration: none;
+}
 .hover-scale {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
