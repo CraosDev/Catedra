@@ -13,179 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- Estilos personalizados -->
-  <style>
-    :root {
-  --bs-primary: #1F3B5A;
-  --bs-primary-rgb: 31,59,90;
-  --bs-secondary: #3CAEA3;
-  --bs-secondary-rgb: 60,174,163;
-  --bs-body-bg: #F8F9FA;
-  --bs-body-color: #343A40;
-}
-
-body {
-  background-color: var(--bs-body-bg);
-  color: var(--bs-body-color);
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.6;
-  letter-spacing: 0.1px;
-  margin: 0;
-}
-
-a.text-secondary:hover {
-  color: var(--bs-primary) !important;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-  letter-spacing: -0.3px;
-  line-height: 1.2;
-  margin-bottom: 0.6em;
-}
-
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.6rem; }
-h4 { font-size: 1.3rem; }
-h5 { font-size: 1.1rem; }
-h6 { font-size: 1rem; }
-
-p, small {
-  font-weight: 200;
-  letter-spacing: 0.1px;
-  margin-bottom: 1rem;
-}
-
-.btn-custom {
-  font-weight: 500;
-  font-size: 0.95rem;
-  letter-spacing: 0.3px;
-  border-radius: 0.5rem;
-  transition: background-color 0.3s, transform 0.2s;
-}
-.btn-custom:hover {
-  transform: translateY(-2px);
-}
-
-.hover-scale {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.hover-scale:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 1.2rem 2rem rgba(0, 0, 0, 0.1);
-}
-
-footer {
-  font-size: 0.9rem;
-}
-
-/* Responsive book cover */
-.book-cover {
-  position: relative;
-  width: 100%;
-  max-width: 200px;
-  aspect-ratio: 2 / 3;
-  margin: auto;
-}
-
-.book-cover img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.book-cover::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 15px;
-  height: 100%;
-  background: linear-gradient(to right, #505050d2, transparent);
-  box-shadow: 2px 0 5px rgba(10, 10, 10, 0.3);
-  border-right: 1px solid rgba(107, 107, 107, 0.342);
-  z-index: 1;
-}
-
-/* Categorías responsivas */
-.categoria-card {
-  width: 100%;
-  aspect-ratio: 4 / 1; /* Alternativa responsiva a height fija */
-  position: relative;
-  overflow: hidden;
-  border-radius: 1rem;
-  transition: all 0.3s ease;
-}
-
-.categoria-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-  transition: filter 0.3s ease;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.categoria-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  transition: opacity 0.3s ease;
-}
-
-.categoria-content {
-  position: relative;
-  z-index: 3;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  transition: color 0.3s ease;
-  text-align: center;
-  color: white;
-}
-
-.categoria-card:hover img {
-  filter: brightness(1.2);
-}
-
-.categoria-card:hover .categoria-overlay {
-  opacity: 0.2;
-}
-
-/* MEDIA QUERIES para mejorar aún más la adaptación */
-@media (max-width: 768px) {
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.7rem; }
-  .book-cover {
-    max-width: 150px;
-  }
-  .categoria-card {
-    aspect-ratio: 3 / 1;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 { font-size: 1.6rem; }
-  h2 { font-size: 1.4rem; }
-  .categoria-content {
-    font-size: 0.9rem;
-    padding: 0.5rem;
-  }
-}
-
-    </style>
-    
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body 
   data-bs-spy="scroll" 
@@ -202,7 +30,7 @@ footer {
 
     <div class="d-flex align-items-center order-lg-3 ms-auto">
       <form class="d-flex me-2">
-        <div class="input-group">
+        <div class="input-group position-relative">
           <input class="form-control rounded-pill pe-5" type="search" placeholder="Buscar..." style="max-width: 75%;">
           <button class="btn btn-light rounded-pill position-absolute end-0 hover-lift" type="submit" style="z-index: 2;">
             <i class="bi bi-search"></i>
@@ -262,162 +90,233 @@ footer {
   </div>
 </nav>
 <!-- Banner principal -->
-<section class="bg-light py-5 text-center">
-  <div class="container">
-    <h1 class="display-5 fw-bold text-primary">Bienvenido a la sección de Medicina</h1>
-    <p class="lead text-secondary">Explora nuestra selección de libros médicos especializados en Cátedra del Saber. Encuentra títulos de referencia, manuales y recursos para estudiantes y profesionales de la salud.</p>
-    <a href="#ofertas" class="btn btn-primary btn-lg mt-3 rounded-pill">Ver Libros en Oferta</a>
-  </div>
-</section>
+<!-- Hero / Portada -->
 
-<!-- Sección de Ofertas -->
-<section id="ofertas" class="py-2 bg-white">
-  <div class="container">
-    <h2 class="text-center fw-bold mb-4 text-primary">Libros de Medicina Destacados</h2>
-    <div class="container py-5">
-      <div class="row row-cols-2 row-cols-md-5 g-3">
-        
-        <!-- Card 1 -->
+<!-- Hero Medicina -->
+<div id="medicina" class="position-relative d-flex align-items-center text-white" style="min-height:75vh; overflow: hidden;">
+   <video autoplay muted loop playsinline class="position-absolute w-100 h-100 object-fit-cover" style="top: 0; left: 0; z-index: 0;">
+    <source src="video/medicina.mp4" type="video/mp4">
+    Tu navegador no soporta video HTML5.
+  </video>
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.6); z-index: 1;"></div>
+  <div class="container text-center py-5 px-3 position-relative" style="max-width: 900px; z-index: 2;">
+    <h1 class="display-4 fw-bold mb-3">Biblioteca Médica</h1>
+    <p class="lead mb-4">
+      Explora libros de medicina para estudiantes y profesionales: anatomía, farmacología, cirugía, pediatría y más.
+    </p>
+    <div class="d-flex justify-content-center gap-3 flex-wrap mb-2">
+      <a href="#categorias" class="btn btn-lg btn-outline-light btn-custom px-4 py-3">
+        Ver Categorías
+      </a>
+      <a href="#contacto" class="btn btn-outline-light btn-lg btn-custom px-4 py-3">
+        Contactar Sucursal
+      </a>
+    </div>
+    <div class="mt-4">
+      <a href="" class="badge bg-light text-primary fs-6 fw-semibold px-3 py-2 shadow-sm">Novedades 2025</a>
+    </div>
+  </div>
+</div>
+<section class="container my-5">
+  <h2 class="text-center text-primary fw-bold mb-4">Nuestros Libros</h2>
+
+  <div class="row row-cols-2 row-cols-md-6 g-3">
+    
+    <!-- Libro 1 -->
+    <div class="col">
+      <div class="card h-100 border-0 shadow-sm hover-scale">
+      <div class="book-cover">
+        <img src="img/libros/medicina/cirugia.jpg" class="card-img-top card-img-libro" alt="Cirugía">
+      </div>
+      
+      <div class="card-body">
+        <h5 class="card-title fw-bold texto-cortado-multilinea">Cirugía para el grado de medicina</h5>
+        <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Cirugía</a>
+      </div>
+      <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+        <span class="precio-libro">Bs 345.00</span>
+        <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+      </div>
+      </div>
+    </div>
+     <!-- Card 2 -->
         <div class="col">
           <div class="card h-100 border-0 shadow-sm hover-scale">
-            <div class="book-cover">
-              <img src="img/libros/anatomia-gray.jpg" class="card-img-top card-img-libro" alt="Gray Anatomía">
-            </div>
-            <span class="badge bg-secondary position-absolute top-0 start-0 m-3">Anatomía</span>
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Gray. Anatomía para Estudiantes</h5>
-              <small class="card-text text-secondary">Referencia esencial para el estudio anatómico, ideal para estudiantes de medicina.</small>
-            </div>
-            <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-              <span class="text-success fw-semibold">$59.99 <small class="text-muted text-decoration-line-through">$75.00</small></span>
-              <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
-            </div>
+          <div class="book-cover">
+            <img src="img/libros/medicina/enfermeria.jpg" class="card-img-top card-img-libro" alt="Enfermería de Salud Mental">
+          </div>
+          
+          <div class="card-body">
+            <h5 class="card-title fw-bold texto-cortado-multilinea">Enfermería de Salud Mental</h5>
+            <a class="badge bg-primary position-absolute top-0 start-0 "style="z-index: 1;">Enfermería</a>
+          </div>
+          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+            <span class="precio-libro">Bs 238.00</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+          </div>
           </div>
         </div>
-    
-        <!-- Card 2 -->
-        <div class="col">
-          <div class="card h-100 border-0 shadow-sm hover-scale">
-            <div class="book-cover">
-              <img src="img/libros/farmacologia-katzung.jpg" class="card-img-top card-img-libro" alt="Farmacología Katzung">
-            </div>
-            <span class="badge bg-secondary position-absolute top-0 start-0 m-3">Farmacología</span>
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Farmacología Básica y Clínica - Katzung</h5>
-              <small class="card-text text-secondary">Manual actualizado para comprender los principios farmacológicos y su aplicación clínica.</small>
-            </div>
-            <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-              <span class="text-success fw-semibold">$48.00 <small class="text-muted text-decoration-line-through">$60.00</small></span>
-              <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
-            </div>
-          </div>
-        </div>
-    
+
         <!-- Card 3 -->
         <div class="col">
           <div class="card h-100 border-0 shadow-sm hover-scale">
-            <div class="book-cover">
-              <img src="img/libros/robbins-patologia.jpg" class="card-img-top card-img-libro" alt="Robbins Patología">
-            </div>
-            <span class="badge bg-secondary position-absolute top-0 start-0 m-3">Patología</span>
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Robbins y Cotran. Patología Estructural y Funcional</h5>
-              <small class="card-text text-secondary">El texto más consultado para el aprendizaje de la patología médica.</small>
-            </div>
-            <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-              <span class="text-success fw-semibold">$65.00 <small class="text-muted text-decoration-line-through">$80.00</small></span>
-              <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
-            </div>
+          <div class="book-cover">
+            <img src="img/libros/medicina/otologia.jpg" class="card-img-top card-img-libro" alt="Otología">
+          </div>
+          
+          <div class="card-body">
+            <h5 class="card-title fw-bold texto-cortado-multilinea">Otología</h5>
+            <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Otorrinolaringología</a>
+          </div>
+          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+            <span class="precio-libro">Bs 290.00</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+          </div>
           </div>
         </div>
-       
+
         <!-- Card 4 -->
         <div class="col">
           <div class="card h-100 border-0 shadow-sm hover-scale">
-            <div class="book-cover">
-              <img src="img/libros/nelson-pediatria.jpg" class="card-img-top card-img-libro" alt="Nelson Pediatría">
-            </div>
-            <span class="badge bg-secondary position-absolute top-0 start-0 m-3">Pediatría</span>
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Nelson. Tratado de Pediatría</h5>
-              <small class="card-text text-secondary">Obra de referencia para el diagnóstico y tratamiento en pediatría.</small>
-            </div>
-            <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-              <span class="text-success fw-semibold">$72.00 <small class="text-muted text-decoration-line-through">$90.00</small></span>
-              <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
-            </div>
+          <div class="book-cover">
+            <img src="img/libros/medicina/psiquiatria.jpg" class="card-img-top card-img-libro" alt="Psiquiatría">
+          </div>
+          
+          <div class="card-body">
+            <h5 class="card-title fw-bold texto-cortado-multilinea">Psiquiatría para medicos no psiquiatras</h5>
+            <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Psiquiatría</a>
+          </div>
+          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+            <span class="precio-libro">Bs 385.00</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+          </div>
           </div>
         </div>
-  
+
         <!-- Card 5 -->
         <div class="col">
           <div class="card h-100 border-0 shadow-sm hover-scale">
-            <div class="book-cover">
-              <img src="img/libros/cirugia-sabiston.jpg" class="card-img-top card-img-libro" alt="Sabiston Cirugía">
-            </div>
-            <span class="badge bg-secondary position-absolute top-0 start-0 m-3">Cirugía</span>
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Sabiston. Tratado de Cirugía</h5>
-              <small class="card-text text-secondary">Guía completa para el aprendizaje y la práctica quirúrgica moderna.</small>
-            </div>
-            <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-              <span class="text-success fw-semibold">$80.00 <small class="text-muted text-decoration-line-through">$99.00</small></span>
-              <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2">Comprar</a>
-            </div>
+          <div class="book-cover">
+            <img src="img/libros/medicina/semiologia.jpg" class="card-img-top card-img-libro" alt="Semiología Médica">
+          </div>
+          
+          <div class="card-body">
+            <h5 class="card-title fw-bold texto-cortado-multilinea">Semiología Médica,fisiopatologia,semiotecnia y propedeutica</h5>
+            <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Semiología</a>
+          </div>
+          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+            <span class="precio-libro">Bs 269.00</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+          </div>
           </div>
         </div>
-    
-      </div>
-    </div>
+        <!-- Card 6 -->
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm hover-scale">
+          <div class="book-cover">
+            <img src="img/libros/medicina/enfermeria.jpg" class="card-img-top card-img-libro" alt="Enfermería de Salud Mental">
+          </div>
+          
+          <div class="card-body">
+            <h5 class="card-title fw-bold texto-cortado-multilinea">Enfermería de Salud Mental</h5>
+            <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Enfermería</a>
+          </div>
+          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+            <span class="precio-libro">Bs 238.00</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+          </div>
+          </div>
+        </div>
+
   </div>
 </section>
+
 <!-- Categorías -->
-<section id="categorias" class="py-5 bg-light">
+<section id="categorias" class="bg-light py-5">
   <div class="container">
     <h2 class="text-center fw-bold mb-5 text-primary">Categorías Médicas</h2>
-    <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4 g-4">
+    <div class="row g-3 justify-content-center">
 
-      <!-- Categoría individual -->
-      <div class="col">
-        <div class="categoria-card position-relative text-white rounded-4 overflow-hidden shadow">
-          <div class="categoria-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
-          <div class="categoria-content position-relative p-4 d-flex align-items-center justify-content-center h-100">
-            <h5 class="fw-bold">Anatomía</h5>
+      <!-- Anatomía -->
+      <div class="col-6 col-md-3">
+        <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden categoria-card position-relative" style="max-width: 180px; margin: 0 auto;">
+          <img src="img/categorias/anatomia.jpg" class="card-img-top object-fit-cover" alt="Anatomía" style="height: 100px;">
+          <div class="card-body bg-white text-center py-2">
+            <h6 class="fw-bold text-primary mb-0">Anatomía</h6>
           </div>
-          <img src="img/categorias/anatomia.jpg" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" alt="Anatomía">
         </div>
       </div>
 
-      <div class="col">
-        <div class="categoria-card position-relative text-white rounded-4 overflow-hidden shadow">
-          <div class="categoria-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
-          <div class="categoria-content position-relative p-4 d-flex align-items-center justify-content-center h-100">
-            <h5 class="fw-bold">Farmacología</h5>
+      <!-- Farmacología -->
+      <div class="col-6 col-md-3">
+        <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden categoria-card position-relative" style="max-width: 180px; margin: 0 auto;">
+          <img src="img/categorias/farmacologia.jpg" class="card-img-top object-fit-cover" alt="Farmacología" style="height: 100px;">
+          <div class="card-body bg-white text-center py-2">
+            <h6 class="fw-bold text-primary mb-0">Farmacología</h6>
           </div>
-          <img src="img/categorias/farmacologia.jpg" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" alt="Farmacología">
         </div>
       </div>
 
-      <div class="col">
-        <div class="categoria-card position-relative text-white rounded-4 overflow-hidden shadow">
-          <div class="categoria-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
-          <div class="categoria-content position-relative p-4 d-flex align-items-center justify-content-center h-100">
-            <h5 class="fw-bold">Cirugía</h5>
+      <!-- Cirugía -->
+      <div class="col-6 col-md-3">
+        <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden categoria-card position-relative" style="max-width: 180px; margin: 0 auto;">
+          <img src="img/categorias/cirugia.jpeg" class="card-img-top object-fit-cover" alt="Cirugía" style="height: 100px;">
+          <div class="card-body bg-white text-center py-2">
+            <h6 class="fw-bold text-primary mb-0">Cirugía</h6>
           </div>
-          <img src="img/categorias/cirugia.jpeg" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" alt="Cirugía">
         </div>
       </div>
 
-      <div class="col">
-        <div class="categoria-card position-relative text-white rounded-4 overflow-hidden shadow">
-          <div class="categoria-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
-          <div class="categoria-content position-relative p-4 d-flex align-items-center justify-content-center h-100">
-            <h5 class="fw-bold">Pediatría</h5>
+      <!-- Pediatría -->
+      <div class="col-6 col-md-3">
+        <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden categoria-card position-relative" style="max-width: 180px; margin: 0 auto;">
+          <img src="img/categorias/pediatria.png" class="card-img-top object-fit-cover" alt="Pediatría" style="height: 100px;">
+          <div class="card-body bg-white text-center py-2">
+            <h6 class="fw-bold text-primary mb-0">Pediatría</h6>
           </div>
-          <img src="img/categorias/pediatria.png" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" alt="Pediatría">
         </div>
       </div>
 
+      <!-- Farmacología -->
+      <div class="col-6 col-md-3">
+        <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden categoria-card position-relative" style="max-width: 180px; margin: 0 auto;">
+          <img src="img/categorias/farmacologia.jpg" class="card-img-top object-fit-cover" alt="Farmacología" style="height: 100px;">
+          <div class="card-body bg-white text-center py-2">
+            <h6 class="fw-bold text-primary mb-0">Farmacología</h6>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cirugía -->
+      <div class="col-6 col-md-3">
+        <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden categoria-card position-relative" style="max-width: 180px; margin: 0 auto;">
+          <img src="img/categorias/cirugia.jpeg" class="card-img-top object-fit-cover" alt="Cirugía" style="height: 100px;">
+          <div class="card-body bg-white text-center py-2">
+            <h6 class="fw-bold text-primary mb-0">Cirugía</h6>
+          </div>
+        </div>
+      </div>
+
+      <!-- Anatomía -->
+      <div class="col-6 col-md-3">
+        <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden categoria-card position-relative" style="max-width: 180px; margin: 0 auto;">
+          <img src="img/categorias/anatomia.jpg" class="card-img-top object-fit-cover" alt="Anatomía" style="height: 100px;">
+          <div class="card-body bg-white text-center py-2">
+            <h6 class="fw-bold text-primary mb-0">Anatomía</h6>
+          </div>
+        </div>
+      </div>
+
+      <!-- Farmacología -->
+      <div class="col-6 col-md-3">
+        <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden categoria-card position-relative" style="max-width: 180px; margin: 0 auto;">
+          <img src="img/categorias/farmacologia.jpg" class="card-img-top object-fit-cover" alt="Farmacología" style="height: 100px;">
+          <div class="card-body bg-white text-center py-2">
+            <h6 class="fw-bold text-primary mb-0">Farmacología</h6>
+          </div>
+        </div>
+      </div>
+      
     </div>
   </div>
 </section>
@@ -500,7 +399,9 @@ footer {
       </div>
     </div>
   </footer>
-
+  <a href="https://wa.me/59170000000" class="btn btn-success position-fixed bottom-0 end-0 m-4 rounded-circle shadow-lg" style="z-index: 1050;">
+  <i class="bi bi-whatsapp fs-4"></i>
+</a>  
 
 
   <!-- Modal Sesion-->

@@ -74,7 +74,7 @@ a{
     position: absolute;
     top: 0;
     left: 0;
-    width: 15px;
+    width: 8px;
     height: 100%;
     background: linear-gradient(to right, #505050d2, transparent);
     box-shadow: 2px 0 5px rgba(10, 10, 10, 0.3);
