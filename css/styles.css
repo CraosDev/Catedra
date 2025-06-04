@@ -235,4 +235,12 @@ footer {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.texto-cortado-multilinea2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;     /* Número de líneas a mostrar */
+    line-clamp: 2;             /* Standard property for compatibility */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 

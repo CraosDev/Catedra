@@ -100,44 +100,51 @@
 <!-- Banner principal -->
 <!-- Hero / Portada -->
 
-<!-- Hero Medicina -->
-<div id="infantiles" class="position-relative d-flex align-items-center text-white" style="min-height:75vh; overflow: hidden;">
+<!-- Hero Otros -->
+<div id="otros" class="position-relative d-flex align-items-center text-white" style="min-height:75vh; overflow: hidden;">
    <video autoplay muted loop playsinline class="position-absolute w-100 h-100 object-fit-cover" style="top: 0; left: 0; z-index: 0;">
-    <source src="video/infantiles.mp4" type="video/mp4">
+    <source src="video/libreria.mp4" type="video/mp4">
     Tu navegador no soporta video HTML5.
   </video>
   <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.6); z-index: 1;"></div>
   <div class="container text-center py-5 px-3 position-relative" style="max-width: 900px; z-index: 2;">
-    <h1 class="display-4 fw-bold mb-3">Biblioteca Infantil</h1>
+    <h1 class="display-4 fw-bold mb-3">Libros y Materiales Especiales</h1>
     <p class="lead mb-4">
-      Explora libros, cuentos y materiales educativos para niños y niñas de todas las edades.
+      Encuentra libros de cocina, música, arte, diccionarios, guías técnicas, planos y mucho más. Una selección para todos los gustos y necesidades.
     </p>
     <div class="d-flex justify-content-center gap-3 flex-wrap mb-2">
-      <a href="#categorias" class="badge bg-warning text-dark fs-6 fw-semibold px-3 py-2 shadow-sm">Explorar Categorías</a>
-      <a href="#juguetes-educativos" class="badge bg-success text-white fs-6 fw-semibold px-3 py-2 shadow-sm">Juguetes Educativos</a>
-      <a href="#manualidades" class="badge bg-info text-dark fs-6 fw-semibold px-3 py-2 shadow-sm">Manualidades</a>
-      <a href="#contacto" class="badge bg-primary text-white fs-6 fw-semibold px-3 py-2 shadow-sm">Contacto y Sucursal</a>
-      <a href="#faqAccordion" class="badge bg-pink text-white fs-6 fw-semibold px-3 py-2 shadow-sm" style="background-color:#e75480!important;">Preguntas Frecuentes</a>
+      <a href="#categorias" class="btn btn-lg btn-outline-light btn-custom px-4 py-3">
+        Ver Categorías
+      </a>
+      <a href="#contacto" class="btn btn-outline-light btn-lg btn-custom px-4 py-3">
+        Contactar Sucursal
+      </a>
     </div>
-
+    <div class="mt-4">
+      <a href="" class="badge bg-light text-primary fs-6 fw-semibold px-3 py-2 shadow-sm my-2">Novedades 2025</a>
+      <a href="#materiales-varios" class="badge bg-light text-primary fs-6 fw-semibold px-3 py-2 shadow-sm my-2">Ver Materiales</a>
+      <a href="#faqAccordion" class="badge bg-light text-primary fs-6 fw-semibold px-3 py-2 shadow-sm">Preguntas Frecuentes</a>
+    </div>
   </div>
 </div>
 <section class="container my-5">
-  <h2 class="text-center text-primary fw-bold mb-4">Nuestros Libros Infantiles</h2>
-  <p class="lead text-secondary">Descubre nuestra selección de cuentos, libros ilustrados y material didáctico para los más pequeños.</p>
+  <h2 class="text-center text-primary fw-bold mb-4">Libros y Materiales Destacados</h2>
+  <p class="lead text-secondary">Explora nuestra colección de libros de interés general, arte, cocina, música, diccionarios, guías y más. Ideales para estudiantes, profesionales y aficionados.</p>
   <div class="row row-cols-2 row-cols-md-6 g-3">
     <!-- Libro 1 -->
     <div class="col">
       <div class="card h-100 border-0 shadow-sm hover-scale">
       <div class="book-cover">
-        <img src="img/libros/infantiles/100 cuentos.jpg" class="card-img-top card-img-libro" alt="100 cuentos">
+        <img src="img/libros/varios/cocina.jpg" class="card-img-top card-img-libro" alt="Cocina Internacional">
       </div>
       <div class="card-body">
-        <h5 class="card-title fw-bold texto-cortado-multilinea">100 cuentos para soñar</h5>
-        <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Cuentos</a>
+        <h5 class="card-title fw-bold texto-cortado-multilinea">Cocina Internacional</h5>
+        <p class="small text-secondary mb-1">Autor: Chef Laura Ruiz</p>
+        <p class="small texto-cortado-multilinea2">Recetas de todo el mundo con fotografías y consejos de chefs profesionales.</p>
+        <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Cocina</a>
       </div>
       <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-        <span class="precio-libro">Bs 120.00</span>
+        <span class="precio-libro">Bs 180.00</span>
         <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
       </div>
       </div>
@@ -146,14 +153,16 @@
     <div class="col">
       <div class="card h-100 border-0 shadow-sm hover-scale">
       <div class="book-cover">
-        <img src="img/libros/infantiles/animales.jpg" class="card-img-top card-img-libro" alt="Animales divertidos">
+        <img src="img/libros/varios/diccionario.jpg" class="card-img-top card-img-libro" alt="Diccionario Español-Inglés">
       </div>
       <div class="card-body">
-        <h5 class="card-title fw-bold texto-cortado-multilinea">Animales divertidos</h5>
-        <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Educativo</a>
+        <h5 class="card-title fw-bold texto-cortado-multilinea">Diccionario Español-Inglés</h5>
+        <p class="small text-secondary mb-1">Editorial: Lexicón</p>
+        <p class="small texto-cortado-multilinea2">Edición actualizada, ideal para estudiantes y viajeros.</p>
+        <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Diccionario</a>
       </div>
       <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-        <span class="precio-libro">Bs 95.00</span>
+        <span class="precio-libro">Bs 90.00</span>
         <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
       </div>
       </div>
@@ -162,14 +171,16 @@
     <div class="col">
       <div class="card h-100 border-0 shadow-sm hover-scale">
       <div class="book-cover">
-        <img src="img/libros/infantiles/autum.jpg" class="card-img-top card-img-libro" alt="Autum la ardilla">
+        <img src="img/libros/varios/guines.jpg" class="card-img-top card-img-libro" alt="Guía de Viajes Europa">
       </div>
       <div class="card-body">
-        <h5 class="card-title fw-bold texto-cortado-multilinea">Autum la ardilla</h5>
-        <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Cuento</a>
+        <h5 class="card-title fw-bold texto-cortado-multilinea">Guía de Viajes Europa</h5>
+        <p class="small text-secondary mb-1">Autor: Varios</p>
+        <p class="small texto-cortado-multilinea2">Rutas, mapas y recomendaciones para recorrer las principales ciudades europeas.</p>
+        <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Guía</a>
       </div>
       <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-        <span class="precio-libro">Bs 110.00</span>
+        <span class="precio-libro">Bs 150.00</span>
         <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
       </div>
       </div>
@@ -178,14 +189,16 @@
     <div class="col">
       <div class="card h-100 border-0 shadow-sm hover-scale">
       <div class="book-cover">
-        <img src="img/libros/infantiles/el zorro.jpg" class="card-img-top card-img-libro" alt="El zorro y la luna">
+        <img src="img/libros/varios/musica.jpg" class="card-img-top card-img-libro" alt="Historia de la Música">
       </div>
       <div class="card-body">
-        <h5 class="card-title fw-bold texto-cortado-multilinea">El zorro y la luna</h5>
-        <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Fábula</a>
+        <h5 class="card-title fw-bold texto-cortado-multilinea">Historia de la Música</h5>
+        <p class="small text-secondary mb-1">Autor: Mtro. Pablo Suárez</p>
+        <p class="small texto-cortado-multilinea2">Un recorrido ilustrado por los grandes géneros y compositores de la música universal.</p>
+        <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Música</a>
       </div>
       <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-        <span class="precio-libro">Bs 105.00</span>
+        <span class="precio-libro">Bs 170.00</span>
         <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
       </div>
       </div>
@@ -194,14 +207,16 @@
     <div class="col">
       <div class="card h-100 border-0 shadow-sm hover-scale">
       <div class="book-cover">
-        <img src="img/libros/infantiles/javier.jpg" class="card-img-top card-img-libro" alt="Javier y el dragón">
+        <img src="img/libros/varios/planos.jpg" class="card-img-top card-img-libro" alt="Planos y Construcción">
       </div>
       <div class="card-body">
-        <h5 class="card-title fw-bold texto-cortado-multilinea">Javier y el dragón</h5>
-        <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Aventura</a>
+        <h5 class="card-title fw-bold texto-cortado-multilinea">Planos y Construcción</h5>
+        <p class="small text-secondary mb-1">Autor: Ing. Marco Torres</p>
+        <p class="small texto-cortado-multilinea2">Manual práctico para estudiantes y profesionales de arquitectura e ingeniería civil.</p>
+        <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Técnico</a>
       </div>
       <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-        <span class="precio-libro">Bs 130.00</span>
+        <span class="precio-libro">Bs 200.00</span>
         <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
       </div>
       </div>
@@ -210,73 +225,75 @@
     <div class="col">
       <div class="card h-100 border-0 shadow-sm hover-scale">
       <div class="book-cover">
-        <img src="img/libros/infantiles/100 cuentos.jpg" class="card-img-top card-img-libro" alt="100 cuentos">
+        <img src="img/libros/varios/cocina.jpg" class="card-img-top card-img-libro" alt="Cocina Internacional">
       </div>
       <div class="card-body">
-        <h5 class="card-title fw-bold texto-cortado-multilinea">100 cuentos para soñar</h5>
-        <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Cuentos</a>
+        <h5 class="card-title fw-bold texto-cortado-multilinea">Cocina Internacional</h5>
+        <p class="small text-secondary mb-1">Autor: Chef Laura Ruiz</p>
+        <p class="small texto-cortado-multilinea2">Recetas de todo el mundo con fotografías y consejos de chefs profesionales.</p>
+        <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Cocina</a>
       </div>
       <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-        <span class="precio-libro">Bs 120.00</span>
+        <span class="precio-libro">Bs 180.00</span>
         <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
       </div>
       </div>
     </div>
   </div>
 </section>
-<section class="container my-5" id="juguetes-educativos">
-  <h2 class="text-center fw-bold mb-4 text-primary">Juguetes Educativos</h2>
+<section class="container my-5" id="materiales-varios">
+  <h2 class="text-center fw-bold mb-4 text-primary">Materiales y Recursos Especiales</h2>
   <p class="lead text-secondary text-center mb-5">
-    Descubre nuestra colección de juguetes y materiales didácticos ideales para el aprendizaje y la diversión de los niños.
+    Además de libros, contamos con mapas, láminas, instrumentos de dibujo, partituras y más para complementar tu aprendizaje o afición.
   </p>
   <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-    <!-- Rompecabezas -->
+    <!-- Mapa Mundi -->
     <div class="col">
       <div class="card h-100 border-0 shadow-sm hover-scale rounded-4 position-relative">
         <div class="ratio ratio-4x3 rounded-top-4 overflow-hidden">
-          <img src="img/modelos/esqueleto.jpg" class="card-img-top object-fit-cover" alt="Rompecabezas de animales" style="height:100%;object-fit:cover;">
+          <img src="img/modelos/esqueleto.jpg" class="card-img-top object-fit-cover" alt="Mapa Mundi" style="height:100%;object-fit:cover;">
         </div>
         <div class="card-body pb-2">
-          <h5 class="card-title fw-bold texto-cortado-multilinea mb-2">Rompecabezas de animales</h5>
-          <p class="card-text texto-cortado-multilinea small text-secondary mb-0">Piezas grandes y coloridas para aprender jugando.</p>
+          <h5 class="card-title fw-bold texto-cortado-multilinea mb-2">Mapa Mundi</h5>
+          <p class="card-text texto-cortado-multilinea small text-secondary mb-0">Ideal para aulas, oficinas y amantes de la geografía.</p>
         </div>
-        <span class="badge bg-primary position-absolute top-0 start-0 m-2" style="z-index: 1;">Juguetes</span>
-        <div class="card-footer border-0 bg-white d-flex justify-content-between align-items-center rounded-bottom-4">
-          <span class="precio-libro fw-semibold">Bs 80.00</span>
-          <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-        </div>
-      </div>
-    </div>
-    <!-- Juego de memoria -->
-    <div class="col">
-      <div class="card h-100 border-0 shadow-sm hover-scale rounded-4 position-relative">
-        <div class="ratio ratio-4x3 rounded-top-4 overflow-hidden">
-          <img src="img/modelos/cerebro.jpg" class="card-img-top object-fit-cover" alt="Juego de memoria" style="height:100%;object-fit:cover;">
-        </div>
-        <div class="card-body pb-2">
-          <h5 class="card-title fw-bold texto-cortado-multilinea mb-2">Juego de memoria</h5>
-          <p class="card-text texto-cortado-multilinea small text-secondary mb-0">Tarjetas ilustradas para estimular la memoria y la concentración.</p>
-        </div>
-        <span class="badge bg-primary position-absolute top-0 start-0 m-2" style="z-index: 1;">Juguetes</span>
+        <span class="badge bg-primary position-absolute top-0 start-0 m-2" style="z-index: 1;">Material</span>
         <div class="card-footer border-0 bg-white d-flex justify-content-between align-items-center rounded-bottom-4">
           <span class="precio-libro fw-semibold">Bs 60.00</span>
           <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
         </div>
       </div>
     </div>
-    <!-- Set de plastilina -->
+    <!-- Láminas de arte -->
     <div class="col">
       <div class="card h-100 border-0 shadow-sm hover-scale rounded-4 position-relative">
         <div class="ratio ratio-4x3 rounded-top-4 overflow-hidden">
-          <img src="img/modelos/craneo.jpg" class="card-img-top object-fit-cover" alt="Set de plastilina" style="height:100%;object-fit:cover;">
+          <img src="img/modelos/cerebro.jpg" class="card-img-top object-fit-cover" alt="Láminas de arte" style="height:100%;object-fit:cover;">
         </div>
         <div class="card-body pb-2">
-          <h5 class="card-title fw-bold texto-cortado-multilinea mb-2">Set de plastilina</h5>
-          <p class="card-text texto-cortado-multilinea small text-secondary mb-0">Colores variados para crear y desarrollar la motricidad fina.</p>
+          <h5 class="card-title fw-bold texto-cortado-multilinea mb-2">Láminas de arte</h5>
+          <p class="card-text texto-cortado-multilinea small text-secondary mb-0">Reproducciones de obras clásicas y contemporáneas para decoración y estudio.</p>
         </div>
-        <span class="badge bg-primary position-absolute top-0 start-0 m-2" style="z-index: 1;">Juguetes</span>
+        <span class="badge bg-primary position-absolute top-0 start-0 m-2" style="z-index: 1;">Material</span>
         <div class="card-footer border-0 bg-white d-flex justify-content-between align-items-center rounded-bottom-4">
           <span class="precio-libro fw-semibold">Bs 50.00</span>
+          <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- Instrumentos de dibujo -->
+    <div class="col">
+      <div class="card h-100 border-0 shadow-sm hover-scale rounded-4 position-relative">
+        <div class="ratio ratio-4x3 rounded-top-4 overflow-hidden">
+          <img src="img/modelos/craneo.jpg" class="card-img-top object-fit-cover" alt="Instrumentos de dibujo" style="height:100%;object-fit:cover;">
+        </div>
+        <div class="card-body pb-2">
+          <h5 class="card-title fw-bold texto-cortado-multilinea mb-2">Instrumentos de dibujo</h5>
+          <p class="card-text texto-cortado-multilinea small text-secondary mb-0">Compases, reglas y materiales para estudiantes y artistas.</p>
+        </div>
+        <span class="badge bg-primary position-absolute top-0 start-0 m-2" style="z-index: 1;">Material</span>
+        <div class="card-footer border-0 bg-white d-flex justify-content-between align-items-center rounded-bottom-4">
+          <span class="precio-libro fw-semibold">Bs 70.00</span>
           <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
         </div>
       </div>
@@ -286,52 +303,52 @@
 <!-- Categorías -->
 <section id="categorias" class="bg-light">
   <div class="container">
-    <h2 class="text-center fw-bold mb-5 text-primary">Categorías Infantiles</h2>
+    <h2 class="text-center fw-bold mb-5 text-primary">Categorías Generales</h2>
     <!-- Swiper -->
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
-        <!-- Cuentos -->
+        <!-- Cocina -->
         <div class="swiper-slide">
           <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden categoria-card text-center" style="max-width: 180px; margin: 0 auto;">
-            <img src="img/libros/infantiles/100 cuentos.jpg" class="card-img-top object-fit-cover" alt="Cuentos" style="height: 100px;">
+            <img src="img/libros/varios/cocina.jpg" class="card-img-top object-fit-cover" alt="Cocina" style="height: 100px;">
             <div class="card-body bg-white py-2">
-              <h6 class="fw-bold text-primary mb-0">Cuentos</h6>
+              <h6 class="fw-bold text-primary mb-0">Cocina</h6>
             </div>
           </div>
         </div>
-        <!-- Fábulas -->
+        <!-- Diccionarios -->
         <div class="swiper-slide">
           <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden categoria-card text-center" style="max-width: 180px; margin: 0 auto;">
-            <img src="img/libros/infantiles/el zorro.jpg" class="card-img-top object-fit-cover" alt="Fábulas" style="height: 100px;">
+            <img src="img/libros/varios/diccionario.jpg" class="card-img-top object-fit-cover" alt="Diccionarios" style="height: 100px;">
             <div class="card-body bg-white py-2">
-              <h6 class="fw-bold text-primary mb-0">Fábulas</h6>
+              <h6 class="fw-bold text-primary mb-0">Diccionarios</h6>
             </div>
           </div>
         </div>
-        <!-- Educativos -->
+        <!-- Guías -->
         <div class="swiper-slide">
           <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden categoria-card text-center" style="max-width: 180px; margin: 0 auto;">
-            <img src="img/libros/infantiles/animales.jpg" class="card-img-top object-fit-cover" alt="Educativos" style="height: 100px;">
+            <img src="img/libros/varios/guines.jpg" class="card-img-top object-fit-cover" alt="Guías" style="height: 100px;">
             <div class="card-body bg-white py-2">
-              <h6 class="fw-bold text-primary mb-0">Educativos</h6>
+              <h6 class="fw-bold text-primary mb-0">Guías</h6>
             </div>
           </div>
         </div>
-        <!-- Aventuras -->
+        <!-- Música -->
         <div class="swiper-slide">
           <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden categoria-card text-center" style="max-width: 180px; margin: 0 auto;">
-            <img src="img/libros/infantiles/javier.jpg" class="card-img-top object-fit-cover" alt="Aventuras" style="height: 100px;">
+            <img src="img/libros/varios/musica.jpg" class="card-img-top object-fit-cover" alt="Música" style="height: 100px;">
             <div class="card-body bg-white py-2">
-              <h6 class="fw-bold text-primary mb-0">Aventuras</h6>
+              <h6 class="fw-bold text-primary mb-0">Música</h6>
             </div>
           </div>
         </div>
-        <!-- Manualidades -->
+        <!-- Técnicos -->
         <div class="swiper-slide">
           <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden categoria-card text-center" style="max-width: 180px; margin: 0 auto;">
-            <img src="img/modelos/craneo.jpg" class="card-img-top object-fit-cover" alt="Manualidades" style="height: 100px;">
+            <img src="img/libros/varios/planos.jpg" class="card-img-top object-fit-cover" alt="Técnicos" style="height: 100px;">
             <div class="card-body bg-white py-2">
-              <h6 class="fw-bold text-primary mb-0">Manualidades</h6>
+              <h6 class="fw-bold text-primary mb-0">Técnicos</h6>
             </div>
           </div>
         </div>
@@ -394,58 +411,46 @@
     <div class="accordion-item">
       <h2 class="accordion-header" id="faq1">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1">
-          ¿Tienen libros para todas las edades?
+          ¿Qué tipo de libros y materiales puedo encontrar en esta sección?
         </button>
       </h2>
       <div id="faqCollapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
         <div class="accordion-body">
-          Sí, contamos con libros y materiales para bebés, niños pequeños y preadolescentes.
+          Ofrecemos libros de cocina, arte, música, diccionarios, guías técnicas, manuales, materiales de dibujo, mapas y mucho más.
         </div>
       </div>
     </div>
     <div class="accordion-item">
       <h2 class="accordion-header" id="faq2">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2">
-          ¿Ofrecen juguetes educativos y juegos didácticos?
+          ¿Tienen materiales para profesionales y estudiantes?
         </button>
       </h2>
       <div id="faqCollapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
         <div class="accordion-body">
-          Sí, tenemos una amplia variedad de juguetes didácticos, juegos de memoria, rompecabezas y materiales para el desarrollo infantil.
+          Sí, contamos con manuales técnicos, guías, planos y recursos útiles tanto para estudiantes como para profesionales de distintas áreas.
         </div>
       </div>
     </div>
     <div class="accordion-item">
       <h2 class="accordion-header" id="faq3">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3">
-          ¿Tienen libros para aprender a leer y escribir?
+          ¿Puedo solicitar un libro o material específico que no esté en el catálogo?
         </button>
       </h2>
       <div id="faqCollapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
         <div class="accordion-body">
-          Sí, ofrecemos libros de preescritura, abecedarios, cuentos para primeros lectores y material de apoyo escolar.
+          Sí, puedes contactarnos para solicitar libros o materiales especiales y te informaremos sobre la disponibilidad o el proceso de pedido.
         </div>
       </div>
     </div>
     <div class="accordion-item">
       <h2 class="accordion-header" id="faq4">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4">
-          ¿Realizan actividades o talleres para niños?
-        </button>
-      </h2>
-      <div id="faqCollapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
-          Sí, organizamos cuentacuentos, talleres de manualidades y actividades de animación a la lectura. Consulta nuestro calendario en la sucursal.
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="faq5">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5">
           ¿Realizan envíos a domicilio?
         </button>
       </h2>
-      <div id="faqCollapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div id="faqCollapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
         <div class="accordion-body">
           Sí, realizamos envíos a domicilio en toda la ciudad y el país.
         </div>
@@ -463,7 +468,7 @@
       <!-- Sobre nosotros -->
       <div class="col-md-4">
         <h5 class="fw-bold mb-3">Cátedra del Saber</h5>
-        <p>Fomentando la pasión por la lectura infantil desde 1995.</p>
+        <p>Promoviendo la lectura y el conocimiento en todas las áreas desde 1995.</p>
         <div class="d-flex gap-3 fs-4">
           <a href="#" class="text-light"><i class="bi bi-facebook"></i></a>
           <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
@@ -487,14 +492,19 @@
         <h6 class="text-uppercase fw-semibold mb-3">Ubicaciones y Contacto</h6>
         <ul class="list-unstyled small mb-3">
           <li class="mb-2">
-            <strong>Sucursal Infantiles:</strong><br>
-            Av. German Busch N° 2093 (frente a la gasolinera.)<br>
-            <i class="bi bi-telephone me-1"></i> 72554871
+            <strong>Sucursal General:</strong><br>
+            Av. del Saber N° 1000 (zona central)<br>
+            <i class="bi bi-telephone me-1"></i> 70000000
           </li>
           <li>
             <strong>Sucursal Medicina:</strong><br>
             Av. Saavedra N° 2222 (frente al hospital de clínicas) - Miraflores<br>
             <i class="bi bi-telephone me-1"></i> 72003750
+          </li>
+          <li>
+            <strong>Sucursal Infantiles:</strong><br>
+            Av. German Busch N° 2093 (frente a la gasolinera.)<br>
+            <i class="bi bi-telephone me-1"></i> 72554871
           </li>
         </ul>
       </div>
