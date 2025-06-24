@@ -17,372 +17,373 @@
   <link rel="stylesheet" href="css/styles.css" />
   
   <!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
+
 <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80" tabindex="0">
+
   <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
-  <div class="container-fluid d-flex justify-content-between align-items-center">
-    <a class="navbar-brand" href="index.html">
-      <img src="img/logo.png" alt="Logo" width="140">
-    </a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
 
-    <div class="d-flex align-items-center order-lg-3 ms-auto">
-      <form class="d-flex me-2">
-        <div class="input-group position-relative">
-          <input class="form-control rounded-pill pe-5" type="search" placeholder="Buscar..." style="max-width: 75%;">
-          <button class="btn btn-light rounded-pill position-absolute end-0 hover-lift" type="submit" style="z-index: 2;">
-            <i class="bi bi-search"></i>
-          </button>
-        </div>
-      </form>
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo.png" alt="Logo" width="140">
+      </a>
 
-      <button class="btn btn-light rounded-pill hover-lift d-lg-none" 
+      <div class="d-flex align-items-center order-lg-3 ms-auto">
+        <form class="d-flex me-2">
+          <div class="input-group position-relative">
+            <input class="form-control rounded-pill pe-5" type="search" placeholder="Buscar..." style="max-width: 75%;">
+            <button class="btn btn-light rounded-pill position-absolute end-0 hover-lift" type="submit" style="z-index: 2;">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </form>
+
+        <button class="btn btn-light rounded-pill hover-lift d-lg-none" 
+                type="button" 
+                data-bs-toggle="modal" 
+                data-bs-target="#loginModal">
+          <i class="bi bi-person-fill"></i>
+        </button>
+
+        <button class="navbar-toggler border-0" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#mainNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse order-lg-2" id="mainNav">
+        <ul class="navbar-nav text-uppercase">
+          <li class="nav-item">
+            <a class="nav-link active py-2 px-3 fw-medium" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-2 px-3 fw-medium" href="medicina.html">Medicina</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-2 px-3 fw-medium" href="infantiles.html">Infantil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-2 px-3 fw-medium" href="otros.html">Otros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-2 px-3 fw-medium" href="index.html#nosotros">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-2 px-3 fw-medium" href="index.html#contacto">Contacto</a>
+          </li>
+        </ul>
+      </div>
+      
+      <button class="btn btn-light rounded-pill hover-lift d-none d-lg-inline-flex ms-2 order-lg-4" 
               type="button" 
               data-bs-toggle="modal" 
               data-bs-target="#loginModal">
         <i class="bi bi-person-fill"></i>
       </button>
-       <button class="navbar-toggler border-0" 
-            type="button" 
-            data-bs-toggle="collapse" 
-            data-bs-target="#mainNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
     </div>
-    <div class="collapse navbar-collapse order-lg-2" id="mainNav">
-      <ul class="navbar-nav text-uppercase">
-        <li class="nav-item">
-          <a class="nav-link active py-2 px-3 fw-medium" href="index.html">Inicio</a>
-        </li>
+  </nav>
 
-        <!-- Dropdown Medicina -->
-        <li class="nav-item">
-          <a class="nav-link py-2 px-3 fw-medium" href="medicina.html">Medicina</a>
-        </li>
-
-        <!-- Dropdown Infantil -->
-        <li class="nav-item">
-          <a class="nav-link py-2 px-3 fw-medium" href="infantiles.html">Infantil</a>
-        </li>
-
-        <!-- Resto del menú -->
-        <li class="nav-item">
-          <a class="nav-link py-2 px-3 fw-medium" href="otros.html">Otros</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link py-2 px-3 fw-medium" href="index.html#nosotros">Nosotros</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link py-2 px-3 fw-medium" href="index.html#contacto">Contacto</a>
-        </li>
-      </ul>
+  <!-- Hero Medicina -->
+  <div id="medicina" class="position-relative d-flex align-items-center text-white" style="min-height:75vh; overflow: hidden;">
+    <video autoplay muted loop playsinline class="position-absolute w-100 h-100 object-fit-cover" style="top: 0; left: 0; z-index: 0;">
+      <source src="video/medicina.mp4" type="video/mp4">
+      Tu navegador no soporta video HTML5.
+    </video>
+    <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.6); z-index: 1;"></div>
+    <div class="container text-center py-5 px-3 position-relative" style="max-width: 900px; z-index: 2;">
+      <h1 class="display-4 fw-bold mb-3">Biblioteca Médica Especializada</h1>
+      <p class="lead mb-4">
+        Accede a los mejores libros, manuales y modelos anatómicos para estudiantes, docentes y profesionales de la salud. 
+      </p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap mb-2">
+        <a href="#categorias" class="btn btn-lg btn-outline-light btn-custom px-4 py-3">
+          Ver Categorías
+        </a>
+        <a href="#contacto" class="btn btn-outline-light btn-lg btn-custom px-4 py-3">
+          Contactar Sucursal
+        </a>
+      </div>
+      <div class="mt-4">
+        <a href="#" class="badge bg-light text-primary fs-6 fw-semibold px-3 py-2 shadow-sm my-2">Novedades 2025</a>
+        <a href="#modelos-anatomicos" class="badge bg-light text-primary fs-6 fw-semibold px-3 py-2 shadow-sm my-2">Modelos Anatómicos</a>
+        <a href="#faqAccordion" class="badge bg-light text-primary fs-6 fw-semibold px-3 py-2 shadow-sm">Preguntas Frecuentes</a>
+      </div>
     </div>
-    
-    <button class="btn btn-light rounded-pill hover-lift d-none d-lg-inline-flex ms-2 order-lg-4" 
-            type="button" 
-            data-bs-toggle="modal" 
-            data-bs-target="#loginModal">
-      <i class="bi bi-person-fill"></i>
-    </button>
   </div>
-</nav>
 
-<!-- Banner principal -->
-<!-- Hero / Portada -->
+  <!-- Libros Médicos Destacados -->
+  <section class="container my-5">
+    <h2 class="text-center text-primary fw-bold mb-4">Libros Médicos Destacados</h2>
+    <p class="lead text-secondary">Selección recomendada para el aprendizaje, la docencia y la práctica clínica.</p>
+    <div class="row row-cols-2 row-cols-md-6 g-3">
+      <!-- Libro 1 -->
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm hover-scale">
+        <div class="book-cover">
+          <img src="img/libros/medicina/cirugia.jpg" class="card-img-top card-img-libro" alt="Cirugía">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title fw-bold texto-cortado-multilinea">Cirugía para el grado de medicina</h5>
+          <p class="small text-secondary mb-1">Autor: Dr. Juan Pérez | 4ta Edición</p>
+          <p class="small texto-cortado-multilinea2">Manual completo con casos clínicos y técnicas quirúrgicas esenciales para estudiantes y residentes.</p>
+          <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Cirugía</a>
+        </div>
+        <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+          <span class="precio-libro">Bs 345.00</span>
+          <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+        </div>
+        </div>
+      </div>
+      <!-- Libro 2 -->
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm hover-scale">
+        <div class="book-cover">
+          <img src="img/libros/medicina/enfermeria.jpg" class="card-img-top card-img-libro" alt="Enfermería de Salud Mental">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title fw-bold texto-cortado-multilinea">Enfermería de Salud Mental</h5>
+          <p class="small text-secondary mb-1">Autor: Lic. Ana Gómez | 2da Edición</p>
+          <p class="small texto-cortado-multilinea2">Guía práctica para el abordaje integral del paciente en el área de salud mental.</p>
+          <a class="badge bg-primary position-absolute top-0 start-0 "style="z-index: 1;">Enfermería</a>
+        </div>
+        <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+          <span class="precio-libro">Bs 238.00</span>
+          <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+        </div>
+        </div>
+      </div>
+      <!-- Libro 3 -->
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm hover-scale">
+        <div class="book-cover">
+          <img src="img/libros/medicina/otologia.jpg" class="card-img-top card-img-libro" alt="Otología">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title fw-bold texto-cortado-multilinea">Otología</h5>
+          <p class="small text-secondary mb-1">Autor: Dr. Luis Rojas | 3ra Edición</p>
+          <p class="small texto-cortado-multilinea2">Referencia esencial sobre enfermedades del oído y procedimientos otológicos.</p>
+          <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Otorrinolaringología</a>
+        </div>
+        <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+          <span class="precio-libro">Bs 290.00</span>
+          <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+        </div>
+        </div>
+      </div>
+      <!-- Libro 4 -->
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm hover-scale">
+        <div class="book-cover">
+          <img src="img/libros/medicina/psiquiatria.jpg" class="card-img-top card-img-libro" alt="Psiquiatría">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title fw-bold texto-cortado-multilinea">Psiquiatría para médicos no psiquiatras</h5>
+          <p class="small text-secondary mb-1">Autor: Dra. María López | 5ta Edición</p>
+          <p class="small texto-cortado-multilinea2">Herramientas clínicas para el diagnóstico y manejo de trastornos psiquiátricos en atención primaria.</p>
+          <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Psiquiatría</a>
+        </div>
+        <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+          <span class="precio-libro">Bs 385.00</span>
+          <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+        </div>
+        </div>
+      </div>
+      <!-- Libro 5 -->
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm hover-scale">
+        <div class="book-cover">
+          <img src="img/libros/medicina/semiologia.jpg" class="card-img-top card-img-libro" alt="Semiología Médica">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title fw-bold texto-cortado-multilinea">Semiología Médica, fisiopatología, semiotecnia y propedéutica</h5>
+          <p class="small text-secondary mb-1">Autor: Dr. Carlos Méndez | 6ta Edición</p>
+          <p class="small texto-cortado-multilinea2">Obra fundamental para el aprendizaje de la exploración clínica y el razonamiento diagnóstico.</p>
+          <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Semiología</a>
+        </div>
+        <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+          <span class="precio-libro">Bs 269.00</span>
+          <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+        </div>
+        </div>
+      </div>
+      <!-- Libro 6 -->
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm hover-scale">
+        <div class="book-cover">
+          <img src="img/libros/medicina/enfermeria.jpg" class="card-img-top card-img-libro" alt="Enfermería de Salud Mental">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title fw-bold texto-cortado-multilinea">Enfermería de Salud Mental</h5>
+          <p class="small text-secondary mb-1">Autor: Lic. Ana Gómez | 2da Edición</p>
+          <p class="small texto-cortado-multilinea2">Guía práctica para el abordaje integral del paciente en el área de salud mental.</p>
+          <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Enfermería</a>
+        </div>
+        <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+          <span class="precio-libro">Bs 238.00</span>
+          <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- Hero Medicina -->
-<div id="medicina" class="position-relative d-flex align-items-center text-white" style="min-height:75vh; overflow: hidden;">
-   <video autoplay muted loop playsinline class="position-absolute w-100 h-100 object-fit-cover" style="top: 0; left: 0; z-index: 0;">
-    <source src="video/medicina.mp4" type="video/mp4">
-    Tu navegador no soporta video HTML5.
-  </video>
-  <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.6); z-index: 1;"></div>
-  <div class="container text-center py-5 px-3 position-relative" style="max-width: 900px; z-index: 2;">
-    <h1 class="display-4 fw-bold mb-3">Biblioteca Médica Especializada</h1>
-    <p class="lead mb-4">
-      Accede a los mejores libros, manuales y modelos anatómicos para estudiantes, docentes y profesionales de la salud. 
+  <!-- Modelos Anatómicos y Material Didáctico -->
+  <section class="container my-5" id="modelos-anatomicos">
+    <h2 class="text-center fw-bold mb-4 text-primary">Modelos Anatómicos y Material Didáctico</h2>
+    <p class="lead text-secondary text-center mb-5">
+      Explora nuestra colección de modelos anatómicos de alta calidad, ideales para la enseñanza, el laboratorio y la consulta profesional. Disponibles en diferentes tamaños y niveles de detalle.
     </p>
-    <div class="d-flex justify-content-center gap-3 flex-wrap mb-2">
-      <a href="#categorias" class="btn btn-lg btn-outline-light btn-custom px-4 py-3">
-        Ver Categorías
-      </a>
-      <a href="#contacto" class="btn btn-outline-light btn-lg btn-custom px-4 py-3">
-        Contactar Sucursal
-      </a>
+    <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+      <!-- Esqueleto -->
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm hover-scale rounded-4 position-relative">
+          <div class="ratio ratio-4x3 rounded-top-4 overflow-hidden">
+            <img src="img/modelos/esqueleto.jpg" class="card-img-top object-fit-cover" alt="Esqueleto humano a escala real" style="height:100%;object-fit:cover;">
+          </div>
+          <div class="card-body pb-2">
+            <h5 class="card-title fw-bold texto-cortado-multilinea mb-2">Esqueleto Humano</h5>
+            <p class="card-text texto-cortado-multilinea small text-secondary mb-0">Modelo a escala real, articulado y desmontable. Perfecto para prácticas de anatomía y docencia.</p>
+          </div>
+          <span class="badge bg-primary position-absolute top-0 start-0 m-2" style="z-index: 1;">Modelo Anatómico</span>
+          <div class="card-footer border-0 bg-white d-flex justify-content-between align-items-center rounded-bottom-4">
+            <span class="precio-libro fw-semibold">Bs 238.00</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- Cerebro de goma -->
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm hover-scale rounded-4 position-relative">
+          <div class="ratio ratio-4x3 rounded-top-4 overflow-hidden">
+            <img src="img/modelos/cerebro.jpg" class="card-img-top object-fit-cover" alt="Modelo de cerebro" style="height:100%;object-fit:cover;">
+          </div>
+          <div class="card-body pb-2">
+            <h5 class="card-title fw-bold texto-cortado-multilinea mb-2">Cerebro de Goma</h5>
+            <p class="card-text texto-cortado-multilinea small text-secondary mb-0">Modelo anatómico desmontable, ideal para el estudio de neuroanatomía y demostraciones prácticas.</p>
+          </div>
+          <span class="badge bg-primary position-absolute top-0 start-0 m-2" style="z-index: 1;">Modelo Anatómico</span>
+          <div class="card-footer border-0 bg-white d-flex justify-content-between align-items-center rounded-bottom-4">
+            <span class="precio-libro fw-semibold">Bs 238.00</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- Cráneo anatómico -->
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm hover-scale rounded-4 position-relative">
+          <div class="ratio ratio-4x3 rounded-top-4 overflow-hidden">
+            <img src="img/modelos/craneo.jpg" class="card-img-top object-fit-cover" alt="Cráneo anatómico" style="height:100%;object-fit:cover;">
+          </div>
+          <div class="card-body pb-2">
+            <h5 class="card-title fw-bold texto-cortado-multilinea mb-2">Cráneo Anatómico</h5>
+            <p class="card-text texto-cortado-multilinea small text-secondary mb-0">Representación realista, desmontable en 3 partes. Útil para prácticas de odontología y medicina general.</p>
+          </div>
+          <span class="badge bg-primary position-absolute top-0 start-0 m-2" style="z-index: 1;">Modelo Anatómico</span>
+          <div class="card-footer border-0 bg-white d-flex justify-content-between align-items-center rounded-bottom-4">
+            <span class="precio-libro fw-semibold">Bs 238.00</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="mt-4">
-      <a href="#" class="badge bg-light text-primary fs-6 fw-semibold px-3 py-2 shadow-sm my-2">Novedades 2025</a>
-      <a href="#modelos-anatomicos" class="badge bg-light text-primary fs-6 fw-semibold px-3 py-2 shadow-sm my-2">Modelos Anatómicos</a>
-      <a href="#faqAccordion" class="badge bg-light text-primary fs-6 fw-semibold px-3 py-2 shadow-sm">Preguntas Frecuentes</a>
+  <!-- Categorías Médicas -->
+  <section id="categorias" class="bg-light">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-5 text-primary">Categorías Médicas</h2>
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- Anatomía -->
+          <div class="swiper-slide">
+            <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden categoria-card text-center" style="max-width: 180px; margin: 0 auto;">
+              <img src="img/categorias/anatomia.jpg" class="card-img-top object-fit-cover" alt="Anatomía" style="height: 100px;">
+              <div class="card-body bg-white py-2">
+                <h6 class="fw-bold text-primary mb-0">Anatomía<br></h6>
+              </div>
+            </div>
+          </div>
+          <!-- Farmacología -->
+          <div class="swiper-slide">
+            <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden categoria-card text-center" style="max-width: 180px; margin: 0 auto;">
+              <img src="img/categorias/farmacologia.jpg" class="card-img-top object-fit-cover" alt="Farmacología" style="height: 100px;">
+              <div class="card-body bg-white py-2">
+                <h6 class="fw-bold text-primary mb-0">Farmacología<br></h6>
+              </div>
+            </div>
+          </div>
+          <!-- Cirugía -->
+          <div class="swiper-slide">
+            <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden categoria-card text-center" style="max-width: 180px; margin: 0 auto;">
+              <img src="img/categorias/cirugia.jpeg" class="card-img-top object-fit-cover" alt="Cirugía" style="height: 100px;">
+              <div class="card-body bg-white py-2">
+                <h6 class="fw-bold text-primary mb-0">Cirugía<br></h6>
+              </div>
+            </div>
+          </div>
+          <!-- Pediatría -->
+          <div class="swiper-slide">
+            <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden categoria-card text-center" style="max-width: 180px; margin: 0 auto;">
+              <img src="img/categorias/pediatria.png" class="card-img-top object-fit-cover" alt="Pediatría" style="height: 100px;">
+              <div class="card-body bg-white py-2">
+                <h6 class="fw-bold text-primary mb-0">Pediatría<br></h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+  </section>
 
-<section class="container my-5">
-  <h2 class="text-center text-primary fw-bold mb-4">Libros Médicos Destacados</h2>
-  <p class="lead text-secondary">Selección recomendada para el aprendizaje, la docencia y la práctica clínica.</p>
-  <div class="row row-cols-2 row-cols-md-6 g-3">
-    <!-- Libro 1 -->
-    <div class="col">
-      <div class="card h-100 border-0 shadow-sm hover-scale">
-      <div class="book-cover">
-        <img src="img/libros/medicina/cirugia.jpg" class="card-img-top card-img-libro" alt="Cirugía">
-      </div>
-      <div class="card-body">
-        <h5 class="card-title fw-bold texto-cortado-multilinea">Cirugía para el grado de medicina</h5>
-        <p class="small text-secondary mb-1">Autor: Dr. Juan Pérez | 4ta Edición</p>
-        <p class="small texto-cortado-multilinea2">Manual completo con casos clínicos y técnicas quirúrgicas esenciales para estudiantes y residentes.</p>
-        <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Cirugía</a>
-      </div>
-      <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-        <span class="precio-libro">Bs 345.00</span>
-        <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-      </div>
-      </div>
-    </div>
-    <!-- Libro 2 -->
-    <div class="col">
-      <div class="card h-100 border-0 shadow-sm hover-scale">
-      <div class="book-cover">
-        <img src="img/libros/medicina/enfermeria.jpg" class="card-img-top card-img-libro" alt="Enfermería de Salud Mental">
-      </div>
-      <div class="card-body">
-        <h5 class="card-title fw-bold texto-cortado-multilinea">Enfermería de Salud Mental</h5>
-        <p class="small text-secondary mb-1">Autor: Lic. Ana Gómez | 2da Edición</p>
-        <p class="small texto-cortado-multilinea2">Guía práctica para el abordaje integral del paciente en el área de salud mental.</p>
-        <a class="badge bg-primary position-absolute top-0 start-0 "style="z-index: 1;">Enfermería</a>
-      </div>
-      <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-        <span class="precio-libro">Bs 238.00</span>
-        <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-      </div>
-      </div>
-    </div>
-    <!-- Libro 3 -->
-    <div class="col">
-      <div class="card h-100 border-0 shadow-sm hover-scale">
-      <div class="book-cover">
-        <img src="img/libros/medicina/otologia.jpg" class="card-img-top card-img-libro" alt="Otología">
-      </div>
-      <div class="card-body">
-        <h5 class="card-title fw-bold texto-cortado-multilinea">Otología</h5>
-        <p class="small text-secondary mb-1">Autor: Dr. Luis Rojas | 3ra Edición</p>
-        <p class="small texto-cortado-multilinea2">Referencia esencial sobre enfermedades del oído y procedimientos otológicos.</p>
-        <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Otorrinolaringología</a>
-      </div>
-      <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-        <span class="precio-libro">Bs 290.00</span>
-        <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-      </div>
-      </div>
-    </div>
-    <!-- Libro 4 -->
-    <div class="col">
-      <div class="card h-100 border-0 shadow-sm hover-scale">
-      <div class="book-cover">
-        <img src="img/libros/medicina/psiquiatria.jpg" class="card-img-top card-img-libro" alt="Psiquiatría">
-      </div>
-      <div class="card-body">
-        <h5 class="card-title fw-bold texto-cortado-multilinea">Psiquiatría para médicos no psiquiatras</h5>
-        <p class="small text-secondary mb-1">Autor: Dra. María López | 5ta Edición</p>
-        <p class="small texto-cortado-multilinea2">Herramientas clínicas para el diagnóstico y manejo de trastornos psiquiátricos en atención primaria.</p>
-        <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Psiquiatría</a>
-      </div>
-      <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-        <span class="precio-libro">Bs 385.00</span>
-        <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-      </div>
-      </div>
-    </div>
-    <!-- Libro 5 -->
-    <div class="col">
-      <div class="card h-100 border-0 shadow-sm hover-scale">
-      <div class="book-cover">
-        <img src="img/libros/medicina/semiologia.jpg" class="card-img-top card-img-libro" alt="Semiología Médica">
-      </div>
-      <div class="card-body">
-        <h5 class="card-title fw-bold texto-cortado-multilinea">Semiología Médica, fisiopatología, semiotecnia y propedéutica</h5>
-        <p class="small text-secondary mb-1">Autor: Dr. Carlos Méndez | 6ta Edición</p>
-        <p class="small texto-cortado-multilinea2">Obra fundamental para el aprendizaje de la exploración clínica y el razonamiento diagnóstico.</p>
-        <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Semiología</a>
-      </div>
-      <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-        <span class="precio-libro">Bs 269.00</span>
-        <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-      </div>
-      </div>
-    </div>
-    <!-- Libro 6 -->
-    <div class="col">
-      <div class="card h-100 border-0 shadow-sm hover-scale">
-      <div class="book-cover">
-        <img src="img/libros/medicina/enfermeria.jpg" class="card-img-top card-img-libro" alt="Enfermería de Salud Mental">
-      </div>
-      <div class="card-body">
-        <h5 class="card-title fw-bold texto-cortado-multilinea">Enfermería de Salud Mental</h5>
-        <p class="small text-secondary mb-1">Autor: Lic. Ana Gómez | 2da Edición</p>
-        <p class="small texto-cortado-multilinea2">Guía práctica para el abordaje integral del paciente en el área de salud mental.</p>
-        <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Enfermería</a>
-      </div>
-      <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-        <span class="precio-libro">Bs 238.00</span>
-        <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-      </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="container my-5" id="modelos-anatomicos">
-  <h2 class="text-center fw-bold mb-4 text-primary">Modelos Anatómicos y Material Didáctico</h2>
-  <p class="lead text-secondary text-center mb-5">
-    Explora nuestra colección de modelos anatómicos de alta calidad, ideales para la enseñanza, el laboratorio y la consulta profesional. Disponibles en diferentes tamaños y niveles de detalle.
-  </p>
-  <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-    <!-- Esqueleto -->
-    <div class="col">
-      <div class="card h-100 border-0 shadow-sm hover-scale rounded-4 position-relative">
-        <div class="ratio ratio-4x3 rounded-top-4 overflow-hidden">
-          <img src="img/modelos/esqueleto.jpg" class="card-img-top object-fit-cover" alt="Esqueleto humano a escala real" style="height:100%;object-fit:cover;">
-        </div>
-        <div class="card-body pb-2">
-          <h5 class="card-title fw-bold texto-cortado-multilinea mb-2">Esqueleto Humano</h5>
-          <p class="card-text texto-cortado-multilinea small text-secondary mb-0">Modelo a escala real, articulado y desmontable. Perfecto para prácticas de anatomía y docencia.</p>
-        </div>
-        <span class="badge bg-primary position-absolute top-0 start-0 m-2" style="z-index: 1;">Modelo Anatómico</span>
-        <div class="card-footer border-0 bg-white d-flex justify-content-between align-items-center rounded-bottom-4">
-          <span class="precio-libro fw-semibold">Bs 238.00</span>
-          <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-        </div>
-      </div>
-    </div>
-    <!-- Cerebro de goma -->
-    <div class="col">
-      <div class="card h-100 border-0 shadow-sm hover-scale rounded-4 position-relative">
-        <div class="ratio ratio-4x3 rounded-top-4 overflow-hidden">
-          <img src="img/modelos/cerebro.jpg" class="card-img-top object-fit-cover" alt="Modelo de cerebro" style="height:100%;object-fit:cover;">
-        </div>
-        <div class="card-body pb-2">
-          <h5 class="card-title fw-bold texto-cortado-multilinea mb-2">Cerebro de Goma</h5>
-          <p class="card-text texto-cortado-multilinea small text-secondary mb-0">Modelo anatómico desmontable, ideal para el estudio de neuroanatomía y demostraciones prácticas.</p>
-        </div>
-        <span class="badge bg-primary position-absolute top-0 start-0 m-2" style="z-index: 1;">Modelo Anatómico</span>
-        <div class="card-footer border-0 bg-white d-flex justify-content-between align-items-center rounded-bottom-4">
-          <span class="precio-libro fw-semibold">Bs 238.00</span>
-          <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-        </div>
-      </div>
-    </div>
-    <!-- Cráneo anatómico -->
-    <div class="col">
-      <div class="card h-100 border-0 shadow-sm hover-scale rounded-4 position-relative">
-        <div class="ratio ratio-4x3 rounded-top-4 overflow-hidden">
-          <img src="img/modelos/craneo.jpg" class="card-img-top object-fit-cover" alt="Cráneo anatómico" style="height:100%;object-fit:cover;">
-        </div>
-        <div class="card-body pb-2">
-          <h5 class="card-title fw-bold texto-cortado-multilinea mb-2">Cráneo Anatómico</h5>
-          <p class="card-text texto-cortado-multilinea small text-secondary mb-0">Representación realista, desmontable en 3 partes. Útil para prácticas de odontología y medicina general.</p>
-        </div>
-        <span class="badge bg-primary position-absolute top-0 start-0 m-2" style="z-index: 1;">Modelo Anatómico</span>
-        <div class="card-footer border-0 bg-white d-flex justify-content-between align-items-center rounded-bottom-4">
-          <span class="precio-libro fw-semibold">Bs 238.00</span>
-          <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Categorías -->
-<section id="categorias" class="bg-light">
-  <div class="container">
-    <h2 class="text-center fw-bold mb-5 text-primary">Categorías Médicas</h2>
-    <!-- Swiper -->
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <!-- Anatomía -->
-        <div class="swiper-slide">
-          <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden categoria-card text-center" style="max-width: 180px; margin: 0 auto;">
-            <img src="img/categorias/anatomia.jpg" class="card-img-top object-fit-cover" alt="Anatomía" style="height: 100px;">
-            <div class="card-body bg-white py-2">
-              <h6 class="fw-bold text-primary mb-0">Anatomía<br></h6>
-            </div>
-          </div>
-        </div>
-        <!-- Farmacología -->
-        <div class="swiper-slide">
-          <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden categoria-card text-center" style="max-width: 180px; margin: 0 auto;">
-            <img src="img/categorias/farmacologia.jpg" class="card-img-top object-fit-cover" alt="Farmacología" style="height: 100px;">
-            <div class="card-body bg-white py-2">
-              <h6 class="fw-bold text-primary mb-0">Farmacología<br></h6>
-            </div>
-          </div>
-        </div>
-        <!-- Cirugía -->
-        <div class="swiper-slide">
-          <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden categoria-card text-center" style="max-width: 180px; margin: 0 auto;">
-            <img src="img/categorias/cirugia.jpeg" class="card-img-top object-fit-cover" alt="Cirugía" style="height: 100px;">
-            <div class="card-body bg-white py-2">
-              <h6 class="fw-bold text-primary mb-0">Cirugía<br></h6>
-            </div>
-          </div>
-        </div>
-        <!-- Pediatría -->
-        <div class="swiper-slide">
-          <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden categoria-card text-center" style="max-width: 180px; margin: 0 auto;">
-            <img src="img/categorias/pediatria.png" class="card-img-top object-fit-cover" alt="Pediatría" style="height: 100px;">
-            <div class="card-body bg-white py-2">
-              <h6 class="fw-bold text-primary mb-0">Pediatría<br></h6>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="row container-fluid">
-  <div class="text-center">
+  <!-- Contacto y Preguntas Frecuentes -->
+  <div class="row container-fluid">
+    <div class="text-center">
       <h2 class="fw-bold display-5 text-primary mb-4 mt-5">Contáctanos</h2>
     </div>
 
-<!-- Contacto -->
-<section id="contacto" class="py-2 bg-light col-md-6">
-  <div class="container">
-    <div class="text-center ">
-      <p class="lead text-secondary">¿Tienes dudas sobre nuestros libros o modelos? Contáctanos o visítanos en nuestra sucursal especializada en medicina.</p>
-    </div>
-    <div class="row">
-      <div class="col">
-        <div class="card bg-primary text-white border-0 shadow hover-scale h-100 rounded-3">
-          <div class="card-header bg-secondary bg-gradient border-0 rounded-top-3 d-flex align-items-center">
-            <i class="bi bi-geo-alt-fill me-2"></i>
-            <h5 class="mb-0">Sucursal Medicina</h5>
-          </div>
-          <div class="card-body p-4">
-            <p class="mb-3"><i class="bi bi-geo-alt me-2"></i>Av. Saavedra N° 2222 (frente al hospital de clínicas) - Miraflores</p>
-            <p class="mb-3"><i class="bi bi-clock me-2"></i>Lun–Vie: 9:00–19:00 • Sáb: 10:00–14:00</p>
-            <div class="d-flex align-items-center mb-3">
-              <p class="mb-0"><i class="bi bi-telephone me-2"></i>72003750</p><a href="https://wa.me/59172003750" class="mx-3 btn btn-sm btn-success"><i class="bi bi-whatsapp"></i></a>
-            </div>
-            <div class="accordion accordion-flush" id="accordionFlushExample">
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    <i class="bi bi-geo-alt-fill me-2"></i>Ver ubicación
-                  </button>
-                </h2>
-                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                  <div class="ratio ratio-4x3 rounded-3 overflow-hidden mb-3">
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1506.4841929601841!2d-68.09325414979848!3d-16.539883964259435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915edf0a04f5a40f%3A0x57dbfc76b4458ab3!2sLa%20Paz!5e1!3m2!1ses!2sbo!4v1746584652860!5m2!1ses!2sbo"
-                      style="border:0;" allowfullscreen="" loading="lazy"
-                      referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <!-- Contacto -->
+    <section id="contacto" class="py-2 bg-light col-md-6">
+      <div class="container">
+        <div class="text-center ">
+          <p class="lead text-secondary">¿Tienes dudas sobre nuestros libros o modelos? Contáctanos o visítanos en nuestra sucursal especializada en medicina.</p>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="card bg-primary text-white border-0 shadow hover-scale h-100 rounded-3">
+              <div class="card-header bg-secondary bg-gradient border-0 rounded-top-3 d-flex align-items-center">
+                <i class="bi bi-geo-alt-fill me-2"></i>
+                <h5 class="mb-0">Sucursal Medicina</h5>
+              </div>
+              <div class="card-body p-4">
+                <p class="mb-3"><i class="bi bi-geo-alt me-2"></i>Av. Saavedra N° 2222 (frente al hospital de clínicas) - Miraflores</p>
+                <p class="mb-3"><i class="bi bi-clock me-2"></i>Lun–Vie: 9:00–19:00 • Sáb: 10:00–14:00</p>
+                <div class="d-flex align-items-center mb-3">
+                  <p class="mb-0"><i class="bi bi-telephone me-2"></i>72003750</p>
+                  <a href="https://wa.me/59172003750" class="mx-3 btn btn-sm btn-success"><i class="bi bi-whatsapp"></i></a>
+                </div>
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        <i class="bi bi-geo-alt-fill me-2"></i>Ver ubicación
+                      </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="ratio ratio-4x3 rounded-3 overflow-hidden mb-3">
+                        <iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1506.4841929601841!2d-68.09325414979848!3d-16.539883964259435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915edf0a04f5a40f%3A0x57dbfc76b4458ab3!2sLa%20Paz!5e1!3m2!1ses!2sbo!4v1746584652860!5m2!1ses!2sbo"
+                          style="border:0;" allowfullscreen="" loading="lazy"
+                          referrerpolicy="no-referrer-when-downgrade"></iframe>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -390,106 +391,107 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- Preguntas Frecuentes -->
+    <section class="container py-5 col-md-6">
+      <h2 class="text-center fw-bold mb-4 text-primary">Preguntas Frecuentes</h2>
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1">
+              ¿Tienen libros de última edición y autores reconocidos?
+            </button>
+          </h2>
+          <div id="faqCollapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Sí, trabajamos con editoriales reconocidas y ofrecemos libros actualizados de autores líderes en el área médica.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq2">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2">
+              ¿Puedo reservar libros o modelos anatómicos?
+            </button>
+          </h2>
+          <div id="faqCollapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Sí, puedes reservar cualquier producto y te avisaremos cuando esté disponible para retiro o envío.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq3">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3">
+              ¿Realizan envíos a todo el país?
+            </button>
+          </h2>
+          <div id="faqCollapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Sí, enviamos a todo el país mediante servicios de mensajería confiables y seguros.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
-</section>
-<section class="container py-5 col-md-6">
-  <h2 class="text-center fw-bold mb-4 text-primary">Preguntas Frecuentes</h2>
-  <div class="accordion" id="faqAccordion">
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="faq1">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1">
-          ¿Tienen libros de última edición y autores reconocidos?
-        </button>
-      </h2>
-      <div id="faqCollapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
-          Sí, trabajamos con editoriales reconocidas y ofrecemos libros actualizados de autores líderes en el área médica.
+
+  <!-- Pie de página -->
+  <footer class="bg-primary text-light pt-5 mt-5">
+    <div class="container">
+      <div class="row gy-4">
+        <!-- Sobre nosotros -->
+        <div class="col-md-4">
+          <h5 class="fw-bold mb-3">Cátedra del Saber</h5>
+          <p>Tu aliado en la formación médica y científica desde 1995. Comprometidos con la excelencia académica y profesional.</p>
+          <div class="d-flex gap-3 fs-4">
+            <a href="#" class="text-light"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-light"><i class="bi bi-twitter"></i></a>
+          </div>
+        </div>
+        <!-- Enlaces rápidos -->
+        <div class="col-md-4">
+          <h6 class="text-uppercase fw-semibold mb-3">Enlaces rápidos</h6>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-light text-decoration-none py-1 d-block">Inicio</a></li>
+            <li><a href="medicina.html" class="text-light text-decoration-none py-1 d-block">Medicina</a></li>
+            <li><a href="infantiles.html" class="text-light text-decoration-none py-1 d-block">Infantil</a></li>
+            <li><a href="#otros" class="text-light text-decoration-none py-1 d-block">Otros</a></li>
+            <li><a href="index.html#nosotros" class="text-light text-decoration-none py-1 d-block">Nosotros</a></li>
+            <li><a href="index.html#contacto" class="text-light text-decoration-none py-1 d-block">Contacto</a></li>
+          </ul>
+        </div>
+        <!-- Newsletter -->
+        <div class="col-md-4">
+          <h6 class="text-uppercase fw-semibold mb-3">Ubicaciones y Contacto</h6>
+          <ul class="list-unstyled small mb-3">
+            <li class="mb-2">
+              <strong>Sucursal Medicina:</strong><br>
+              Av. Saavedra N° 2222 (frente al hospital de clínicas) - Miraflores<br>
+              <i class="bi bi-telephone me-1"></i> 72003750
+            </li>
+            <li>
+              <strong>Sucursal Infantiles:</strong><br>
+              Av. German Busch N° 2093 (frente a la gasolinera.)<br>
+              <i class="bi bi-telephone me-1"></i> 72554871
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="faq2">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2">
-          ¿Puedo reservar libros o modelos anatómicos?
-        </button>
-      </h2>
-      <div id="faqCollapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
-          Sí, puedes reservar cualquier producto y te avisaremos cuando esté disponible para retiro o envío.
-        </div>
+      <hr class="border-secondary my-4" />
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small">
+        <p class="mb-2 mb-md-0">&copy; 2025 Cátedra del Saber. Todos los derechos reservados.</p>
+        <a href="#inicio" class="btn btn-outline-light btn-sm"><i class="bi bi-arrow-up"></i></a>
       </div>
     </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="faq3">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3">
-          ¿Realizan envíos a todo el país?
-        </button>
-      </h2>
-      <div id="faqCollapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
-          Sí, enviamos a todo el país mediante servicios de mensajería confiables y seguros.
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-</div>
-<!-- Pie de página -->
-<footer class="bg-primary text-light pt-5 mt-5">
-  <div class="container">
-    <div class="row gy-4">
-      <!-- Sobre nosotros -->
-      <div class="col-md-4">
-        <h5 class="fw-bold mb-3">Cátedra del Saber</h5>
-        <p>Tu aliado en la formación médica y científica desde 1995. Comprometidos con la excelencia académica y profesional.</p>
-        <div class="d-flex gap-3 fs-4">
-          <a href="#" class="text-light"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="text-light"><i class="bi bi-twitter"></i></a>
-        </div>
-      </div>
-      <!-- Enlaces rápidos -->
-      <div class="col-md-4">
-        <h6 class="text-uppercase fw-semibold mb-3">Enlaces rápidos</h6>
-        <ul class="list-unstyled">
-          <li><a href="index.html" class="text-light text-decoration-none py-1 d-block">Inicio</a></li>
-          <li><a href="medicina.html" class="text-light text-decoration-none py-1 d-block">Medicina</a></li>
-          <li><a href="infantiles.html" class="text-light text-decoration-none py-1 d-block">Infantil</a></li>
-          <li><a href="#otros" class="text-light text-decoration-none py-1 d-block">Otros</a></li>
-          <li><a href="index.html#nosotros" class="text-light text-decoration-none py-1 d-block">Nosotros</a></li>
-          <li><a href="index.html#contacto" class="text-light text-decoration-none py-1 d-block">Contacto</a></li>
-        </ul>
-      </div>
-      <!-- Newsletter -->
-      <div class="col-md-4">
-        <h6 class="text-uppercase fw-semibold mb-3">Ubicaciones y Contacto</h6>
-        <ul class="list-unstyled small mb-3">
-          <li class="mb-2">
-            <strong>Sucursal Medicina:</strong><br>
-            Av. Saavedra N° 2222 (frente al hospital de clínicas) - Miraflores<br>
-            <i class="bi bi-telephone me-1"></i> 72003750
-          </li>
-          <li>
-            <strong>Sucursal Infantiles:</strong><br>
-            Av. German Busch N° 2093 (frente a la gasolinera.)<br>
-            <i class="bi bi-telephone me-1"></i> 72554871
-          </li>
-        </ul>
-      </div>
-    </div>
-    <hr class="border-secondary my-4" />
-    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small">
-      <p class="mb-2 mb-md-0">&copy; 2025 Cátedra del Saber. Todos los derechos reservados.</p>
-      <a href="#inicio" class="btn btn-outline-light btn-sm"><i class="bi bi-arrow-up"></i></a>
-    </div>
-  </div>
-   
-</footer>
+  </footer>
+
+  <!-- Botón WhatsApp flotante -->
   <a href="https://wa.me/59170000000" class="btn btn-success position-fixed bottom-0 end-0 m-4 rounded-circle shadow-lg" style="z-index: 1050;">
-  <i class="bi bi-whatsapp fs-4"></i>
-</a>  
- 
+    <i class="bi bi-whatsapp fs-4"></i>
+  </a>  
 
   <!-- Modal Sesion-->
   <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -534,27 +536,27 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-  const swiper = new Swiper('.mySwiper', {
-    slidesPerView: 2,
-    spaceBetween: 20,
-    loop: true,
-    autoplay: {
-      delay: 1500,
-      disableOnInteraction: false,
-    },
-    breakpoints: {
-      576: {
-        slidesPerView: 3,
+    const swiper = new Swiper('.mySwiper', {
+      slidesPerView: 2,
+      spaceBetween: 20,
+      loop: true,
+      autoplay: {
+        delay: 1500,
+        disableOnInteraction: false,
       },
-      768: {
-        slidesPerView: 4,
-      },
-      992: {
-        slidesPerView: 5,
+      breakpoints: {
+        576: {
+          slidesPerView: 3,
+        },
+        768: {
+          slidesPerView: 4,
+        },
+        992: {
+          slidesPerView: 5,
+        }
       }
-    }
-  });
-</script>
+    });
+  </script>
 </body>
 </html>
 

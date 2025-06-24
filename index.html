@@ -1,516 +1,516 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="img/encabezado.jpg" type="image/x-icon" />
-    <title>Cátedra del Saber - Librería Especializada</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="img/encabezado.jpg" type="image/x-icon" />
+  <title>Cátedra del Saber - Librería Especializada</title>
 
-    <!-- Bootstrap 5.3 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" />
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" />
 
-    <!-- Google Fonts - Fuente moderna y elegante -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts - Fuente moderna y elegante -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
 <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80" tabindex="0">
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
-  <div class="container-fluid d-flex justify-content-between align-items-center">
-    <a class="navbar-brand" href="index.html">
-      <img src="img/logo.png" alt="Logo" width="140">
-    </a>
 
-    <div class="d-flex align-items-center order-lg-3 ms-auto">
-      <form class="d-flex me-2">
-        <div class="input-group">
-          <input class="form-control rounded-pill pe-5" type="search" placeholder="Buscar..." style="max-width: 75%;">
-          <button class="btn btn-light rounded-pill position-absolute end-0 hover-lift" type="submit" style="z-index: 2;">
-            <i class="bi bi-search"></i>
-          </button>
-        </div>
-      </form>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
 
-      <button class="btn btn-light rounded-pill hover-lift d-lg-none" 
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo.png" alt="Logo" width="140">
+      </a>
+
+      <div class="d-flex align-items-center order-lg-3 ms-auto">
+        <form class="d-flex me-2">
+          <div class="input-group">
+            <input class="form-control rounded-pill pe-5" type="search" placeholder="Buscar..." style="max-width: 75%;">
+            <button class="btn btn-light rounded-pill position-absolute end-0 hover-lift" type="submit" style="z-index: 2;">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </form>
+
+        <button class="btn btn-light rounded-pill hover-lift d-lg-none" 
+                type="button" 
+                data-bs-toggle="modal" 
+                data-bs-target="#loginModal">
+          <i class="bi bi-person-fill"></i>
+        </button>
+
+        <button class="navbar-toggler border-0" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#mainNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse order-lg-2" id="mainNav">
+        <ul class="navbar-nav text-uppercase">
+          <li class="nav-item">
+            <a class="nav-link active py-2 px-3 fw-medium" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-2 px-3 fw-medium" href="medicina.html">Medicina</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-2 px-3 fw-medium" href="infantiles.html">Infantil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-2 px-3 fw-medium" href="otros.html">Otros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-2 px-3 fw-medium" href="index.html#nosotros">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-2 px-3 fw-medium" href="index.html#contacto">Contacto</a>
+          </li>
+        </ul>
+      </div>
+
+      <button class="btn btn-light rounded-pill hover-lift d-none d-lg-inline-flex ms-2 order-lg-4" 
               type="button" 
               data-bs-toggle="modal" 
               data-bs-target="#loginModal">
         <i class="bi bi-person-fill"></i>
       </button>
-       <button class="navbar-toggler border-0" 
-            type="button" 
-            data-bs-toggle="collapse" 
-            data-bs-target="#mainNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
     </div>
-    <div class="collapse navbar-collapse order-lg-2" id="mainNav">
-      <ul class="navbar-nav text-uppercase">
-        <li class="nav-item">
-          <a class="nav-link active py-2 px-3 fw-medium" href="index.html">Inicio</a>
-        </li>
+  </nav>
 
-        <!-- Dropdown Medicina -->
-        <li class="nav-item">
-          <a class="nav-link py-2 px-3 fw-medium" href="medicina.html">Medicina</a>
-        </li>
+  <!-- Hero / Portada -->
+  <section id="inicio" class="position-relative d-flex align-items-center text-white" style="min-height:75vh; overflow: hidden;">
+    <!-- VIDEO DE FONDO -->
+    <video autoplay muted loop playsinline class="position-absolute w-100 h-100 object-fit-cover" style="top: 0; left: 0; z-index: 0;">
+      <source src="video/libreria.mp4" type="video/mp4">
+      Tu navegador no soporta video HTML5.
+    </video>
 
-        <!-- Dropdown Infantil -->
-        <li class="nav-item">
-          <a class="nav-link py-2 px-3 fw-medium" href="infantiles.html">Infantil</a>
-        </li>
+    <!-- CAPA OSCURA PARA MEJORAR LEGIBILIDAD -->
+    <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.6); z-index: 1;"></div>
 
-        <!-- Resto del menú -->
-        <li class="nav-item">
-          <a class="nav-link py-2 px-3 fw-medium" href="otros.html">Otros</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link py-2 px-3 fw-medium" href="index.html#nosotros">Nosotros</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link py-2 px-3 fw-medium" href="index.html#contacto">Contacto</a>
-        </li>
-      </ul>
-    </div>
-
-    <button class="btn btn-light rounded-pill hover-lift d-none d-lg-inline-flex ms-2 order-lg-4" 
-            type="button" 
-            data-bs-toggle="modal" 
-            data-bs-target="#loginModal">
-      <i class="bi bi-person-fill"></i>
-    </button>
-  </div>
-</nav>
-<!-- Hero / Portada -->
-<section id="inicio" class="position-relative d-flex align-items-center text-white" style="min-height:75vh; overflow: hidden;">
-  <!-- VIDEO DE FONDO -->
-  <video autoplay muted loop playsinline class="position-absolute w-100 h-100 object-fit-cover" style="top: 0; left: 0; z-index: 0;">
-    <source src="video/libreria.mp4" type="video/mp4">
-    Tu navegador no soporta video HTML5.
-  </video>
-
-  <!-- CAPA OSCURA PARA MEJORAR LEGIBILIDAD -->
-  <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.6); z-index: 1;"></div>
-
-  <!-- CONTENIDO ENCIMA DEL VIDEO Y DEL FILTRO -->
-  <div class="container text-center py-5 px-3 position-relative" style="max-width: 900px; z-index: 2;">
-    <h1 class="display-4 fw-bold mb-4" style="text-shadow:0 0.5rem 1rem rgba(0,0,0,0.7); font-family:'Montserrat', sans-serif;">
-      Descubre el Placer de Leer
-    </h1>
-    <p class="fs-4 mb-4" style="text-shadow:0 0.3rem 0.7rem rgba(0,0,0,0.1);">
-       Libros especializados en medicina y literatura infantil, solo en Cátedra del Saber.
-    </p>
-    <div class="d-flex justify-content-center gap-3 flex-wrap">
-      <a href="#secciones" class="btn btn-lg btn-secondary btn-custom px-4 py-3">Explorar</a>
-      <a href="#contacto" class="btn btn-outline-light btn-lg btn-custom px-4 py-3">Contacto</a>
-    </div>
-    <div class="mt-5">
-      <a href="#secciones" class="text-white fs-2"><i class="bi bi-chevron-down"></i></a>
-    </div>
-  </div>
-</section>
-<!-- Secciones / Medicina/Infantiles/otros -->
-<section id="secciones" class="py-5 bg-light ">
-  <div class="container-fluid">
-    <div class="text-center mb-5">
-      <h2 class="fw-bold display-5 text-primary mb-3">Explora Nuestros Libros Especializados</h2>
-      <p class="lead text-secondary">Encuentra literatura médica, infantil y una selección de libros para ampliar tu conocimiento y creatividad.</p>
-    </div>
-    <div class="row g-4">
-
-      <!-- Medicina -->
-      <div id="medicina"
-        class="container-fluid full-width-container d-flex justify-content-center align-items-center parallax-section"
-        style="background-image: url('img/medicina.jpg');">
-        <div class="parallax-overlay">
-          <i class="bi bi-heart-pulse fs-1"></i>
-          <h3 class="fw-semibold">Literatura Médica</h3>
-          <p class="">
-        Libros, manuales y recursos especializados para estudiantes y profesionales de las ciencias de la salud.
-          </p>
-          <a href="medicina.html" class="btn btn-outline-light btn-lg btn-custom px-4 py-3">Explorar</a>
-        </div>
+    <!-- CONTENIDO ENCIMA DEL VIDEO Y DEL FILTRO -->
+    <div class="container text-center py-5 px-3 position-relative" style="max-width: 900px; z-index: 2;">
+      <h1 class="display-4 fw-bold mb-4" style="text-shadow:0 0.5rem 1rem rgba(0,0,0,0.7); font-family:'Montserrat', sans-serif;">
+        Descubre el Placer de Leer
+      </h1>
+      <p class="fs-4 mb-4" style="text-shadow:0 0.3rem 0.7rem rgba(0,0,0,0.1);">
+        Libros especializados en medicina y literatura infantil, solo en Cátedra del Saber.
+      </p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="#secciones" class="btn btn-lg btn-secondary btn-custom px-4 py-3">Explorar</a>
+        <a href="#contacto" class="btn btn-outline-light btn-lg btn-custom px-4 py-3">Contacto</a>
       </div>
-
-      <section>
-        <!-- Cards de libros -->
-        <div class="container">
-          <div class="row row-cols-2 row-cols-md-6 g-3">
-
-        <!-- Card 1 -->
-        <div class="col">
-          <div class="card h-100 border-0 shadow-sm hover-scale">
-          <div class="book-cover">
-            <img src="img/libros/medicina/cirugia.jpg" class="card-img-top card-img-libro" alt="Cirugía">
-          </div>
-          
-          <div class="card-body">
-            <h5 class="card-title fw-bold texto-cortado-multilinea">Cirugía para el grado de medicina</h5>
-            <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Cirugía</a>
-          </div>
-          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-            <span class="precio-libro">Bs 345.00</span>
-            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-          </div>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="col">
-          <div class="card h-100 border-0 shadow-sm hover-scale">
-          <div class="book-cover">
-            <img src="img/libros/medicina/enfermeria.jpg" class="card-img-top card-img-libro" alt="Enfermería de Salud Mental">
-          </div>
-          
-          <div class="card-body">
-            <h5 class="card-title fw-bold texto-cortado-multilinea">Enfermería de Salud Mental</h5>
-            <a class="badge bg-primary position-absolute top-0 start-0 "style="z-index: 1;">Enfermería</a>
-          </div>
-          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-            <span class="precio-libro">Bs 238.00</span>
-            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-          </div>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="col">
-          <div class="card h-100 border-0 shadow-sm hover-scale">
-          <div class="book-cover">
-            <img src="img/libros/medicina/otologia.jpg" class="card-img-top card-img-libro" alt="Otología">
-          </div>
-          
-          <div class="card-body">
-            <h5 class="card-title fw-bold texto-cortado-multilinea">Otología</h5>
-            <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Otorrinolaringología</a>
-          </div>
-          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-            <span class="precio-libro">Bs 290.00</span>
-            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-          </div>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="col">
-          <div class="card h-100 border-0 shadow-sm hover-scale">
-          <div class="book-cover">
-            <img src="img/libros/medicina/psiquiatria.jpg" class="card-img-top card-img-libro" alt="Psiquiatría">
-          </div>
-          
-          <div class="card-body">
-            <h5 class="card-title fw-bold texto-cortado-multilinea">Psiquiatría para medicos no psiquiatras</h5>
-            <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Psiquiatría</a>
-          </div>
-          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-            <span class="precio-libro">Bs 385.00</span>
-            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-          </div>
-          </div>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="col">
-          <div class="card h-100 border-0 shadow-sm hover-scale">
-          <div class="book-cover">
-            <img src="img/libros/medicina/semiologia.jpg" class="card-img-top card-img-libro" alt="Semiología Médica">
-          </div>
-          
-          <div class="card-body">
-            <h5 class="card-title fw-bold texto-cortado-multilinea">Semiología Médica,fisiopatologia,semiotecnia y propedeutica</h5>
-            <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Semiología</a>
-          </div>
-          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-            <span class="precio-libro">Bs 269.00</span>
-            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-          </div>
-          </div>
-        </div>
-        <!-- Card 6 -->
-        <div class="col">
-          <div class="card h-100 border-0 shadow-sm hover-scale">
-          <div class="book-cover">
-            <img src="img/libros/medicina/enfermeria.jpg" class="card-img-top card-img-libro" alt="Enfermería de Salud Mental">
-          </div>
-          
-          <div class="card-body">
-            <h5 class="card-title fw-bold texto-cortado-multilinea">Enfermería de Salud Mental</h5>
-            <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Enfermería</a>
-          </div>
-          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-            <span class="precio-libro">Bs 238.00</span>
-            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-          </div>
-          </div>
-        </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Literatura infantil -->
-      <div id="infantil"
-        class="container-fluid full-width-container d-flex justify-content-center align-items-center parallax-section mt-3"
-        style="background-image: url('img/infantiles.jpg');">
-        <div class="parallax-overlay">
-          <i class="bi bi-emoji-smile fs-1"></i>
-          <h3 class="fw-semibold">Literatura Infantil</h3>
-          <p class="">
-        Libros ilustrados, cuentos, juegos y materiales didácticos para estimular la imaginación y el aprendizaje de los más pequeños.
-          </p>
-          <a href="infantiles.html" class="btn btn-outline-light btn-lg btn-custom px-4 py-3">Explorar</a>
-        </div>
+      <div class="mt-5">
+        <a href="#secciones" class="text-white fs-2"><i class="bi bi-chevron-down"></i></a>
       </div>
+    </div>
+  </section>
 
-      <section>
-        <!-- Cards de libros -->
-        <div class="container">
-          <div class="row row-cols-2 row-cols-md-6 g-3">
-
-        <!-- Card 1 -->
-        <div class="col">
-          <div class="card h-100 border-0 shadow-sm hover-scale">
-          <div class="book-cover">
-        <img src="img/libros/infantiles/100 cuentos.jpg" class="card-img-top card-img-libro" alt="100 cuentos para niños">
-          </div>
-          
-          <div class="card-body">
-        <h5 class="card-title fw-bold">100 cuentos para niños</h5>
-        <a class="badge bg-primary position-absolute top-0 start-0"style="z-index: 1;">Cuentos</a>
-          </div>
-          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-        <span class="precio-libro">Bs 128.80</span>
-        <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-          </div>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="col">
-          <div class="card h-100 border-0 shadow-sm hover-scale">
-          <div class="book-cover">
-        <img src="img/libros/infantiles/animales.jpg" class="card-img-top card-img-libro" alt="Animales Del Bosque">
-          </div>
-          
-          <div class="card-body">
-        <h5 class="card-title fw-bold">Animales Del Bosque</h5>
-        <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Naturaleza</a>
-          </div>
-          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-        <span class="precio-libro">Bs 96.79</span>
-        <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-          </div>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="col">
-          <div class="card h-100 border-0 shadow-sm hover-scale">
-          <div class="book-cover">
-        <img src="img/libros/infantiles/autum.jpg" class="card-img-top card-img-libro" alt="Autumn">
-          </div>
-          
-          <div class="card-body">
-        <h5 class="card-title fw-bold">Autumn</h5>
-        <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Estaciones</a>
-          </div>
-          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-        <span class="precio-libro">Bs 79.48</span>
-        <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-          </div>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="col">
-          <div class="card h-100 border-0 shadow-sm hover-scale">
-          <div class="book-cover">
-        <img src="img/libros/infantiles/el zorro.jpg" class="card-img-top card-img-libro" alt="El zorro en el Bosque">
-          </div>
-          
-          <div class="card-body">
-        <h5 class="card-title fw-bold">El zorro en el Bosque</h5>
-        <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Fábula</a>
-          </div>
-          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-        <span class="precio-libro">Bs 87.97</span>
-        <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-          </div>
-          </div>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="col">
-          <div class="card h-100 border-0 shadow-sm hover-scale">
-          <div class="book-cover">
-            <img src="img/libros/infantiles/javier.jpg" class="card-img-top card-img-libro" alt="Javier el Dinosaurio">
-          </div>
-          
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Javier el Dinosaurio</h5>
-            <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Dinosaurios</a>
-          </div>
-          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-            <span class="precio-libro">Bs 98.88</span>
-            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-          </div>
-          </div>
-        </div>
-        <!-- Card 2 -->
-        <div class="col">
-          <div class="card h-100 border-0 shadow-sm hover-scale">
-          <div class="book-cover">
-        <img src="img/libros/infantiles/animales.jpg" class="card-img-top card-img-libro" alt="Animales Del Bosque">
-          </div>
-          
-          <div class="card-body">
-        <h5 class="card-title fw-bold">Animales Del Bosque</h5>
-        <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Naturaleza</a>
-          </div>
-          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-        <span class="precio-libro">Bs 96.79</span>
-        <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-          </div>
-          </div>
-        </div>
-
-          </div>
-        </div>
-      </section>
-      <!-- Literatura otros -->
-      <div id="otros"
-        class="container-fluid full-width-container d-flex justify-content-center align-items-center parallax-section mt-3"
-        style="background-image: url('img/varios.jpg');">
-        <div class="parallax-overlay">
-          <i class="bi bi-journal-richtext fs-1"></i>
-          <h3 class="fw-semibold">Literatura Variada</h3>
-          <p class="">
-        Gastronomía, diccionarios, arte, historia y mucho más para ampliar tus horizontes y descubrir nuevas pasiones.
-          </p>
-          <a href="otros.html" class="btn btn-outline-light btn-lg btn-custom px-4 py-3">Explorar</a>
-        </div>
+  <!-- Secciones / Medicina/Infantiles/otros -->
+  <section id="secciones" class="py-5 bg-light ">
+    <div class="container-fluid">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold display-5 text-primary mb-3">Explora Nuestros Libros Especializados</h2>
+        <p class="lead text-secondary">Encuentra literatura médica, infantil y una selección de libros para ampliar tu conocimiento y creatividad.</p>
       </div>
+      <div class="row g-4">
 
-      <section>
-        <!-- Cards de libros -->
-        <div class="container">
-          <div class="row row-cols-2 row-cols-md-6 g-3">
-
-        <!-- Card 1 -->
-        <div class="col">
-          <div class="card h-100 border-0 shadow-sm hover-scale">
-          <div class="book-cover">
-            <img src="img/libros/varios/cocina.jpg" class="card-img-top card-img-libro" alt="Cocina Vegana">
-          </div>
-          
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Cocina Vegana</h5>
-            <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Gastronomía</a>
-          </div>
-          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-            <span class="precio-libro">Bs 22.50</span>
-            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-          </div>
+        <!-- Medicina -->
+        <div id="medicina"
+          class="container-fluid full-width-container d-flex justify-content-center align-items-center parallax-section"
+          style="background-image: url('img/medicina.jpg');">
+          <div class="parallax-overlay">
+            <i class="bi bi-heart-pulse fs-1"></i>
+            <h3 class="fw-semibold">Literatura Médica</h3>
+            <p>
+              Libros, manuales y recursos especializados para estudiantes y profesionales de las ciencias de la salud.
+            </p>
+            <a href="medicina.html" class="btn btn-outline-light btn-lg btn-custom px-4 py-3">Explorar</a>
           </div>
         </div>
 
-        <!-- Card 2 -->
-        <div class="col">
-          <div class="card h-100 border-0 shadow-sm hover-scale">
-          <div class="book-cover">
-            <img src="img/libros/varios/diccionario.jpg" class="card-img-top card-img-libro" alt="Larousse Diccionario Básico">
-          </div>
-          
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Larousse Diccionario Básico</h5>
-            <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Diccionario</a>
-          </div>
-          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-            <span class="precio-libro">Bs 18.90</span>
-            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-          </div>
-          </div>
-        </div>
+        <section>
+          <!-- Cards de libros -->
+          <div class="container">
+            <div class="row row-cols-2 row-cols-md-6 g-3">
 
-        <!-- Card 3 -->
-        <div class="col">
-          <div class="card h-100 border-0 shadow-sm hover-scale">
-          <div class="book-cover">
-            <img src="img/libros/varios/guines.jpg" class="card-img-top card-img-libro" alt="Guinness World Records 2022">
-          </div>
-          
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Guinness World Records 2022</h5>
-            <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Curiosidades</a>
-          </div>
-          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-            <span class="precio-libro">Bs 29.99</span>
-            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-          </div>
-          </div>
-        </div>
+              <!-- Card 1 -->
+              <div class="col">
+                <div class="card h-100 border-0 shadow-sm hover-scale">
+                  <div class="book-cover">
+                    <img src="img/libros/medicina/cirugia.jpg" class="card-img-top card-img-libro" alt="Cirugía">
+                  </div>
+                  
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold texto-cortado-multilinea">Cirugía para el grado de medicina</h5>
+                    <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Cirugía</a>
+                  </div>
+                  <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                    <span class="precio-libro">Bs 345.00</span>
+                    <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+                  </div>
+                </div>
+              </div>
 
-        <!-- Card 4 -->
-        <div class="col">
-          <div class="card h-100 border-0 shadow-sm hover-scale">
-          <div class="book-cover">
-            <img src="img/libros/varios/planos.jpg" class="card-img-top card-img-libro" alt="Planos y Edificios">
-          </div>
-          
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Planos y Edificios</h5>
-            <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Arquitectura</a>
-          </div>
-          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-            <span class="precio-libro">Bs 24.75</span>
-            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-          </div>
-          </div>
-        </div>
+              <!-- Card 2 -->
+              <div class="col">
+                <div class="card h-100 border-0 shadow-sm hover-scale">
+                  <div class="book-cover">
+                    <img src="img/libros/medicina/enfermeria.jpg" class="card-img-top card-img-libro" alt="Enfermería de Salud Mental">
+                  </div>
+                  
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold texto-cortado-multilinea">Enfermería de Salud Mental</h5>
+                    <a class="badge bg-primary position-absolute top-0 start-0 "style="z-index: 1;">Enfermería</a>
+                  </div>
+                  <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                    <span class="precio-libro">Bs 238.00</span>
+                    <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+                  </div>
+                </div>
+              </div>
 
-        <!-- Card 5 -->
-        <div class="col">
-          <div class="card h-100 border-0 shadow-sm hover-scale">
-            <div class="book-cover">
-            <img src="img/libros/varios/musica.jpg" class="card-img-top card-img-libro" alt="Musica Fácil">
-            </div>
-            
-            <div class="card-body">
-            <h5 class="card-title fw-bold">Musica Fácil</h5>
-            <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Música</a>
-            </div>
-            <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-            <span class="precio-libro">Bs 19.80</span>
-            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+              <!-- Card 3 -->
+              <div class="col">
+                <div class="card h-100 border-0 shadow-sm hover-scale">
+                  <div class="book-cover">
+                    <img src="img/libros/medicina/otologia.jpg" class="card-img-top card-img-libro" alt="Otología">
+                  </div>
+                  
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold texto-cortado-multilinea">Otología</h5>
+                    <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Otorrinolaringología</a>
+                  </div>
+                  <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                    <span class="precio-libro">Bs 290.00</span>
+                    <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="col">
+                <div class="card h-100 border-0 shadow-sm hover-scale">
+                  <div class="book-cover">
+                    <img src="img/libros/medicina/psiquiatria.jpg" class="card-img-top card-img-libro" alt="Psiquiatría">
+                  </div>
+                  
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold texto-cortado-multilinea">Psiquiatría para medicos no psiquiatras</h5>
+                    <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Psiquiatría</a>
+                  </div>
+                  <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                    <span class="precio-libro">Bs 385.00</span>
+                    <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 5 -->
+              <div class="col">
+                <div class="card h-100 border-0 shadow-sm hover-scale">
+                  <div class="book-cover">
+                    <img src="img/libros/medicina/semiologia.jpg" class="card-img-top card-img-libro" alt="Semiología Médica">
+                  </div>
+                  
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold texto-cortado-multilinea">Semiología Médica,fisiopatologia,semiotecnia y propedeutica</h5>
+                    <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Semiología</a>
+                  </div>
+                  <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                    <span class="precio-libro">Bs 269.00</span>
+                    <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 6 -->
+              <div class="col">
+                <div class="card h-100 border-0 shadow-sm hover-scale">
+                  <div class="book-cover">
+                    <img src="img/libros/medicina/enfermeria.jpg" class="card-img-top card-img-libro" alt="Enfermería de Salud Mental">
+                  </div>
+                  
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold texto-cortado-multilinea">Enfermería de Salud Mental</h5>
+                    <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Enfermería</a>
+                  </div>
+                  <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                    <span class="precio-libro">Bs 238.00</span>
+                    <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-         <!-- Card 3 -->
-        <div class="col">
-          <div class="card h-100 border-0 shadow-sm hover-scale">
-          <div class="book-cover">
-            <img src="img/libros/varios/guines.jpg" class="card-img-top card-img-libro" alt="Guinness World Records 2022">
-          </div>
-          
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Guinness World Records 2022</h5>
-            <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Curiosidades</a>
-          </div>
-          <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-            <span class="precio-libro">Bs 29.99</span>
-            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-          </div>
+        </section>
+
+        <!-- Literatura infantil -->
+        <div id="infantil"
+          class="container-fluid full-width-container d-flex justify-content-center align-items-center parallax-section mt-3"
+          style="background-image: url('img/infantiles.jpg');">
+          <div class="parallax-overlay">
+            <i class="bi bi-emoji-smile fs-1"></i>
+            <h3 class="fw-semibold">Literatura Infantil</h3>
+            <p class="">
+              Libros ilustrados, cuentos, juegos y materiales didácticos para estimular la imaginación y el aprendizaje de los más pequeños.
+            </p>
+            <a href="infantiles.html" class="btn btn-outline-light btn-lg btn-custom px-4 py-3">Explorar</a>
           </div>
         </div>
+
+        <section>
+          <!-- Cards de libros -->
+          <div class="container">
+            <div class="row row-cols-2 row-cols-md-6 g-3">
+
+              <!-- Card 1 -->
+              <div class="col">
+                <div class="card h-100 border-0 shadow-sm hover-scale">
+                  <div class="book-cover">
+                    <img src="img/libros/infantiles/100 cuentos.jpg" class="card-img-top card-img-libro" alt="100 cuentos para niños">
+                  </div>
+                  
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">100 cuentos para niños</h5>
+                    <a class="badge bg-primary position-absolute top-0 start-0"style="z-index: 1;">Cuentos</a>
+                  </div>
+                  <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                    <span class="precio-libro">Bs 128.80</span>
+                    <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="col">
+                <div class="card h-100 border-0 shadow-sm hover-scale">
+                  <div class="book-cover">
+                    <img src="img/libros/infantiles/animales.jpg" class="card-img-top card-img-libro" alt="Animales Del Bosque">
+                  </div>
+                  
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Animales Del Bosque</h5>
+                    <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Naturaleza</a>
+                  </div>
+                  <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                    <span class="precio-libro">Bs 96.79</span>
+                    <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="col">
+                <div class="card h-100 border-0 shadow-sm hover-scale">
+                  <div class="book-cover">
+                    <img src="img/libros/infantiles/autum.jpg" class="card-img-top card-img-libro" alt="Autumn">
+                  </div>
+                  
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Autumn</h5>
+                    <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Estaciones</a>
+                  </div>
+                  <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                    <span class="precio-libro">Bs 79.48</span>
+                    <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="col">
+                <div class="card h-100 border-0 shadow-sm hover-scale">
+                  <div class="book-cover">
+                    <img src="img/libros/infantiles/el zorro.jpg" class="card-img-top card-img-libro" alt="El zorro en el Bosque">
+                  </div>
+                  
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">El zorro en el Bosque</h5>
+                    <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Fábula</a>
+                  </div>
+                  <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                    <span class="precio-libro">Bs 87.97</span>
+                    <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 5 -->
+              <div class="col">
+                <div class="card h-100 border-0 shadow-sm hover-scale">
+                  <div class="book-cover">
+                    <img src="img/libros/infantiles/javier.jpg" class="card-img-top card-img-libro" alt="Javier el Dinosaurio">
+                  </div>
+                  
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Javier el Dinosaurio</h5>
+                    <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Dinosaurios</a>
+                  </div>
+                  <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                    <span class="precio-libro">Bs 98.88</span>
+                    <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 2 -->
+              <div class="col">
+                <div class="card h-100 border-0 shadow-sm hover-scale">
+                  <div class="book-cover">
+                    <img src="img/libros/infantiles/animales.jpg" class="card-img-top card-img-libro" alt="Animales Del Bosque">
+                  </div>
+                  
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Animales Del Bosque</h5>
+                    <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Naturaleza</a>
+                  </div>
+                  <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                    <span class="precio-libro">Bs 96.79</span>
+                    <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+        <!-- Literatura otros -->
+        <div id="otros"
+          class="container-fluid full-width-container d-flex justify-content-center align-items-center parallax-section mt-3"
+          style="background-image: url('img/varios.jpg');">
+          <div class="parallax-overlay">
+            <i class="bi bi-journal-richtext fs-1"></i>
+            <h3 class="fw-semibold">Literatura Variada</h3>
+            <p class="">
+              Gastronomía, diccionarios, arte, historia y mucho más para ampliar tus horizontes y descubrir nuevas pasiones.
+            </p>
+            <a href="otros.html" class="btn btn-outline-light btn-lg btn-custom px-4 py-3">Explorar</a>
           </div>
         </div>
-      </section>
+
+        <section>
+          <!-- Cards de libros -->
+          <div class="container">
+            <div class="row row-cols-2 row-cols-md-6 g-3">
+
+              <!-- Card 1 -->
+              <div class="col">
+                <div class="card h-100 border-0 shadow-sm hover-scale">
+                  <div class="book-cover">
+                    <img src="img/libros/varios/cocina.jpg" class="card-img-top card-img-libro" alt="Cocina Vegana">
+                  </div>
+                  
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Cocina Vegana</h5>
+                    <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Gastronomía</a>
+                  </div>
+                  <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                    <span class="precio-libro">Bs 22.50</span>
+                    <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="col">
+                <div class="card h-100 border-0 shadow-sm hover-scale">
+                  <div class="book-cover">
+                    <img src="img/libros/varios/diccionario.jpg" class="card-img-top card-img-libro" alt="Larousse Diccionario Básico">
+                  </div>
+                  
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Larousse Diccionario Básico</h5>
+                    <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Diccionario</a>
+                  </div>
+                  <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                    <span class="precio-libro">Bs 18.90</span>
+                    <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="col">
+                <div class="card h-100 border-0 shadow-sm hover-scale">
+                  <div class="book-cover">
+                    <img src="img/libros/varios/guines.jpg" class="card-img-top card-img-libro" alt="Guinness World Records 2022">
+                  </div>
+                  
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Guinness World Records 2022</h5>
+                    <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Curiosidades</a>
+                  </div>
+                  <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                    <span class="precio-libro">Bs 29.99</span>
+                    <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="col">
+                <div class="card h-100 border-0 shadow-sm hover-scale">
+                  <div class="book-cover">
+                    <img src="img/libros/varios/planos.jpg" class="card-img-top card-img-libro" alt="Planos y Edificios">
+                  </div>
+                  
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Planos y Edificios</h5>
+                    <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Arquitectura</a>
+                  </div>
+                  <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                    <span class="precio-libro">Bs 24.75</span>
+                    <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 5 -->
+              <div class="col">
+                <div class="card h-100 border-0 shadow-sm hover-scale">
+                  <div class="book-cover">
+                    <img src="img/libros/varios/musica.jpg" class="card-img-top card-img-libro" alt="Musica Fácil">
+                  </div>
+                  
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Musica Fácil</h5>
+                    <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Música</a>
+                  </div>
+                  <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                    <span class="precio-libro">Bs 19.80</span>
+                    <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+                  </div>
+                </div>
+              </div>
+               <!-- Card 3 -->
+              <div class="col">
+                <div class="card h-100 border-0 shadow-sm hover-scale">
+                  <div class="book-cover">
+                    <img src="img/libros/varios/guines.jpg" class="card-img-top card-img-libro" alt="Guinness World Records 2022">
+                  </div>
+                  
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Guinness World Records 2022</h5>
+                    <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Curiosidades</a>
+                  </div>
+                  <div class="card-footer border-0 d-flex justify-content-between align-items-center">
+                    <span class="precio-libro">Bs 29.99</span>
+                    <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Sobre Nosotros -->
   <section id="nosotros" class="py-5">
@@ -705,6 +705,7 @@
     </div>
   </div>
 </footer>
+
  <a href="https://wa.me/59170000000" class="btn btn-success position-fixed bottom-0 end-0 m-4 rounded-circle shadow-lg" style="z-index: 1050;">
   <i class="bi bi-whatsapp fs-4"></i>
 </a>  
