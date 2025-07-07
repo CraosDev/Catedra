@@ -15,7 +15,7 @@ body {
     font-weight: 400;
     line-height: 1.6;
     letter-spacing: 0.1px;
-    overflow-x: hidden;
+   
 }
 
 a.text-secondary:hover {
@@ -245,3 +245,9 @@ footer {
     text-overflow: ellipsis;
 }
 
+.navbar {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1030 !important;
+  transition: none !important;
+}
