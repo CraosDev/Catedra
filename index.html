@@ -15,88 +15,82 @@
 
   <!-- Estilos personalizados -->
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/trig-js/src/trig-animations.min.css"></link>
+<script src="https://cdn.jsdelivr.net/npm/trig-js/src/trig.min.js"></script>
 
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80" tabindex="0">
 
   <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm"
-     data-aos="fade-down" data-aos-duration="600">
-  <div class="container-fluid d-flex justify-content-between align-items-center">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
 
-    <a class="navbar-brand" href="index.html" data-aos="fade-right" data-aos-delay="100">
-      <img src="img/logo.png" alt="Logo" width="140">
-    </a>
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo.png" alt="Logo" width="140">
+      </a>
 
-    <div class="d-flex align-items-center order-lg-3 ms-auto" data-aos="fade-left" data-aos-delay="300">
-      <form class="d-flex me-2 position-relative" style="width: 240px;" data-aos="fade" data-aos-delay="400">
-        <input class="form-control rounded-pill pe-5" type="search" placeholder="Buscar..." style="width: 100%;">
-        <button class="btn btn-light rounded-pill position-absolute end-0 top-50 translate-middle-y" type="submit" style="z-index:2; right: 8px;">
-          <i class="bi bi-search"></i>
+      <div class="d-flex align-items-center order-lg-3 ms-auto">
+        <form class="d-flex me-2 position-relative" style="width: 240px;">
+          <input class="form-control rounded-pill pe-5" type="search" placeholder="Buscar..." style="width: 100%;">
+          <button class="btn btn-light rounded-pill position-absolute end-0 top-50 translate-middle-y" type="submit" style="z-index:2; right: 8px;">
+            <i class="bi bi-search"></i>
+          </button>
+        </form>
+
+        <button class="btn btn-light rounded-pill hover-lift d-lg-none" 
+                type="button" 
+                data-bs-toggle="modal" 
+                data-bs-target="#loginModal">
+          <i class="bi bi-person-fill"></i>
         </button>
-      </form>
 
-      <button class="btn btn-light rounded-pill hover-lift d-lg-none"
-              type="button"
-              data-bs-toggle="modal"
-              data-bs-target="#loginModal"
-              data-aos="fade"
-              data-aos-delay="500">
+        <button class="navbar-toggler border-0" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#mainNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse order-lg-2" id="mainNav">
+        <ul class="navbar-nav text-uppercase trig-reveal-down-left enable-trig">
+          <li class="nav-item">
+            <a class="nav-link active py-2 px-3 fw-medium trig-target" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-2 px-3 fw-medium trig-target" href="medicina.html">Medicina</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-2 px-3 fw-medium trig-target" href="infantiles.html">Infantil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-2 px-3 fw-medium trig-target" href="otros.html">Otros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-2 px-3 fw-medium trig-target" href="index.html#nosotros">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-2 px-3 fw-medium trig-target" href="index.html#contacto">Contacto</a>
+          </li>
+        </ul>
+      </div>
+      
+      <button class="btn btn-light rounded-pill hover-lift d-none d-lg-inline-flex ms-2 order-lg-4" 
+              type="button" 
+              data-bs-toggle="modal" 
+              data-bs-target="#loginModal">
         <i class="bi bi-person-fill"></i>
       </button>
-
-      <button class="navbar-toggler border-0"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#mainNav"
-              data-aos="fade"
-              data-aos-delay="600">
-        <span class="navbar-toggler-icon"></span>
-      </button>
     </div>
-
-    <!-- SIN AOS AQUÍ para evitar problemas -->
-    <div class="collapse navbar-collapse order-lg-2" id="mainNav">
-      <ul class="navbar-nav text-uppercase">
-        <li class="nav-item" data-aos="fade-up" data-aos-delay="100">
-          <a class="nav-link active py-2 px-3 fw-medium" href="index.html">Inicio</a>
-        </li>
-        <li class="nav-item" data-aos="fade-up" data-aos-delay="200">
-          <a class="nav-link py-2 px-3 fw-medium" href="medicina.html">Medicina</a>
-        </li>
-        <li class="nav-item" data-aos="fade-up" data-aos-delay="300">
-          <a class="nav-link py-2 px-3 fw-medium" href="infantiles.html">Infantil</a>
-        </li>
-        <li class="nav-item" data-aos="fade-up" data-aos-delay="400">
-          <a class="nav-link py-2 px-3 fw-medium" href="otros.html">Otros</a>
-        </li>
-        <li class="nav-item" data-aos="fade-up" data-aos-delay="500">
-          <a class="nav-link py-2 px-3 fw-medium" href="index.html#nosotros">Nosotros</a>
-        </li>
-        <li class="nav-item" data-aos="fade-up" data-aos-delay="600">
-          <a class="nav-link py-2 px-3 fw-medium" href="index.html#contacto">Contacto</a>
-        </li>
-      </ul>
-    </div>
-
-    <button class="btn btn-light rounded-pill hover-lift d-none d-lg-inline-flex ms-2 order-lg-4"
-            type="button"
-            data-bs-toggle="modal"
-            data-bs-target="#loginModal"
-            data-aos="fade"
-            data-aos-delay="700">
-      <i class="bi bi-person-fill"></i>
-    </button>
-  </div>
-</nav>
+  </nav>
 
 
 
   <!-- Hero / Portada -->
-  <section id="inicio" class="position-relative d-flex align-items-center text-white" style="min-height:75vh; overflow: hidden;">
+  <section id="inicio" class="position-relative d-flex align-items-center text-white" data-trig style="min-height:75vh; overflow: hidden;">
     <!-- VIDEO DE FONDO -->
     <video autoplay muted loop playsinline class="position-absolute w-100 h-100 object-fit-cover" style="top: 0; left: 0; z-index: 0;">
       <source src="video/libreria.mp4" type="video/mp4">
@@ -134,8 +128,8 @@
       <div class="row g-4 ">
 
         <!-- Medicina -->
-        <div id="medicina" " 
-          class="container-fluid full-width-container d-flex justify-content-center align-items-center parallax-section"
+        <div id="medicina"
+          class="container-fluid full-width-container d-flex justify-content-center align-items-center parallax-section mt-3" 
           style="background-image: url('img/medicina.jpg');">
           <div class="parallax-overlay" >
             <i class="bi bi-heart-pulse fs-1"></i>
@@ -535,10 +529,10 @@
           <p class="text-muted mb-4">
             En Cátedra del Saber, nos enorgullece ser un referente en literatura médica y infantil. Nuestro compromiso es ofrecer contenidos de alta calidad que apoyen el crecimiento profesional y personal de nuestros lectores, en un espacio que combina tradición, innovación y pasión por la lectura.
           </p>
-          <div class="row g-3">
+          <div class="row g-3 ">
             <!-- Datos destacados -->
-            <div class="col-sm-6">
-              <div class="d-flex bg-body p-3 rounded-3 shadow hover-scale h-100 align-items-center">
+            <div class="col-sm-6 trig-fade-up enable-trig">
+              <div class="d-flex bg-body p-3 rounded-3 shadow hover-scale h-100 align-items-center trig-target">
                 <i class="bi bi-book-half fs-2 text-secondary me-3"></i>
                 <div>
                   <h4 class="mb-1 fw-semibold">15,000+</h4>
@@ -546,8 +540,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-6">
-              <div class="d-flex bg-body p-3 rounded-3 shadow hover-scale h-100 align-items-center">
+            <div class="col-sm-6 trig-fade-down enable-trig">
+              <div class="d-flex bg-body p-3 rounded-3 shadow hover-scale h-100 align-items-center trig-target">
                 <i class="bi bi-people fs-2 text-secondary me-3"></i>
                 <div>
                   <h4 class="mb-1 fw-semibold">Equipo Experto</h4>
@@ -555,8 +549,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-6">
-              <div class="d-flex bg-body p-3 rounded-3 shadow hover-scale h-100 align-items-center">
+            <div class="col-sm-6 trig-fade-left enable-trig">
+              <div class="d-flex bg-body p-3 rounded-3 shadow hover-scale h-100 align-items-center trig-target">
                 <i class="bi bi-award fs-2 text-secondary me-3"></i>
                 <div>
                   <h4 class="mb-1 fw-semibold">Reconocimientos</h4>
@@ -564,8 +558,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-6">
-              <div class="d-flex bg-body p-3 rounded-3 shadow hover-scale h-100 align-items-center">
+            <div class="col-sm-6 trig-fade-right enable-trig">
+              <div class="d-flex bg-body p-3 rounded-3 shadow hover-scale h-100 align-items-center trig-target">
                 <i class="bi bi-clock-history fs-2 text-secondary me-3"></i>
                 <div>
                   <h4 class="mb-1 fw-semibold">30+ Años</h4>
@@ -576,8 +570,8 @@
           </div>
         </div>
         <!-- Imagen -->
-        <div class="col-lg-6 text-center">
-          <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1350&q=80" class="img-fluid rounded-3 shadow-lg" alt="Librería" />
+        <div class="col-lg-6 text-center trig-pop-right enable-trig">
+          <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1350&q=80" class="img-fluid rounded-3 shadow-lg trig-target" alt="Librería" />
         </div>
       </div>
     </div>
