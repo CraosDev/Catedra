@@ -56,7 +56,7 @@
       </div>
 
       <div class="collapse navbar-collapse order-lg-2" id="mainNav">
-        <ul class="navbar-nav text-uppercase trig-reveal-down-left enable-trig">
+        <ul class="navbar-nav text-uppercase trig-fade enable-trig">
           <li class="nav-item">
             <a class="nav-link active py-2 px-3 fw-medium trig-target" href="index.html">Inicio</a>
           </li>
@@ -90,9 +90,9 @@
 
 
   <!-- Hero / Portada -->
-  <section id="inicio" class="position-relative d-flex align-items-center text-white" data-trig style="min-height:75vh; overflow: hidden;">
+  <section id="inicio" class="position-relative d-flex align-items-center text-white trig-fade enable-trig"  style="min-height:75vh; overflow: hidden;">
     <!-- VIDEO DE FONDO -->
-    <video autoplay muted loop playsinline class="position-absolute w-100 h-100 object-fit-cover" style="top: 0; left: 0; z-index: 0;">
+    <video autoplay muted loop playsinline class="position-absolute w-100 h-100 object-fit-cover trig-target" style="top: 0; left: 0; z-index: 0;">
       <source src="video/libreria.mp4" type="video/mp4">
       Tu navegador no soporta video HTML5.
     </video>
@@ -121,23 +121,26 @@
   <!-- Secciones / Medicina/Infantiles/otros -->
   <section id="secciones" class="py-5 bg-light " >
     <div class="container-fluid ">
-      <div class="text-center mb-5" >
-        <h2 class="fw-bold display-5 text-primary mb-3">Explora Nuestros Libros Especializados</h2>
+      <div class="text-center mb-5 trig-fade-left enable-trig" >
+        <h2 class="fw-bold display-5 text-primary mb-3 trig-target" >Explora Nuestros Libros Especializados</h2>
         <p class="lead text-secondary">Encuentra literatura médica, infantil y una selección de libros para ampliar tu conocimiento y creatividad.</p>
       </div>
       <div class="row g-4 ">
 
         <!-- Medicina -->
         <div id="medicina"
-          class="container-fluid full-width-container d-flex justify-content-center align-items-center parallax-section mt-3" 
+          class="container-fluid full-width-container d-flex justify-content-center align-items-center parallax-section mt-3 " 
           style="background-image: url('img/medicina.jpg');">
-          <div class="parallax-overlay" >
-            <i class="bi bi-heart-pulse fs-1"></i>
-            <h3 class="fw-semibold">Literatura Médica</h3>
-            <p>
+          <div class="parallax-overlay  trig-fade enable-trig" >
+            <div class="trig-target">
+              <i class="bi bi-heart-pulse fs-1"></i>
+              <h3 class="fw-semibold ">Literatura Médica</h3>
+              <p>
               Libros, manuales y recursos especializados para estudiantes y profesionales de las ciencias de la salud.
-            </p>
-            <a href="medicina.html" class="btn btn-outline-light btn-lg btn-custom px-4 py-3">Explorar</a>
+              </p>
+              <a href="medicina.html" class="btn btn-outline-light btn-lg btn-custom px-4 py-3">Explorar</a>
+            </div>
+            
           </div>
         </div>
 
@@ -260,13 +263,15 @@
         <div id="infantil"
           class="container-fluid full-width-container d-flex justify-content-center align-items-center parallax-section mt-3"
           style="background-image: url('img/infantiles.jpg');">
-          <div class="parallax-overlay">
-            <i class="bi bi-emoji-smile fs-1"></i>
-            <h3 class="fw-semibold">Literatura Infantil</h3>
-            <p class="">
-              Libros ilustrados, cuentos, juegos y materiales didácticos para estimular la imaginación y el aprendizaje de los más pequeños.
-            </p>
-            <a href="infantiles.html" class="btn btn-outline-light btn-lg btn-custom px-4 py-3">Explorar</a>
+          <div class="parallax-overlay trig-fade enable-trig">
+            <div class="trig-target">
+              <i class="bi bi-emoji-smile fs-1"></i>
+              <h3 class="fw-semibold">Literatura Infantil</h3>
+              <p class="">
+                Libros ilustrados, cuentos, juegos y materiales didácticos para estimular la imaginación y el aprendizaje de los más pequeños.
+              </p>
+              <a href="infantiles.html" class="btn btn-outline-light btn-lg btn-custom px-4 py-3">Explorar</a>
+            </div>
           </div>
         </div>
 
@@ -389,13 +394,15 @@
         <div id="otros"
           class="container-fluid full-width-container d-flex justify-content-center align-items-center parallax-section mt-3"
           style="background-image: url('img/varios.jpg');">
-          <div class="parallax-overlay">
-            <i class="bi bi-journal-richtext fs-1"></i>
-            <h3 class="fw-semibold">Literatura Variada</h3>
-            <p class="">
-              Gastronomía, diccionarios, arte, historia y mucho más para ampliar tus horizontes y descubrir nuevas pasiones.
-            </p>
-            <a href="otros.html" class="btn btn-outline-light btn-lg btn-custom px-4 py-3">Explorar</a>
+          <div class="parallax-overlay trig-fade enable-trig">
+            <div class="trig-target">
+              <i class="bi bi-book fs-1"></i>
+              <h3 class="fw-semibold">Literatura Variada</h3>
+              <p>
+                Una selección de libros de cocina, diccionarios, curiosidades y más para enriquecer tu biblioteca personal.
+              </p>
+              <a href="otros.html" class="btn btn-outline-light btn-lg btn-custom px-4 py-3">Explorar</a>
+            </div>
           </div>
         </div>
 
@@ -520,8 +527,8 @@
   <!-- Sobre Nosotros -->
   <section id="nosotros" class="py-5">
     <div class="container">
-      <div class="text-center mb-5" >
-        <h2 class="fw-bold display-5 text-primary mb-3">Sobre Nosotros</h2>
+      <div class="text-center mb-5 trig-fade-right enable-trig" >
+        <h2 class="fw-bold display-5 text-primary mb-3 trig-target">Sobre Nosotros</h2>
         <p class="lead text-secondary">Desde 1995, fomentando la pasión por el conocimiento y la lectura especializada.</p>
       </div>
       <div class="row g-4 align-items-center">
@@ -580,8 +587,8 @@
   <!-- Contacto -->
   <section id="contacto" class="py-5 bg-light">
     <div class="container">
-      <div class="text-center mb-5" >
-        <h2 class="fw-bold display-5 text-primary mb-3">Contáctanos</h2>
+      <div class="text-center mb-5 trig-fade-left enable-trig" >
+        <h2 class="fw-bold display-5 text-primary mb-3 trig-target">Contáctanos</h2>
         <p class="lead text-secondary">Visítanos en nuestras sucursales o envíanos un mensaje para más información.</p>
       </div>
       <div class="row g-4">
