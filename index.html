@@ -20,6 +20,12 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/trig-js/src/trig-animations.min.css"></link>
 <script src="https://cdn.jsdelivr.net/npm/trig-js/src/trig.min.js"></script>
 
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80" tabindex="0">
@@ -103,7 +109,7 @@
     <!-- CONTENIDO ENCIMA DEL VIDEO Y DEL FILTRO -->
     <div class="container text-center py-5 px-3 position-relative" style="max-width: 900px; z-index: 2;">
       <h1 class="display-4 fw-bold mb-4" style="text-shadow:0 0.5rem 1rem rgba(0,0,0,0.7); font-family:'Montserrat', sans-serif;">
-        Descubre el Placer de Leer
+        Libreria Catedra del Saber
       </h1>
       <p class="fs-4 mb-4" style="text-shadow:0 0.3rem 0.7rem rgba(0,0,0,0.1);">
         Libros especializados en medicina y literatura infantil, solo en Cátedra del Saber.
@@ -144,120 +150,175 @@
           </div>
         </div>
 
+        <!-- Swiper para libros de medicina -->
         <section>
-          <!-- Cards de libros -->
-          <div class="container ">
-            <div class="row row-cols-2 row-cols-md-6 g-3">
-
-              <!-- Card 1 -->
-              <div class="col">
-                <div class="card h-100 border-0 shadow-sm hover-scale">
-                  <div class="book-cover">
-                    <img src="img/libros/medicina/cirugia.jpg" class="card-img-top card-img-libro" alt="Cirugía">
-                  </div>
-                  
-                  <div class="card-body">
-                    <h5 class="card-title fw-bold texto-cortado-multilinea">Cirugía para el grado de medicina</h5>
-                    <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Cirugía</a>
-                  </div>
-                  <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-                    <span class="precio-libro">Bs 345.00</span>
-                    <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-                  </div>
-                </div>
+          <div class="container">
+            <div class="swiper mySwiperLibrosMedicina">
+              <div class="swiper-wrapper">
+          <!-- Card 1 -->
+          <div class="swiper-slide">
+            <div class="card h-100 border-0 shadow-sm hover-scale">
+              <div class="book-cover">
+            <img src="img/libros/medicina/cirugia.jpg" class="card-img-top card-img-libro" alt="Cirugía">
               </div>
-
-              <!-- Card 2 -->
-              <div class="col">
-                <div class="card h-100 border-0 shadow-sm hover-scale">
-                  <div class="book-cover">
-                    <img src="img/libros/medicina/enfermeria.jpg" class="card-img-top card-img-libro" alt="Enfermería de Salud Mental">
-                  </div>
-                  
-                  <div class="card-body">
-                    <h5 class="card-title fw-bold texto-cortado-multilinea">Enfermería de Salud Mental</h5>
-                    <a class="badge bg-primary position-absolute top-0 start-0 "style="z-index: 1;">Enfermería</a>
-                  </div>
-                  <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-                    <span class="precio-libro">Bs 238.00</span>
-                    <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-                  </div>
-                </div>
+              <div class="card-body">
+            <h5 class="card-title fw-bold texto-cortado-multilinea">Cirugía para el grado de medicina</h5>
+            <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Cirugía</a>
               </div>
-
-              <!-- Card 3 -->
-              <div class="col">
-                <div class="card h-100 border-0 shadow-sm hover-scale">
-                  <div class="book-cover">
-                    <img src="img/libros/medicina/otologia.jpg" class="card-img-top card-img-libro" alt="Otología">
-                  </div>
-                  
-                  <div class="card-body">
-                    <h5 class="card-title fw-bold texto-cortado-multilinea">Otología</h5>
-                    <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Otorrinolaringología</a>
-                  </div>
-                  <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-                    <span class="precio-libro">Bs 290.00</span>
-                    <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Card 4 -->
-              <div class="col">
-                <div class="card h-100 border-0 shadow-sm hover-scale">
-                  <div class="book-cover">
-                    <img src="img/libros/medicina/psiquiatria.jpg" class="card-img-top card-img-libro" alt="Psiquiatría">
-                  </div>
-                  
-                  <div class="card-body">
-                    <h5 class="card-title fw-bold texto-cortado-multilinea">Psiquiatría para medicos no psiquiatras</h5>
-                    <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Psiquiatría</a>
-                  </div>
-                  <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-                    <span class="precio-libro">Bs 385.00</span>
-                    <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Card 5 -->
-              <div class="col">
-                <div class="card h-100 border-0 shadow-sm hover-scale">
-                  <div class="book-cover">
-                    <img src="img/libros/medicina/semiologia.jpg" class="card-img-top card-img-libro" alt="Semiología Médica">
-                  </div>
-                  
-                  <div class="card-body">
-                    <h5 class="card-title fw-bold texto-cortado-multilinea">Semiología Médica,fisiopatologia,semiotecnia y propedeutica</h5>
-                    <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Semiología</a>
-                  </div>
-                  <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-                    <span class="precio-libro">Bs 269.00</span>
-                    <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 6 -->
-              <div class="col">
-                <div class="card h-100 border-0 shadow-sm hover-scale">
-                  <div class="book-cover">
-                    <img src="img/libros/medicina/enfermeria.jpg" class="card-img-top card-img-libro" alt="Enfermería de Salud Mental">
-                  </div>
-                  
-                  <div class="card-body">
-                    <h5 class="card-title fw-bold texto-cortado-multilinea">Enfermería de Salud Mental</h5>
-                    <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Enfermería</a>
-                  </div>
-                  <div class="card-footer border-0 d-flex justify-content-between align-items-center">
-                    <span class="precio-libro">Bs 238.00</span>
-                    <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
-                  </div>
-                </div>
+              <div class="card-footer border-0 d-flex justify-content-between align-items-center" style="position: relative; z-index: 2;">
+            <span class="precio-libro" style="background: rgba(255,255,255,0.85); padding: 2px 8px; border-radius: 8px;">Bs 345.00</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
               </div>
             </div>
-          </div>
-        </section>
+            </div>
+            <!-- Card 2 -->
+            <div class="swiper-slide">
+            <div class="card h-100 border-0 shadow-sm hover-scale">
+              <div class="book-cover">
+            <img src="img/libros/medicina/enfermeria.jpg" class="card-img-top card-img-libro" alt="Enfermería de Salud Mental">
+              </div>
+              <div class="card-body">
+            <h5 class="card-title fw-bold texto-cortado-multilinea">Enfermería de Salud Mental</h5>
+            <a class="badge bg-primary position-absolute top-0 start-0 "style="z-index: 1;">Enfermería</a>
+              </div>
+              <div class="card-footer border-0 d-flex justify-content-between align-items-center" style="position: relative; z-index: 2;">
+            <span class="precio-libro" style="background: rgba(255,255,255,0.85); padding: 2px 8px; border-radius: 8px;">Bs 238.00</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+              </div>
+            </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="swiper-slide">
+            <div class="card h-100 border-0 shadow-sm hover-scale">
+              <div class="book-cover">
+            <img src="img/libros/medicina/otologia.jpg" class="card-img-top card-img-libro" alt="Otología">
+              </div>
+              <div class="card-body">
+            <h5 class="card-title fw-bold texto-cortado-multilinea">Otología</h5>
+            <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Otorrinolaringología</a>
+              </div>
+              <div class="card-footer border-0 d-flex justify-content-between align-items-center" style="position: relative; z-index: 2;">
+            <span class="precio-libro" style="background: rgba(255,255,255,0.85); padding: 2px 8px; border-radius: 8px;">Bs 290.00</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+              </div>
+            </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="swiper-slide">
+            <div class="card h-100 border-0 shadow-sm hover-scale">
+              <div class="book-cover">
+            <img src="img/libros/medicina/psiquiatria.jpg" class="card-img-top card-img-libro" alt="Psiquiatría">
+              </div>
+              <div class="card-body">
+            <h5 class="card-title fw-bold texto-cortado-multilinea">Psiquiatría para medicos no psiquiatras</h5>
+            <a class="badge bg-primary position-absolute top-0 start-0 " style="z-index: 1;">Psiquiatría</a>
+              </div>
+              <div class="card-footer border-0 d-flex justify-content-between align-items-center" style="position: relative; z-index: 2;">
+            <span class="precio-libro" style="background: rgba(255,255,255,0.85); padding: 2px 8px; border-radius: 8px;">Bs 385.00</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+              </div>
+            </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="swiper-slide">
+            <div class="card h-100 border-0 shadow-sm hover-scale">
+              <div class="book-cover">
+            <img src="img/libros/medicina/enfermeria.jpg" class="card-img-top card-img-libro" alt="Enfermería de Salud Mental">
+              </div>
+              <div class="card-body">
+            <h5 class="card-title fw-bold texto-cortado-multilinea">Enfermería de Salud Mental</h5>
+            <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Enfermería</a>
+              </div>
+              <div class="card-footer border-0 d-flex justify-content-between align-items-center" style="position: relative; z-index: 2;">
+            <span class="precio-libro" style="background: rgba(255,255,255,0.85); padding: 2px 8px; border-radius: 8px;">Bs 238.00</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+              </div>
+            </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="swiper-slide">
+            <div class="card h-100 border-0 shadow-sm hover-scale">
+              <div class="book-cover">
+            <img src="img/libros/medicina/enfermeria.jpg" class="card-img-top card-img-libro" alt="Enfermería de Salud Mental">
+              </div>
+              <div class="card-body">
+            <h5 class="card-title fw-bold texto-cortado-multilinea">Enfermería de Salud Mental</h5>
+            <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Enfermería</a>
+              </div>
+              <div class="card-footer border-0 d-flex justify-content-between align-items-center" style="position: relative; z-index: 2;">
+            <span class="precio-libro" style="background: rgba(255,255,255,0.85); padding: 2px 8px; border-radius: 8px;">Bs 238.00</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+              </div>
+            </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="swiper-slide">
+            <div class="card h-100 border-0 shadow-sm hover-scale">
+              <div class="book-cover">
+            <img src="img/libros/medicina/enfermeria.jpg" class="card-img-top card-img-libro" alt="Enfermería de Salud Mental">
+              </div>
+              <div class="card-body">
+            <h5 class="card-title fw-bold texto-cortado-multilinea">Enfermería de Salud Mental</h5>
+            <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Enfermería</a>
+              </div>
+              <div class="card-footer border-0 d-flex justify-content-between align-items-center" style="position: relative; z-index: 2;">
+            <span class="precio-libro" style="background: rgba(255,255,255,0.85); padding: 2px 8px; border-radius: 8px;">Bs 238.00</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+              </div>
+            </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="swiper-slide">
+            <div class="card h-100 border-0 shadow-sm hover-scale">
+              <div class="book-cover">
+            <img src="img/libros/medicina/enfermeria.jpg" class="card-img-top card-img-libro" alt="Enfermería de Salud Mental">
+              </div>
+              <div class="card-body">
+            <h5 class="card-title fw-bold texto-cortado-multilinea">Enfermería de Salud Mental</h5>
+            <a class="badge bg-primary position-absolute top-0 start-0" style="z-index: 1;">Enfermería</a>
+              </div>
+              <div class="card-footer border-0 d-flex justify-content-between align-items-center" style="position: relative; z-index: 2;">
+            <span class="precio-libro" style="background: rgba(255,255,255,0.85); padding: 2px 8px; border-radius: 8px;">Bs 238.00</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-2"><i class="bi bi-eye"></i></a>
+              </div>
+            </div>
+            </div>
+              </div>
+              <!-- Swiper navigation -->
+              <div class="swiper-button-next" style="z-index: 3;"></div>
+              <div class="swiper-button-prev" style="z-index: 3;"></div>
+              <!-- Swiper pagination moved down -->
+              <div class="d-flex justify-content-center" style="margin-top: 40px;">
+              <div class="swiper-pagination" style="z-index: 3;"></div>
+              </div>
+            </div>
+            </div>
+          </section>
+          <script>
+            new Swiper('.mySwiperLibrosMedicina', {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            breakpoints: {
+              576: { slidesPerView: 2 },
+              768: { slidesPerView: 3 },
+              992: { slidesPerView: 4 },
+              1200: { slidesPerView: 6 }
+            },
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev'
+            },
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true
+            },
+            autoplay: {
+              delay: 3000,
+              disableOnInteraction: false
+            },
+            loop: true
+            });
+          </script>
 
         <!-- Literatura infantil -->
         <div id="infantil"
