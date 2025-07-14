@@ -238,6 +238,9 @@ footer {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.card-title.texto-cortado-multilinea {
+  min-height: 2.5em; /* Ajusta según tu line-height y tamaño de fuente */
+}
 .texto-cortado-multilinea2 {
     display: -webkit-box;
     -webkit-line-clamp: 3;     /* Número de líneas a mostrar */
@@ -245,6 +248,7 @@ footer {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    
 }
 
 .navbar {
