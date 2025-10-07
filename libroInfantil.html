@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>El Gran Viaje de Lila - Tienda Online</title>
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" />
+
+  <!-- Google Fonts - Fuente moderna y elegante -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="css/styles.css" />
+    <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+  <style>
+
+/* ---------- Hero libro ---------- */
+.book {
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 2 / 3;
+  perspective: 1500px;
+  margin: auto;
+}
+.cover {
+  position: relative;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform-origin: right center;
+  transition: transform 0.6s ease;
+}
+.book:hover .cover {
+  transform: rotateY(-25deg);
+}
+.front {
+  transform: translateZ(25px);
+  border-radius: var(--book-radius);
+  overflow: hidden;
+  box-shadow: 0 12px 24px rgba(0,0,0,.25);
+}
+.front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- Caja compra ---------- */
+.bg-white.rounded-4.p-4.shadow-sm {
+  border: 1px solid #eaeaea;
+  transition: transform .2s, box-shadow .2s;
+}
+.bg-white.rounded-4.p-4.shadow-sm:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.12);
+}
+
+/* ---------- Cards recomendación ---------- */
+
+
+/* ---------- WhatsApp btn ---------- */
+#whatsappBtn {
+  background: #25d366;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,.2);
+  transition: transform .2s;
+}
+#whatsappBtn:hover {
+  transform: scale(1.1);
+}
+</style>
+
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80" tabindex="0">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+
+    <a class="navbar-brand" href="index.html">
+      <img src="img/logo.png" alt="Logo" width="140">
+    </a>
+
+    <div class="d-flex align-items-center order-lg-3 ms-auto">
+      <form class="d-flex me-2 position-relative" style="width: 240px;">
+        <input class="form-control rounded-pill pe-5" type="search" placeholder="Buscar..." style="width: 100%;">
+        <button class="btn btn-light rounded-pill position-absolute end-0 top-50 translate-middle-y" type="submit" style="z-index:2; right: 8px;">
+          <i class="bi bi-search"></i>
+        </button>
+      </form>
+
+      <button class="btn btn-light rounded-pill hover-lift d-lg-none" 
+              type="button" 
+              data-bs-toggle="modal" 
+              data-bs-target="#loginModal">
+        <i class="bi bi-person-fill"></i>
+      </button>
+
+      <button class="navbar-toggler border-0" 
+              type="button" 
+              data-bs-toggle="collapse" 
+              data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse order-lg-2" id="mainNav">
+      <ul class="navbar-nav text-uppercase trig-fade enable-trig">
+        <li class="nav-item">
+          <a class="nav-link active py-2 px-3 fw-medium trig-target" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link py-2 px-3 fw-medium trig-target" href="medicina.html">Medicina</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link py-2 px-3 fw-medium trig-target" href="infantiles.html">Infantil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link py-2 px-3 fw-medium trig-target" href="otros.html">Otros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link py-2 px-3 fw-medium trig-target" href="index.html#nosotros">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link py-2 px-3 fw-medium trig-target" href="index.html#contacto">Contacto</a>
+        </li>
+      </ul>
+    </div>
+    
+    <button class="btn btn-light rounded-pill hover-lift d-none d-lg-inline-flex ms-2 order-lg-4" 
+            type="button" 
+            data-bs-toggle="modal" 
+            data-bs-target="#loginModal">
+      <i class="bi bi-person-fill"></i>
+    </button>
+  </div>
+</nav>
+
+<div class="container py-5">
+  <div class="row g-4 align-items-start">
+    <!-- Columna imagen -->
+    <div class="book">
+        <div class="cover">
+            <div class="front">
+            <img src="img/libros/infantiles/animales.jpg" alt="Portada del libro infantil" loading="lazy">
+            </div>
+        </div>
+    </div>
+
+    <!-- Columna información -->
+    <div class="col-12 col-md-7">
+      <div class="ps-md-4">
+        <h1 class="display-4 fw-bold mb-2">Animales Del Bosque</h1>
+        <p class="lead text-muted mb-3">Autora: María Gómez</p>
+        <div class="mb-3">
+          <span class="badge bg-dark fs-6 me-2">Infantil</span>
+          <span class="badge bg-secondary fs-6">Edición 2ª - 2023</span>
+        </div>
+
+        <p class="fs-6 text-secondary mb-4">
+          "El Gran Viaje de Lila" es una aventura mágica para niños y niñas. Acompaña a Lila y sus amigos en un recorrido lleno de imaginación, valores y aprendizaje. Ideal para primeros lectores y para compartir en familia.
+        </p>
+
+        <div class="row row-cols-1 row-cols-sm-2 g-3 mb-5">
+          <div class="col">
+            <dl class="row mb-0">
+              <dt class="col-5 text-uppercase text-muted">Editorial</dt>
+              <dd class="col-7">Pequeños Lectores</dd>
+              <dt class="col-5 text-uppercase text-muted">Año</dt>
+              <dd class="col-7">2023</dd>
+            </dl>
+          </div>
+          <div class="col">
+            <dl class="row mb-0">
+              <dt class="col-5 text-uppercase text-muted">Idioma</dt>
+              <dd class="col-7">Español</dd>
+              <dt class="col-5 text-uppercase text-muted">Páginas</dt>
+              <dd class="col-7">48</dd>
+            </dl>
+          </div>
+          <div class="col">
+            <dl class="row mb-0">
+              <dt class="col-5 text-uppercase text-muted">Edición</dt>
+              <dd class="col-7">2ª – Marzo 2023</dd>
+              <dt class="col-5 text-uppercase text-muted">ISBN</dt>
+              <dd class="col-7">978-84-123456-7-8</dd>
+            </dl>
+          </div>
+          <div class="col">
+            <dl class="row mb-0">
+              <dt class="col-5 text-uppercase text-muted">Formato</dt>
+              <dd class="col-7">Tapa blanda</dd>
+              <dt class="col-5 text-uppercase text-muted">Dimensiones</dt>
+              <dd class="col-7">20 x 25 cm</dd>
+            </dl>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-4 p-4 shadow-sm">
+          <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between mb-3">
+            <div>
+              <h2 class="text-danger mb-0">Bs 45 <small class="text-muted fs-6 ms-2"><del>Bs 60</del></small></h2>
+              <div class="mt-1">
+                <span class="badge bg-success bg-opacity-10 text-success fs-6">
+                  <i class="bi bi-check2-circle me-1"></i> Disponible
+                </span>
+              </div>
+            </div>
+            <span class="badge bg-success fs-6 text-uppercase mt-2 mt-sm-0">25% OFF</span>
+          </div>
+
+          <!-- Selector de cantidad -->
+          <div class="input-group mb-3" style="max-width: 200px;">
+            <button class="btn btn-outline-secondary" type="button" id="decrement">
+              <i class="bi bi-dash-lg"></i>
+            </button>
+            <input type="number" class="form-control text-center" value="1" min="1" max="15">
+            <button class="btn btn-outline-secondary" type="button" id="increment">
+              <i class="bi bi-plus-lg"></i>
+            </button>
+          </div>
+
+          <!-- Botones de acción -->
+          <div class="row g-2 mb-3">
+            <div class="col-12 col-sm-6">
+              <button class="btn btn-danger btn-lg w-100">
+                <i class="bi bi-lightning-charge me-2"></i> Reservar ahora
+              </button>
+            </div>
+          </div>
+
+          <!-- Formatos y seguridad -->
+          <div class="d-flex justify-content-around flex-wrap gap-2 mb-3">
+            <span class="badge bg-info bg-opacity-10 text-info fs-6">PDF disponible</span>
+            <span class="badge bg-info bg-opacity-10 text-info fs-6">Audiolibro incluido</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+   
+<style>
+            /* Oculta los botones de navegación de Swiper */
+            .mySwiperLibrosMedicina .swiper-button-next,
+            .mySwiperLibrosMedicina .swiper-button-prev {
+              display: none !important;
+            }
+</style>
+<script>
+  new Swiper('.mySwiperLibrosMedicina', {
+    slidesPerView: 2,
+    spaceBetween: 20,
+    breakpoints: {
+      576: { slidesPerView: 2 },
+      768: { slidesPerView: 3 },
+      992: { slidesPerView: 4 },
+      1200: { slidesPerView: 6 }
+    },
+    // navigation: {
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev'
+    // },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },
+    loop: true
+  });
+</script>
+
+</div>
+
+<!-- Pie de página -->
+<footer class="bg-primary text-light pt-5 mt-5">
+  <div class="container">
+    <div class="row gy-4">
+      <!-- Sobre nosotros -->
+      <div class="col-md-4">
+        <h5 class="fw-bold mb-3">Cátedra del Saber</h5>
+        <p>Fomentando la pasión por la lectura especializada desde 1995.</p>
+        <div class="d-flex gap-3 fs-4">
+          <a href="#" class="text-light"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-twitter"></i></a>
+        </div>
+      </div>
+      <!-- Enlaces rápidos -->
+      <div class="col-md-4">
+        <h6 class="text-uppercase fw-semibold mb-3">Enlaces rápidos</h6>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-light text-decoration-none py-1 d-block">Inicio</a></li>
+          <li><a href="medicina.html" class="text-light text-decoration-none py-1 d-block">Medicina</a></li>
+          <li><a href="infantiles.html" class="text-light text-decoration-none py-1 d-block">Infantil</a></li>
+          <li><a href="#otros" class="text-light text-decoration-none py-1 d-block">Otros</a></li>
+          <li><a href="index.html#nosotros" class="text-light text-decoration-none py-1 d-block">Nosotros</a></li>
+          <li><a href="index.html#contacto" class="text-light text-decoration-none py-1 d-block">Contacto</a></li>
+        </ul>
+      </div>
+      <!-- Newsletter -->
+      <div class="col-md-4">
+        <h6 class="text-uppercase fw-semibold mb-3">Ubicaciones y Contacto</h6>
+        <ul class="list-unstyled small mb-3">
+          <li class="mb-2">
+            <strong>Sucursal Medicina:</strong><br>
+            Av. Saavedra N° 2222 (frente al hospital de clínicas) - Miraflores<br>
+            <i class="bi bi-telephone me-1"></i> 72003750
+          </li>
+          <li>
+            <strong>Sucursal Infantiles:</strong><br>
+            Av. German Busch N° 2093 (frente a la gasolinera.)<br>
+            <i class="bi bi-telephone me-1"></i> 72554871
+          </li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-secondary my-4" />
+    <div class=" flex-md-row justify-content-between align-items-center small">
+      <p class="mb-2 mb-md-0">&copy; 2025 Cátedra del Saber. Todos los derechos reservados.</p>
+      <a href="#inicio" class="btn btn-outline-light btn-sm"><i class="bi bi-arrow-up"></i></a>
+    </div>
+  </div>
+</footer>
+<!-- Botón flotante de WhatsApp -->
+<a href="#" id="whatsappBtn" class="btn btn-success position-fixed bottom-0 end-0 m-4 rounded-circle shadow-lg animate-pulse" style="z-index: 1050;">
+  <i class="bi bi-whatsapp fs-4"></i>
+</a>
+
+<!-- Modal flotante WhatsApp -->
+<div id="whatsappModal" class="position-fixed bottom-0 end-0 m-4 animate__animated" style="z-index: 1060; display: none; min-width: 320px; max-width: 90vw;">
+  <div class="card shadow-lg border-0 rounded-4">
+    <div class="card-header bg-success text-white rounded-top-4 d-flex justify-content-between align-items-center py-2 px-3">
+      <span><i class="bi bi-whatsapp me-2"></i>¿Necesitas ayuda?</span>
+      <button type="button" class="btn-close btn-close-white ms-2" id="closeWhatsappModal" aria-label="Cerrar"></button>
+    </div>
+    <div class="card-body p-3">
+      <p class="mb-2">¡Hola! ¿En qué podemos ayudarte?</p>
+      <a href="https://wa.me/59170000000" target="_blank" class="btn btn-success w-100 rounded-pill">
+        <i class="bi bi-whatsapp me-2"></i>Chatear por WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+<!-- CSS para animaciones -->
+<style>
+  /* Pulso para el botón */
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+  }
+
+  .animate-pulse {
+    animation: pulse 2s infinite;
+  }
+
+  /* Animaciones de entrada y salida */
+  .whatsapp-modal {
+    display: none;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  .whatsapp-modal.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .whatsapp-modal.hide {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+</style>
+
+
+
+<script>
+  const whatsappBtn = document.getElementById('whatsappBtn');
+  const whatsappModal = document.getElementById('whatsappModal');
+  const closeWhatsappModal = document.getElementById('closeWhatsappModal');
+
+  whatsappBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    whatsappModal.style.display = whatsappModal.style.display === 'none' ? 'block' : 'none';
+  });
+
+  closeWhatsappModal.addEventListener('click', function() {
+    whatsappModal.style.display = 'none';
+  });
+
+  // Cerrar modal si se hace click fuera de la tarjeta
+  document.addEventListener('mousedown', function(event) {
+    if (
+      whatsappModal.style.display === 'block' &&
+      !whatsappModal.contains(event.target) &&
+      event.target !== whatsappBtn
+    ) {
+      whatsappModal.style.display = 'none';
+    }
+  });
+</script>
+
+  <!-- Modal Sesion-->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg rounded-4">
+        <div class="modal-header justify-content-center bg-primary text-white rounded-top-4">
+          <div class="text-center w-100">
+            <!-- LOGO -->
+            <img src="img/logo.png" alt="Logo" class="mb-2" style="max-height: 60px;">
+            <h5 class="modal-title mt-2" id="loginModalLabel">Bienvenido</h5>
+            <p class="mb-0 text-white-50 fs-6">Inicia sesión para continuar</p>
+          </div>
+          <button type="button" class="btn-close btn-close-white position-absolute end-0 top-0 m-3" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body px-4 py-4 bg-light">
+          <form>
+            <div class="mb-3">
+              <label for="emailInput" class="form-label">Correo Electrónico</label>
+              <input type="email" class="form-control rounded-pill px-4" id="emailInput" placeholder="nombre@ejemplo.com">
+            </div>
+            <div class="mb-3">
+              <label for="passwordInput" class="form-label">Contraseña</label>
+              <input type="password" class="form-control rounded-pill px-4" id="passwordInput" placeholder="••••••••">
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              
+              
+            </div>
+            <button type="submit" class="btn btn-primary w-100 rounded-pill py-2">Ingresar</button>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
